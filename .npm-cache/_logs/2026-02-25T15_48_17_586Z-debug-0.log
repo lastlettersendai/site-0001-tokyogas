@@ -1,0 +1,23 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.9.0
+2 info using node@v24.14.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/product/GodMaster-Orchestrator/sites/site-0001-tokyogas/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install react react-dom @vitejs/plugin-react @tailwindcss/vite tailwindcss
+8 verbose argv "install" "react" "react-dom" "@vitejs/plugin-react" "@tailwindcss/vite" "tailwindcss"
+9 verbose logfile logs-max:10 dir:/Users/mac/product/GodMaster-Orchestrator/sites/site-0001-tokyogas/.npm-cache/_logs/2026-02-25T15_48_17_586Z-
+10 verbose logfile /Users/mac/product/GodMaster-Orchestrator/sites/site-0001-tokyogas/.npm-cache/_logs/2026-02-25T15_48_17_586Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest react@*
+15 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+16 http fetch GET https://registry.npmjs.org/react attempt 1 failed with ENOTFOUND
+17 http fetch GET https://registry.npmjs.org/react attempt 2 failed with ENOTFOUND
+18 http fetch GET https://registry.npmjs.org/react attempt 3 failed with ENOTFOUND
+19 silly fetch manifest react-dom@*
+20 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+21 http fetch GET https://registry.npmjs.org/react-dom attempt 1 failed with ENOTFOUND
+22 http fetch GET https://registry.npmjs.org/react-dom attempt 2 failed with ENOTFOUND
