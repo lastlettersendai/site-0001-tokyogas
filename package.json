@@ -7,7 +7,8 @@
     "dev": "vite --port 3000 --strictPort",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "pnpm build && npx vercel --prod --yes"
+    "deploy": "pnpm build && npx vercel --prod --yes",
+    "deploy:auto": "node scripts/deploy.js"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.1.5"
   }
 }
