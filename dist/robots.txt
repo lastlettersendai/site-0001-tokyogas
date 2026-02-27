@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://site-0001-tokyogas.vercel.app/sitemap.xml

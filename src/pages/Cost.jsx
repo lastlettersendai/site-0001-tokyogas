@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { SEOHead } from '../components/SEOHead.jsx';
-import { Layout } from '../components/Layout.jsx';
+import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
 import { CTALink } from '../components/CTALink.jsx';
 import { FinalCTA } from '../components/FinalCTA.jsx';
+import { Icon } from '../components/Icon.jsx';
 
 export const Cost = () => {
     // Simulator State
@@ -25,22 +25,43 @@ export const Cost = () => {
 
     const estimate = calcEstimate();
     return (
-        <Layout>
-            <SEOHead
-                title="東京ガスの太陽光・蓄電池はいくら？費用が変わるポイントと見積もりの見方"
-                description="「我が家だといくらかかるの？」という疑問に対し、屋根の形状や設備の容量など、金額が変動する3つのポイントを解説。相見積もりの考え方も紹介します。"
-                path="/cost"
-            />
+        <PageTemplate
+            title="東京ガスの太陽光・蓄電池はいくら？費用が変わるポイントと見積もりの見方"
+            description="「我が家だといくらかかるの？」という疑問に対し、屋根の形状や設備の容量など、金額が変動する3つのポイントを解説。相見積もりの考え方も紹介します。"
+            path="/cost"
+        >
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                <div className="text-center mb-16 border-b border-gray-200 pb-10">
-                    <h1 className="text-3xl md:text-4xl font-black text-[#003366] leading-tight mb-6">
-                        東京ガスの太陽光・蓄電池はいくら？<br />
-                        <span className="text-2xl md:text-3xl text-gray-700 mt-2 block">費用が変わるポイントと見積もりの見方</span>
-                    </h1>
-                    <p className="text-lg font-bold text-orange-600 bg-orange-50 inline-block px-6 py-3 rounded-full border border-orange-200">
-                        結論：金額は家ごとに完全に異なります。まずは「内訳つきの見積もり」を取ることが最短ルートです。
-                    </p>
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+                {/* Intro Section with Image */}
+                <div className="flex flex-col md:flex-row items-center gap-10 mb-16 border-b border-gray-100 pb-12">
+                    <div className="w-full md:w-3/5 text-left">
+                        <span className="text-orange-500 font-bold tracking-widest text-sm mb-3 block uppercase">Cost & Estimate</span>
+                        <h1 className="text-4xl md:text-5xl font-black text-[#003366] leading-tight mb-6">
+                            東京ガスのシステム<br />
+                            費用はいくら？
+                        </h1>
+                        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                            「我が家だといくらかかるの？」という疑問に対し、金額が変動する3つのポイントを解説。
+                        </p>
+                        <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg inline-block shadow-sm">
+                            <p className="text-sm md:text-base font-bold text-gray-800">
+                                <span className="text-orange-600">結論：</span> 金額は家ごとに完全に異なります。<br />まずはプロによる「内訳つきの正確な見積もり」を取ることが唯一の正解です。
+                            </p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-2/5 relative">
+                        <div className="absolute -inset-2 bg-gradient-to-tr from-blue-100 to-orange-100 rounded-2xl blur-md opacity-70"></div>
+                        <img
+                            src="/images/cost_inspector.png"
+                            alt="屋根と図面を確認する信頼できる施工士"
+                            className="relative rounded-2xl shadow-lg border border-white w-full object-cover aspect-square"
+                            loading="lazy"
+                        />
+                        <div className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-xl border border-gray-100 flex items-center gap-2">
+                            <Icon name="hardhat" className="text-gray-800 size-6" />
+                            <span className="text-sm font-bold text-[#003366]">プロの無料診断</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-gray-200 mb-16">
@@ -51,17 +72,17 @@ export const Cost = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 relative pt-12">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-md border-4 border-blue-50">🏠</div>
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-md border-4 border-blue-50"><Icon name="home" className="text-blue-600 size-8" /></div>
                             <h3 className="font-bold text-center text-[#003366] mb-3 text-lg">1. 屋根の広さと形状</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">パネルを何枚載せられるかで基本料金が変わります。また、足場を組む面積や、特殊な屋根材（瓦など）の施工難易度によっても工事費が変動します。</p>
                         </div>
                         <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 relative pt-12">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-md border-4 border-blue-50">⚡</div>
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-md border-4 border-blue-50"><Icon name="zap" className="text-yellow-500 size-8" /></div>
                             <h3 className="font-bold text-center text-[#003366] mb-3 text-lg">2. 設備の容量選び</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">日中の電気使用量に合わせて、適切な蓄電池の容量（kWh）を選ぶ必要があります。容量が大きいほど高額になりますが、小さすぎると停電時や夜間に不足します。</p>
                         </div>
                         <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 relative pt-12">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-md border-4 border-blue-50">🛠️</div>
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-md border-4 border-blue-50"><Icon name="wrench" className="text-gray-600 size-8" /></div>
                             <h3 className="font-bold text-center text-[#003366] mb-3 text-lg">3. 付帯工事・電気工事</h3>
                             <p className="text-sm text-gray-600 leading-relaxed">ご自宅の分電盤（ブレーカー）の古さや、配線を隠すための家の構造によって、追加の電気工事費が発生するケースがあります。</p>
                         </div>
@@ -70,7 +91,7 @@ export const Cost = () => {
 
                 <div className="bg-white p-8 rounded-2xl shadow-sm mb-16 border border-gray-100">
                     <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                        <span className="text-orange-500 text-3xl">📝</span>
+                        <Icon name="clipboard" className="text-orange-500 size-8 mr-2" />
                         1秒でわかる！太陽光＋蓄電池 概算シミュレーター
                     </h2>
 
@@ -96,63 +117,84 @@ export const Cost = () => {
                             </div>
                         </div>
 
-                        {/* Result Block (Principle 1) */}
-                        <div className="mt-8 bg-white border-2 border-[#003366] rounded-xl p-6 text-center shadow-md">
-                            <p className="text-sm text-gray-500 font-bold mb-2">あなたの相場目安（パネル{estimate.kw}kW {hasBattery ? '+ 蓄電池' : 'のみ'}）</p>
-                            <div className="text-4xl md:text-5xl font-black text-[#003366] mb-2 tracking-tight">
-                                約<span className="text-orange-500">{estimate.total}</span>万円 <span className="text-lg text-gray-500 font-medium">〜</span>
+                        {/* Result Block (Premium Quote Card UI) */}
+                        <div className="mt-10 relative">
+                            {/* Card Background Glow */}
+                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-[#003366] to-orange-400 rounded-2xl blur opacity-30 animate-pulse"></div>
+
+                            <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-[linear-gradient(to_bottom,rgba(255,255,255,1),rgba(248,250,252,0.8))]">
+                                <div className="absolute top-0 right-0 bg-[#003366] text-white text-xs font-bold px-4 py-1.5 rounded-bl-lg rounded-tr-2xl">概算シミュレーション結果</div>
+
+                                <p className="text-sm text-gray-500 font-bold mb-1 text-center mt-2">あなたの相場目安</p>
+                                <p className="text-center font-bold text-[#003366] mb-6 pb-4 border-b border-gray-200">
+                                    パネル {estimate.kw}kW {hasBattery ? '+ 蓄電池' : 'のみ'}
+                                </p>
+
+                                <div className="text-center mb-6">
+                                    <span className="text-2xl text-gray-400 font-bold align-top">約</span>
+                                    <span className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#003366] to-blue-800 tracking-tighter mx-1 drop-shadow-sm">
+                                        {estimate.total}
+                                    </span>
+                                    <span className="text-2xl text-gray-600 font-bold baseline">万円</span>
+                                    <span className="text-xl text-gray-400 font-medium ml-1">〜</span>
+                                </div>
+
+                                <p className="text-xs text-center text-red-500 font-bold mb-6 bg-red-50 py-2 rounded-md">
+                                    ※上記は全国平均からの概算であり、実際の費用を保証するものではありません。
+                                </p>
+
+                                <div className="bg-gray-50 border border-gray-100 p-4 rounded-xl relative overflow-hidden">
+                                    <div className="absolute left-0 top-0 w-1 h-full bg-blue-500"></div>
+                                    <p className="text-sm text-gray-700 leading-relaxed pl-2 relative z-10">
+                                        <strong className="text-blue-800 flex items-center gap-1 mb-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 安く見せるネット情報に注意！</strong>
+                                        太陽光工事は「足場代」や「各種電気工事」などの付帯費用で数十万円ブレます。ネット上の確定金額は不可能です。<br className="hidden md:block" />
+                                        確実な金額を知るには、<strong className="text-red-600">ネット検索</strong>ではなく<strong className="text-blue-600 font-bold border-b border-blue-600">ご自宅の図面をプロに見せる</strong>のが唯一の正解です。
+                                    </p>
+                                </div>
                             </div>
-                            <p className="text-xs text-red-500 font-bold mb-4">※上記はあくまで全国平均から算出した概算であり、実際の費用を保証するものではありません。</p>
-                            <p className="text-sm text-gray-700 bg-blue-50 p-3 rounded-lg text-left leading-relaxed">
-                                <strong className="text-blue-800">💡 安く見せるネットの情報に注意！</strong><br />
-                                太陽光は「足場代」や「分電盤工事」などの付帯費用で数十万円ブレます。そのため、ネット上で確定金額を出すことは物理的に不可能です。<br />
-                                確実な金額を知るには、<strong className="text-red-600 line-through">ネットで調べる</strong> のではなく、 <strong className="text-blue-600 underline">ご自宅の図面をプロに見せる</strong> のが唯一の正解です。
-                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div className="text-center mb-16">
-                    <h2 className="text-2xl md:text-3xl font-black text-[#003366] mb-4">なぜ、ネットの「平均価格」を信じてはいけないのか？</h2>
-                </div>
+                {/* Estimate Checklist Diagram/Visual Block */}
+                <div className="mb-20">
+                    <div className="text-center mb-10">
+                        <span className="text-orange-500 font-bold tracking-widest text-sm mb-2 block uppercase">Warning</span>
+                        <h2 className="text-2xl md:text-3xl font-black text-[#003366] mb-4">ネットの「平均価格」で<br className="md:hidden" />安心していませんか？</h2>
+                        <p className="text-gray-600">見積もり提出時に「以下の費用」が明記されているか必ずチェックしてください。<br className="hidden md:block" />悪質な業者はこれを契約後に「追加請求」してきます。</p>
+                    </div>
 
-                <div className="mb-16">
-                    <h2 className="text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100">
-                        絶対に確認すべき「見積もりチェックリスト」
-                    </h2>
-                    <p className="text-gray-600 mb-6">見積もりが出た際は、以下の項目が含まれているか、または金額が明記されているかを確認してください。トラブルを防ぐ防波堤になります。</p>
+                    <div className="bg-[#001a33] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                        {/* Blueprint Background Pattern */}
+                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
 
-                    <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-inner">
-                        <ul className="space-y-4">
-                            <li className="flex items-start gap-3">
-                                <span className="text-green-600 text-xl font-bold mt-1">☑️</span>
-                                <div>
-                                    <strong className="text-gray-800 block">機器代と工事費が分かれているか</strong>
-                                    <span className="text-sm text-gray-500">「一式」とだけ書かれている場合は内訳を求めましょう。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-green-600 text-xl font-bold mt-1">☑️</span>
-                                <div>
-                                    <strong className="text-gray-800 block">足場代は含まれているか</strong>
-                                    <span className="text-sm text-gray-500">後から「足場代は別でした」と言われないための確認項目です。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-green-600 text-xl font-bold mt-1">☑️</span>
-                                <div>
-                                    <strong className="text-gray-800 block">補助金の「見込み額」と「適用後の実質負担額」</strong>
-                                    <span className="text-sm text-gray-500 text-red-500 font-bold">※補助金は確定ではない旨の説明を担当者から必ず受けてください。</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-green-600 text-xl font-bold mt-1">☑️</span>
-                                <div>
-                                    <strong className="text-gray-800 block">保証内容（機器保証、施工保証、自然災害補償）が明記されているか</strong>
-                                    <span className="text-sm text-gray-500">各保証の「年数」と「適用範囲」の見落としがないようにします。</span>
-                                </div>
-                            </li>
-                        </ul>
+                        <h3 className="text-xl font-bold text-white mb-8 text-center relative z-10">見積書で見落としてはならない <span className="text-orange-400">4つの項目</span></h3>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
+                                <div className="mb-3"><Icon name="box" className="text-orange-400 size-8" /></div>
+                                <h4 className="text-lg font-bold text-white mb-2">1. 機器代 / 工事費の分離</h4>
+                                <p className="text-sm text-gray-300">「一式」とだけ書かれている場合は危険。どのパネルにいくらかかり、工事の人件費がいくらか、内訳明記を求めましょう。</p>
+                            </div>
+
+                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
+                                <div className="mb-3"><Icon name="hammer" className="text-orange-400 size-8" /></div>
+                                <h4 className="text-lg font-bold text-white mb-2">2. 「足場代」の完全な記載</h4>
+                                <p className="text-sm text-gray-300">屋根工事に必須の足場代（15万〜30万円前後）。これが「別途請求」の罠になりやすいため、合算されているか確認を。</p>
+                            </div>
+
+                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
+                                <div className="mb-3"><Icon name="file" className="text-orange-400 size-8" /></div>
+                                <h4 className="text-lg font-bold text-white mb-2">3. 補助金「適用前 / 後」の明記</h4>
+                                <p className="text-sm text-gray-300">補助金は審査落ちや予算切れのリスクがあります。「適用後」の極端に安い金額だけを誇張する説明には要注意です。</p>
+                            </div>
+
+                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
+                                <div className="mb-3"><Icon name="shield" className="text-orange-400 size-8" /></div>
+                                <h4 className="text-lg font-bold text-white mb-2">4. 保証範囲（機器・施工）</h4>
+                                <p className="text-sm text-gray-300">「15年保証」とあっても、それが「パネル出力」だけなのか「パワコン」も含むのか、「雨漏り等の施工保証」があるか確認必須。</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -184,6 +226,6 @@ export const Cost = () => {
 
             <FinalCTA />
 
-        </Layout>
+        </PageTemplate>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { SEOHead } from '../components/SEOHead.jsx';
-import { Layout } from '../components/Layout.jsx';
+import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
+import { Icon } from '../components/Icon.jsx';
 
 export const Eligible = () => {
     // Interactive checklist states
@@ -17,12 +17,11 @@ export const Eligible = () => {
     const result = getResult();
 
     return (
-        <Layout>
-            <SEOHead
-                title="東京ガスの太陽光・蓄電池は対象？関東1都6県・戸建て・1981年以降の1分チェック"
-                description="あなたのご自宅が東京ガスの太陽光・蓄電池パッケージの導入対象になるかを1分で診断。築年数や地域などの公式条件に基づき、申し込み前に事前確認ができます。"
-                path="/eligible"
-            />
+        <PageTemplate
+            title="東京ガスの太陽光・蓄電池は対象？関東1都6県・戸建て・1981年以降の1分チェック"
+            description="あなたのご自宅が東京ガスの太陽光・蓄電池パッケージの導入対象になるかを1分で診断。築年数や地域などの公式条件に基づき、申し込み前に事前確認ができます。"
+            path="/eligible"
+        >
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
                 <div className="text-center mb-12">
@@ -31,83 +30,129 @@ export const Eligible = () => {
                         我が家は導入の<span className="text-orange-500">対象外</span>？<br />
                         1分セルフ・チェック
                     </h1>
-                    <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
                         実は、すべての家で太陽光や蓄電池が設置できるわけではありません。申し込んだ後に「対象外でした」と断られる手間を省くため、まずは公式の条件に基づいた簡易チェックをお試しください。
                     </p>
+
+                    {/* Roof Image Block */}
+                    <div className="max-w-3xl mx-auto relative rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                        <div className="absolute top-0 left-0 w-full p-3 bg-gradient-to-b from-black/60 to-transparent z-10 flex justify-between text-white font-bold text-sm">
+                            <span><Icon name="check" className="text-blue-400 size-4 mr-1 align-middle" /> 設置向いている家</span>
+                            <span><Icon name="x" className="text-red-400 size-4 mr-1 align-middle" /> 設置が難しい家</span>
+                        </div>
+                        <img
+                            src="/images/eligible_roof.png"
+                            alt="太陽光パネル設置に向いている屋根と向いていない屋根の比較画像"
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                        />
+                        <div className="bg-white p-4 text-left">
+                            <p className="text-sm text-gray-700 font-bold flex items-center gap-2">
+                                <span className="text-blue-600 text-xl"><Icon name="idea" className="text-blue-600 size-6" /></span>
+                                診断基準は「地域」「築年数」「家のタイプ」の3つだけです。
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Interactive Diagnostic */}
-                <div className="bg-white rounded-2xl shadow-xl border border-blue-50 overflow-hidden mb-16">
-                    <div className="bg-[#003366] py-4 px-6">
-                        <h2 className="text-white font-bold text-lg md:text-xl text-center flex items-center justify-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-white text-[#003366] text-sm flex items-center justify-center">?</span>
+                <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-16 relative">
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-[#003366] to-orange-400"></div>
+                    <div className="bg-gray-50/50 py-6 px-6 border-b border-gray-100">
+                        <h2 className="text-[#003366] font-black text-xl md:text-2xl text-center flex items-center justify-center gap-3">
+                            <span className="w-8 h-8 rounded-full bg-orange-500 text-white text-base flex items-center justify-center shadow-md">?</span>
                             以下の3つの質問にお答えください
                         </h2>
                     </div>
 
-                    <div className="p-6 md:p-10">
+                    <div className="p-6 md:p-10 space-y-8" style={{ backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMjBoNDBNMjAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDAsMCwwLDAuMDMpIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+")` }}>
                         {/* Question 1 */}
-                        <div className="mb-8 border-b border-gray-100 pb-8">
-                            <h3 className="font-bold text-gray-800 text-lg mb-4">Q1: お住まいの地域は以下のいずれかですか？</h3>
-                            <p className="text-sm text-gray-500 mb-4">東京都・神奈川県・千葉県・埼玉県・茨城県・栃木県・群馬県</p>
-                            <div className="flex gap-4">
-                                <button onClick={() => setSteps({ ...steps, 1: 'yes' })} className={`flex-1 py-3 rounded-lg font-bold transition-all ${steps[1] === 'yes' ? 'bg-[#003366] text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>はい</button>
-                                <button onClick={() => setSteps({ ...steps, 1: 'no' })} className={`flex-1 py-3 rounded-lg font-bold transition-all ${steps[1] === 'no' ? 'bg-orange-500 text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>いいえ</button>
+                        <div className={`bg-white rounded-2xl p-6 md:p-8 border-2 transition-all duration-300 shadow-sm ${steps[1] ? 'border-green-400 bg-green-50/20' : 'border-blue-100 hover:border-blue-300 hover:shadow-md'}`}>
+                            <div className="flex items-start gap-4 mb-6">
+                                <div className="bg-[#003366] text-white font-black text-xl w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md">Q1</div>
+                                <div>
+                                    <h3 className="font-bold text-gray-800 text-lg md:text-xl leading-snug">お住まいの地域は以下のいずれかですか？</h3>
+                                    <p className="text-sm text-gray-500 mt-2 font-medium">東京都・神奈川県・千葉県・埼玉県・茨城県・栃木県・群馬県</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 md:pl-16">
+                                <button onClick={() => setSteps({ ...steps, 1: 'yes' })} className={`flex-1 py-4 rounded-xl font-bold text-lg transition-all border-2 ${steps[1] === 'yes' ? 'bg-[#003366] text-white border-[#003366] shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#003366] hover:text-[#003366]'}`}>はい</button>
+                                <button onClick={() => setSteps({ ...steps, 1: 'no' })} className={`flex-1 py-4 rounded-xl font-bold text-lg transition-all border-2 ${steps[1] === 'no' ? 'bg-orange-500 text-white border-orange-500 shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-orange-500 hover:text-orange-500'}`}>いいえ</button>
                             </div>
                         </div>
 
                         {/* Question 2 */}
-                        <div className="mb-8 border-b border-gray-100 pb-8">
-                            <h3 className="font-bold text-gray-800 text-lg mb-4">Q2: お住まいは「戸建て」の自己所有物件ですか？</h3>
-                            <p className="text-sm text-gray-500 mb-4">マンションやアパート等の集合住宅、または賃貸物件は対象外となります。</p>
-                            <div className="flex gap-4">
-                                <button onClick={() => setSteps({ ...steps, 2: 'yes' })} className={`flex-1 py-3 rounded-lg font-bold transition-all ${steps[2] === 'yes' ? 'bg-[#003366] text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>はい</button>
-                                <button onClick={() => setSteps({ ...steps, 2: 'no' })} className={`flex-1 py-3 rounded-lg font-bold transition-all ${steps[2] === 'no' ? 'bg-orange-500 text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>いいえ</button>
+                        <div className={`bg-white rounded-2xl p-6 md:p-8 border-2 transition-all duration-300 shadow-sm ${steps[2] ? 'border-green-400 bg-green-50/20' : 'border-blue-100 hover:border-blue-300 hover:shadow-md'}`}>
+                            <div className="flex items-start gap-4 mb-6">
+                                <div className="bg-[#003366] text-white font-black text-xl w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md">Q2</div>
+                                <div>
+                                    <h3 className="font-bold text-gray-800 text-lg md:text-xl leading-snug">お住まいは「戸建て」の自己所有物件ですか？</h3>
+                                    <p className="text-sm text-gray-500 mt-2 font-medium">マンションやアパート等の集合住宅、または賃貸物件は対象外となります。</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 md:pl-16">
+                                <button onClick={() => setSteps({ ...steps, 2: 'yes' })} className={`flex-1 py-4 rounded-xl font-bold text-lg transition-all border-2 ${steps[2] === 'yes' ? 'bg-[#003366] text-white border-[#003366] shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#003366] hover:text-[#003366]'}`}>はい</button>
+                                <button onClick={() => setSteps({ ...steps, 2: 'no' })} className={`flex-1 py-4 rounded-xl font-bold text-lg transition-all border-2 ${steps[2] === 'no' ? 'bg-orange-500 text-white border-orange-500 shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-orange-500 hover:text-orange-500'}`}>いいえ</button>
                             </div>
                         </div>
 
                         {/* Question 3 */}
-                        <div className="mb-4">
-                            <h3 className="font-bold text-gray-800 text-lg mb-4">Q3: お住まいの建築確認日は「1981年（昭和56年）6月1日以降」ですか？</h3>
-                            <p className="text-sm text-gray-500 mb-4">新耐震基準を満たしているかどうかの確認です。よくわからない場合は「わからない」を選択してください。</p>
-                            <div className="flex gap-2 sm:gap-4">
-                                <button onClick={() => setSteps({ ...steps, 3: 'yes' })} className={`flex-1 py-3 text-sm sm:text-base rounded-lg font-bold transition-all ${steps[3] === 'yes' ? 'bg-[#003366] text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>はい</button>
-                                <button onClick={() => setSteps({ ...steps, 3: 'no' })} className={`flex-1 py-3 text-sm sm:text-base rounded-lg font-bold transition-all ${steps[3] === 'no' ? 'bg-orange-500 text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>いいえ</button>
-                                <button onClick={() => setSteps({ ...steps, 3: 'unknown' })} className={`flex-1 py-3 text-sm sm:text-base rounded-lg font-bold transition-all ${steps[3] === 'unknown' ? 'bg-blue-500 text-white shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>わからない</button>
+                        <div className={`bg-white rounded-2xl p-6 md:p-8 border-2 transition-all duration-300 shadow-sm ${steps[3] ? 'border-green-400 bg-green-50/20' : 'border-blue-100 hover:border-blue-300 hover:shadow-md'}`}>
+                            <div className="flex items-start gap-4 mb-6">
+                                <div className="bg-[#003366] text-white font-black text-xl w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md">Q3</div>
+                                <div>
+                                    <h3 className="font-bold text-gray-800 text-lg md:text-xl leading-snug">建築確認日は「1981年（昭和56年）6月1日以降」ですか？</h3>
+                                    <p className="text-sm text-gray-500 mt-2 font-medium">新耐震基準を満たしているかどうかの確認です。よくわからない場合は「わからない」を選択してください。</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-3 md:pl-16">
+                                <button onClick={() => setSteps({ ...steps, 3: 'yes' })} className={`flex-1 py-4 rounded-xl font-bold text-base md:text-lg transition-all border-2 ${steps[3] === 'yes' ? 'bg-[#003366] text-white border-[#003366] shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-[#003366] hover:text-[#003366]'}`}>はい</button>
+                                <button onClick={() => setSteps({ ...steps, 3: 'no' })} className={`flex-1 py-4 rounded-xl font-bold text-base md:text-lg transition-all border-2 ${steps[3] === 'no' ? 'bg-orange-500 text-white border-orange-500 shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-orange-500 hover:text-orange-500'}`}>いいえ</button>
+                                <button onClick={() => setSteps({ ...steps, 3: 'unknown' })} className={`flex-1 py-4 rounded-xl font-bold text-base md:text-lg transition-all border-2 ${steps[3] === 'unknown' ? 'bg-blue-500 text-white border-blue-500 shadow-lg scale-[1.02]' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-500 hover:text-blue-500'}`}>わからない</button>
                             </div>
                         </div>
 
-                        {/* Result Area */}
+                        {/* Result Area Premium Card */}
                         {result && (
-                            <div className="mt-10 p-6 md:p-8 rounded-xl animate-fade-in bg-gray-50 border-2 border-dashed border-gray-300">
-                                <h3 className="text-center font-black text-xl md:text-2xl mb-4 text-gray-800">診断結果</h3>
-
-                                {result === 'A' && (
-                                    <div className="text-center">
-                                        <div className="text-green-600 text-2xl md:text-3xl font-black mb-4">対象の可能性が非常に高いです！</div>
-                                        <p className="text-gray-600 mb-6">基本条件をすべてクリアしています。屋根の形状等による最終判断が必要なため、まずは無料のWebお見積もりへお進みください。</p>
-                                        <a href="#cta" className="inline-block bg-orange-500 text-white font-bold text-lg py-4 px-10 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                                            無料見積もりで詳細を確認する
-                                        </a>
+                            <div className="mt-12 relative animate-[fade-in-up_0.5s_ease-out]">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-green-400 via-blue-500 to-orange-400 rounded-3xl blur opacity-40 animate-pulse"></div>
+                                <div className="relative bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-2xl backdrop-blur-sm bg-white/90">
+                                    <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#003366] to-blue-600 text-white font-bold px-6 py-2 rounded-full shadow-lg border border-white/50 text-sm tracking-widest uppercase">
+                                        診断結果
                                     </div>
-                                )}
 
-                                {result === 'B' && (
-                                    <div className="text-center">
-                                        <div className="text-blue-600 text-2xl md:text-3xl font-black mb-4">図面での確認が必要です</div>
-                                        <p className="text-gray-600 mb-6">地域と戸建ての条件はクリアしています。築年数が不明な場合でも、設計図書を用意して無料相談に申し込むことで、プロが設置可能か判断してくれます。</p>
-                                        <a href="#cta" className="inline-block bg-[#003366] text-white font-bold text-lg py-4 px-10 rounded-full hover:bg-blue-800 transition-colors shadow-lg">
-                                            図面を準備して相談する
-                                        </a>
-                                    </div>
-                                )}
+                                    {result === 'A' && (
+                                        <div className="text-center mt-4">
+                                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 text-green-600 text-4xl mb-6 shadow-sm border-4 border-white ring-2 ring-green-100"><Icon name="party" className="text-green-600 size-10" /></div>
+                                            <h3 className="text-green-600 text-2xl md:text-3xl font-black mb-6 tracking-tight">対象の可能性が非常に高いです！</h3>
+                                            <p className="text-gray-600 mb-8 max-w-lg mx-auto leading-relaxed text-lg">基本条件をすべてクリアしています。屋根の形状等による最終判断が必要なため、まずは<strong className="text-gray-800">無料のWebお見積もり</strong>へお進みください。</p>
+                                            <a href="#cta" className="inline-block bg-gradient-to-r from-orange-400 to-orange-600 text-white font-bold text-lg py-4 px-12 rounded-full hover:from-orange-500 hover:to-orange-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 w-full sm:w-auto">
+                                                無料見積もりへ進む
+                                            </a>
+                                        </div>
+                                    )}
 
-                                {result === 'C' && (
-                                    <div className="text-center">
-                                        <div className="text-gray-600 text-xl font-bold mb-4">申し訳ありません。対象外の可能性が高いです。</div>
-                                        <p className="text-gray-500 text-sm mb-6">東京ガスの本パッケージは、関東1都6県の戸建て（新耐震基準クリア）に限定されております。条件に合わず残念ですが、本サイトの利用による無駄な申し込みの手間が省けましたら幸いです。</p>
-                                    </div>
-                                )}
+                                    {result === 'B' && (
+                                        <div className="text-center mt-4">
+                                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 text-blue-600 text-4xl mb-6 shadow-sm border-4 border-white ring-2 ring-blue-100"><Icon name="clipboard" className="text-blue-600 size-10" /></div>
+                                            <h3 className="text-blue-600 text-2xl md:text-3xl font-black mb-6 tracking-tight">図面での確認が必要です</h3>
+                                            <p className="text-gray-600 mb-8 max-w-lg mx-auto leading-relaxed text-lg">地域と戸建ての条件はクリア。築年数が不明な場合でも、<strong className="text-gray-800">設計図書</strong>を用意して無料相談に申し込むことで、プロが設置可能か判断してくれます。</p>
+                                            <a href="#cta" className="inline-block bg-gradient-to-r from-[#003366] to-blue-800 text-white font-bold text-lg py-4 px-12 rounded-full hover:brightness-110 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 w-full sm:w-auto">
+                                                図面を準備して相談する
+                                            </a>
+                                        </div>
+                                    )}
+
+                                    {result === 'C' && (
+                                        <div className="text-center mt-4">
+                                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 text-gray-400 text-4xl mb-6 shadow-sm border-4 border-white ring-2 ring-gray-100"><Icon name="pray" className="text-gray-400 size-10" /></div>
+                                            <h3 className="text-gray-600 text-xl md:text-2xl font-black mb-6">申し訳ありません。<br className="sm:hidden" />対象外の可能性が高いです。</h3>
+                                            <div className="bg-red-50 border border-red-100 p-6 rounded-2xl text-left max-w-lg mx-auto">
+                                                <p className="text-gray-600 text-sm leading-relaxed">東京ガスの本パッケージは、<strong className="text-red-600">関東1都6県の戸建て（新耐震基準クリア）</strong>に限定されております。条件に合わず残念ですが、本サイトの利用による無駄な申し込みの手間が省けましたら幸いです。</p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         )}
                     </div>
@@ -166,17 +211,17 @@ export const Eligible = () => {
                     <h3 className="font-bold text-lg text-[#003366] mb-6 text-center">次に読むべき重要なポイント</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <Link to="/cost" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center group">
-                            <div className="text-2xl mb-2">💰</div>
+                            <div className="mb-2 flex justify-center"><Icon name="money" className="text-gray-800 size-6 group-hover:text-blue-600 transition-colors" /></div>
                             <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors">費用の決まり方</div>
                             <div className="text-xs text-gray-500 mt-2">見積もりの見方と変動要因</div>
                         </Link>
                         <Link to="/cancellation" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center group">
-                            <div className="text-2xl mb-2">⚠️</div>
+                            <div className="mb-2 flex justify-center"><Icon name="alert" className="text-gray-800 size-6 group-hover:text-blue-600 transition-colors" /></div>
                             <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors">解約・引越しの注意</div>
                             <div className="text-xs text-gray-500 mt-2">契約前に知るべき解約金リスク</div>
                         </Link>
                         <Link to="/" className="bg-[#003366] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center group">
-                            <div className="text-2xl mb-2">🏠</div>
+                            <div className="mb-2 flex justify-center"><Icon name="home" className="text-white size-6" /></div>
                             <div className="font-bold text-white transition-colors">トップページへ</div>
                             <div className="text-xs text-blue-200 mt-2">すべての不安を解消する</div>
                         </Link>
@@ -184,6 +229,6 @@ export const Eligible = () => {
                 </div>
 
             </div>
-        </Layout>
+        </PageTemplate>
     );
 };

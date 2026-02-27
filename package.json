@@ -7,18 +7,20 @@
     "dev": "vite --port 3000 --strictPort",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && node scripts/prerender.js",
     "preview": "vite preview",
-    "deploy": "pnpm build && npx vercel --prod --yes",
+    "deploy": "pnpm build && node scripts/run_seo_gate.js && npx vercel --prod --yes",
     "deploy:auto": "node scripts/deploy.js"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
     "@vitejs/plugin-react": "^5.1.4",
     "autoprefixer": "^10.4.19",
+    "cheerio": "^1.0.0-rc.12",
     "postcss": "^8.4.38",
     "tailwindcss": "^4.2.1",
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "lucide-react": "^0.344.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.1.5"
