@@ -1,0 +1,5 @@
+
+> site-0001-tokyogas@0.0.0 build
+> vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && node scripts/prerender.js
+
+sh: vite: command not found
