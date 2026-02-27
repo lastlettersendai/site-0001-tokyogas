@@ -58,6 +58,53 @@ export const Outage = () => {
                     </div>
                 </div>
 
+                {/* Case Study Block (Principle 3) */}
+                <div className="bg-white border-2 border-blue-100 rounded-2xl p-8 mb-16 shadow-md relative overflow-hidden">
+                    <div className="absolute top-0 right-0 bg-blue-100 text-[#003366] font-bold px-4 py-1 rounded-bl-xl text-sm">
+                        モデルケース・能力早見表
+                    </div>
+                    <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center gap-2">
+                        <span className="text-2xl">⚡️</span>
+                        【実例】夏場の台風で「丸1日停電」した場合の生活シミュレーション
+                    </h3>
+
+                    <p className="text-gray-600 mb-6 text-sm">
+                        標準的な蓄電池（容量5〜7kWh）を導入した場合、「どれくらいの家電が同時に使えるのか？」の現実的なラインです。
+                    </p>
+
+                    <div className="bg-blue-50 rounded-xl overflow-hidden border border-blue-200">
+                        <table className="w-full text-sm text-left">
+                            <thead className="bg-[#003366] text-white">
+                                <tr>
+                                    <th className="p-3">状況</th>
+                                    <th className="p-3">使用できる主な家電（同時使用）</th>
+                                    <th className="p-3">消費電力の目安</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-blue-100">
+                                <tr className="bg-white">
+                                    <td className="p-3 font-bold text-blue-800">昼間（晴れ）</td>
+                                    <td className="p-3 text-gray-700">冷蔵庫 ＋ LDKの照明 ＋ <strong className="text-orange-600">エアコン1台</strong> ＋ スマホ充電</td>
+                                    <td className="p-3 text-gray-500">太陽光の発電でまかなえる（蓄電池は充電へ）</td>
+                                </tr>
+                                <tr className="bg-white">
+                                    <td className="p-3 font-bold text-blue-800">夜間（蓄電池駆動）</td>
+                                    <td className="p-3 text-gray-700">冷蔵庫 ＋ 一部の照明 ＋ 扇風機 ＋ スマホ充電</td>
+                                    <td className="p-3 text-gray-500">約300〜500W（一晩持たせるための節約モード）</td>
+                                </tr>
+                                <tr className="bg-red-50">
+                                    <td className="p-3 font-bold text-red-800">❌ 使えない（NG）</td>
+                                    <td className="p-3 text-gray-700">IHクッキングヒーター、電子レンジ、ドライヤー</td>
+                                    <td className="p-3 text-red-500">瞬間的に1000Wを超えるため、保護機能が働き停止する恐れ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="mt-4 text-xs text-gray-500 text-right">
+                        ※上記は特定負荷型の標準的な蓄電池を想定。全負荷型の場合はこの限りではありません。
+                    </div>
+                </div>
+
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100">
                         オール電化住宅（エコキュート・IH）の注意点

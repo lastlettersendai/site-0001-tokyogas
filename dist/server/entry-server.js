@@ -140,6 +140,44 @@ const CTALink = ({ href, children, eventName = "click_cta", className = "" }) =>
     }
   );
 };
+const FinalCTA = () => {
+  return /* @__PURE__ */ jsxs("section", { className: "py-20 px-6 bg-gradient-to-b from-[#003366] to-[#001a33] text-white text-center rounded-t-3xl mt-16 shadow-2xl relative overflow-hidden", children: [
+    /* @__PURE__ */ jsx("div", { className: "absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full -mt-20 -mr-20 blur-3xl" }),
+    /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 w-80 h-80 bg-orange-500 opacity-10 rounded-full -mb-32 -ml-32 blur-3xl" }),
+    /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto relative z-10", children: [
+      /* @__PURE__ */ jsx("div", { className: "inline-block bg-blue-900 border border-blue-700 text-blue-200 font-bold px-5 py-2 rounded-full mb-8 text-sm shadow-inner", children: "この記事の結論・まとめ" }),
+      /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-5xl font-black mb-8 leading-tight tracking-tight", children: [
+        "ネットで悩むのは、",
+        /* @__PURE__ */ jsx("br", { className: "md:hidden" }),
+        "今日で終わりにしませんか？"
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "bg-white/10 p-6 md:p-8 rounded-2xl backdrop-blur-md border border-white/20 mb-10 text-left md:text-center text-blue-50 space-y-4 max-w-2xl mx-auto shadow-lg shadow-black/20", children: [
+        /* @__PURE__ */ jsxs("p", { className: "flex items-start md:items-center md:justify-center gap-3", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-orange-400 text-xl font-bold", children: "1." }),
+          /* @__PURE__ */ jsx("span", { children: "我が家の「確実な初期費用」は、図面を見せないと出ない。" })
+        ] }),
+        /* @__PURE__ */ jsxs("p", { className: "flex items-start md:items-center md:justify-center gap-3", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-orange-400 text-xl font-bold", children: "2." }),
+          /* @__PURE__ */ jsx("span", { children: "解約リスクや雨漏りリスクは「大手の保証」で防ぐ。" })
+        ] }),
+        /* @__PURE__ */ jsxs("p", { className: "flex items-start md:items-center md:justify-center gap-3", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-orange-400 text-xl font-bold", children: "3." }),
+          /* @__PURE__ */ jsx("span", { className: "font-bold border-b border-orange-400 pb-1", children: "補助金の予算が尽きる前に、まずは「無料診断」を済ませる。" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("p", { className: "text-blue-200 mb-10 text-lg leading-relaxed font-medium", children: [
+        "導入できるかどうかも、いくらかかるかどうかも、すべては図面次第。",
+        /* @__PURE__ */ jsx("br", { className: "hidden md:block" }),
+        "東京ガスの無料オンライン診断を受けて、まずは「我が家の現実的な数字」を手に入れてください。"
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "relative inline-block w-full sm:w-auto mt-4 group", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute -inset-1 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" }),
+        /* @__PURE__ */ jsx(CTALink, { href: "https://home.tokyo-gas.co.jp/power/solar/index.html", eventName: "generate_lead", className: "relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-black text-xl md:text-2xl py-6 px-12 rounded-full hover:from-orange-400 hover:to-orange-500 transition-all shadow-2xl transform hover:-translate-y-1 w-full sm:w-auto border border-orange-400/50", children: "無料でシミュレーション・見積もりをする" })
+      ] }),
+      /* @__PURE__ */ jsx("p", { className: "mt-6 text-sm text-blue-300 font-medium", children: "※公式サイトへ移動します。相談後、導入を見送ることも可能です。" })
+    ] })
+  ] });
+};
 const Home = () => {
   const articleData = {
     "@context": "https://schema.org",
@@ -206,6 +244,78 @@ const Home = () => {
         ] })
       ] })
     ] }),
+    /* @__PURE__ */ jsx("section", { className: "py-12 bg-gray-50 border-b border-gray-200", children: /* @__PURE__ */ jsx("div", { className: "max-w-4xl mx-auto px-6", children: /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 relative", children: [
+      /* @__PURE__ */ jsx("div", { className: "bg-red-600 text-white font-bold text-center py-3 text-lg", children: "【重要】このサイトの対象者について" }),
+      /* @__PURE__ */ jsxs("div", { className: "p-8 md:p-10", children: [
+        /* @__PURE__ */ jsxs("p", { className: "font-bold text-gray-800 text-lg mb-6 text-center", children: [
+          "当サイトは",
+          /* @__PURE__ */ jsx("span", { className: "text-red-600 border-b-2 border-red-600", children: "「すべての人に太陽光をすすめるサイト」ではありません。" }),
+          /* @__PURE__ */ jsx("br", { className: "hidden md:block" }),
+          "まず、以下の条件に当てはまるかご確認ください。"
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "grid md:grid-cols-2 gap-8 mt-8", children: [
+          /* @__PURE__ */ jsxs("div", { className: "bg-red-50 p-6 rounded-xl border border-red-100", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 mb-4", children: [
+              /* @__PURE__ */ jsx("svg", { className: "w-6 h-6 text-red-500", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" }) }),
+              /* @__PURE__ */ jsxs("h3", { className: "font-black text-red-800 text-lg", children: [
+                "このような方には",
+                /* @__PURE__ */ jsx("br", {}),
+                "おすすめしません"
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs("ul", { className: "space-y-3 text-sm text-gray-700 font-medium", children: [
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "×" }),
+                " 対象エリア外（関東1都6県以外）にお住まいの方"
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "×" }),
+                " 1981年（昭和56年）以前に建てられた旧耐震基準の家屋"
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "×" }),
+                " 賃貸住宅や集合住宅（※戸建て専用のサービスです）"
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "×" }),
+                " 数年以内に確実に取り壊しや引越しの予定がある方"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "bg-blue-50 p-6 rounded-xl border border-blue-100", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 mb-4", children: [
+              /* @__PURE__ */ jsx("svg", { className: "w-6 h-6 text-blue-600", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" }) }),
+              /* @__PURE__ */ jsxs("h3", { className: "font-black text-blue-800 text-lg", children: [
+                "このような方に",
+                /* @__PURE__ */ jsx("br", {}),
+                "「東京ガス」を推奨します"
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs("ul", { className: "space-y-3 text-sm text-gray-700 font-medium", children: [
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-blue-500", children: "○" }),
+                " ",
+                /* @__PURE__ */ jsx("span", { className: "font-bold underline", children: "初期費用0円" }),
+                "で太陽光と蓄電池を導入したい方"
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-blue-500", children: "○" }),
+                " 最近の電気代高騰に頭を悩ませている方"
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-blue-500", children: "○" }),
+                " もしもの災害時（停電）に備えたインフラが欲しい方"
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex gap-2", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-blue-500", children: "○" }),
+                " 訪問販売などの怪しい業者ではなく、安心できる大手に頼みたい方"
+              ] })
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "mt-8 text-center text-sm text-gray-500 bg-gray-50 p-4 rounded-lg", children: "※上記「おすすめしない条件」に1つでも該当する場合、審査や設置基準を通らない可能性が高いため、以降の記事を読んでいただいてもお時間を無駄にしてしまう可能性がございます。" })
+      ] })
+    ] }) }) }),
     /* @__PURE__ */ jsx("section", { className: "py-20 px-6 bg-gray-50", children: /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto", children: [
       /* @__PURE__ */ jsxs("div", { className: "text-center mb-16", children: [
         /* @__PURE__ */ jsx("h2", { className: "text-3xl font-black text-[#003366] mb-4", children: "導入前に潰すべき「3つの不安」" }),
@@ -274,20 +384,7 @@ const Home = () => {
         ] })
       ] })
     ] }) }) }),
-    /* @__PURE__ */ jsx("section", { className: "py-20 px-6 bg-[#003366] text-white text-center", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto", children: [
-      /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-4xl font-black mb-8 leading-tight", children: [
-        "モヤモヤ悩むより、プロに",
-        /* @__PURE__ */ jsx("br", { className: "md:hidden" }),
-        "直接聞くのが最短です。"
-      ] }),
-      /* @__PURE__ */ jsxs("p", { className: "text-blue-200 mb-10 text-lg leading-relaxed", children: [
-        "導入できるかどうかも、いくらかかるかも、すべては図面次第です。",
-        /* @__PURE__ */ jsx("br", {}),
-        "「補助金の枠が残っているうちに」まずは専門家に現状を確認してもらいましょう。"
-      ] }),
-      /* @__PURE__ */ jsx(CTALink, { href: "https://home.tokyo-gas.co.jp/power/solar/index.html", eventName: "generate_lead", className: "inline-block bg-orange-500 text-white font-black text-xl py-5 px-10 rounded-full hover:bg-orange-600 transition-colors shadow-2xl transform hover:-translate-y-1 w-full sm:w-auto", children: "無料相談・見積もりに申し込む" }),
-      /* @__PURE__ */ jsx("p", { className: "mt-4 text-xs text-blue-300", children: "※公式サイトへ移動します。相談後、導入を見送ることも可能です。" })
-    ] }) })
+    /* @__PURE__ */ jsx(FinalCTA, {})
   ] });
 };
 function NotFound() {
@@ -450,6 +547,28 @@ const Eligible = () => {
   ] });
 };
 const Cost = () => {
+  const [roofSize, setRoofSize] = useState("medium");
+  const [hasBattery, setHasBattery] = useState(true);
+  const calcEstimate = () => {
+    let baseCost = 0;
+    let kw = 0;
+    if (roofSize === "small") {
+      baseCost = 80;
+      kw = 3;
+    }
+    if (roofSize === "medium") {
+      baseCost = 120;
+      kw = 5;
+    }
+    if (roofSize === "large") {
+      baseCost = 180;
+      kw = 8;
+    }
+    const batteryCost = hasBattery ? 150 : 0;
+    const total = baseCost + batteryCost;
+    return { total, kw };
+  };
+  const estimate = calcEstimate();
   return /* @__PURE__ */ jsxs(Layout, { children: [
     /* @__PURE__ */ jsx(
       SEOHead,
@@ -491,6 +610,61 @@ const Cost = () => {
           ] })
         ] })
       ] }),
+      /* @__PURE__ */ jsxs("div", { className: "bg-white p-8 rounded-2xl shadow-sm mb-16 border border-gray-100", children: [
+        /* @__PURE__ */ jsxs("h2", { className: "text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-orange-500 text-3xl", children: "📝" }),
+          "1秒でわかる！太陽光＋蓄電池 概算シミュレーター"
+        ] }),
+        /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-6", children: "ご自宅の大きさと蓄電池の希望を選ぶだけで、大まかな初期費用相場（目安）がわかります。" }),
+        /* @__PURE__ */ jsxs("div", { className: "space-y-6 bg-gray-50 p-6 rounded-xl border border-gray-200", children: [
+          /* @__PURE__ */ jsxs("div", { children: [
+            /* @__PURE__ */ jsx("p", { className: "font-bold text-gray-800 mb-3", children: "Q1. ご自宅（屋根）の広さは？" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3", children: [
+              /* @__PURE__ */ jsx("button", { onClick: () => setRoofSize("small"), className: `px-4 py-2 rounded-full font-bold text-sm transition-colors border ${roofSize === "small" ? "bg-[#003366] text-white border-[#003366]" : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"}`, children: "小さめ（約3kW）" }),
+              /* @__PURE__ */ jsx("button", { onClick: () => setRoofSize("medium"), className: `px-4 py-2 rounded-full font-bold text-sm transition-colors border ${roofSize === "medium" ? "bg-[#003366] text-white border-[#003366]" : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"}`, children: "標準サイズ（約5kW）" }),
+              /* @__PURE__ */ jsx("button", { onClick: () => setRoofSize("large"), className: `px-4 py-2 rounded-full font-bold text-sm transition-colors border ${roofSize === "large" ? "bg-[#003366] text-white border-[#003366]" : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"}`, children: "大きめ（約8kW）" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { children: [
+            /* @__PURE__ */ jsxs("p", { className: "font-bold text-gray-800 mb-3", children: [
+              "Q2. 蓄電池も一緒に導入したいですか？ ",
+              /* @__PURE__ */ jsx("span", { className: "text-xs font-normal text-gray-500", children: "※強く推奨" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3", children: [
+              /* @__PURE__ */ jsx("button", { onClick: () => setHasBattery(true), className: `px-4 py-2 rounded-full font-bold text-sm transition-colors border ${hasBattery ? "bg-orange-500 text-white border-orange-500" : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"}`, children: "はい（災害時も安心）" }),
+              /* @__PURE__ */ jsx("button", { onClick: () => setHasBattery(false), className: `px-4 py-2 rounded-full font-bold text-sm transition-colors border ${!hasBattery ? "bg-gray-600 text-white border-gray-600" : "bg-white text-gray-600 border-gray-300 hover:bg-gray-100"}`, children: "いいえ（太陽光のみ）" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "mt-8 bg-white border-2 border-[#003366] rounded-xl p-6 text-center shadow-md", children: [
+            /* @__PURE__ */ jsxs("p", { className: "text-sm text-gray-500 font-bold mb-2", children: [
+              "あなたの相場目安（パネル",
+              estimate.kw,
+              "kW ",
+              hasBattery ? "+ 蓄電池" : "のみ",
+              "）"
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "text-4xl md:text-5xl font-black text-[#003366] mb-2 tracking-tight", children: [
+              "約",
+              /* @__PURE__ */ jsx("span", { className: "text-orange-500", children: estimate.total }),
+              "万円 ",
+              /* @__PURE__ */ jsx("span", { className: "text-lg text-gray-500 font-medium", children: "〜" })
+            ] }),
+            /* @__PURE__ */ jsx("p", { className: "text-xs text-red-500 font-bold mb-4", children: "※上記はあくまで全国平均から算出した概算であり、実際の費用を保証するものではありません。" }),
+            /* @__PURE__ */ jsxs("p", { className: "text-sm text-gray-700 bg-blue-50 p-3 rounded-lg text-left leading-relaxed", children: [
+              /* @__PURE__ */ jsx("strong", { className: "text-blue-800", children: "💡 安く見せるネットの情報に注意！" }),
+              /* @__PURE__ */ jsx("br", {}),
+              "太陽光は「足場代」や「分電盤工事」などの付帯費用で数十万円ブレます。そのため、ネット上で確定金額を出すことは物理的に不可能です。",
+              /* @__PURE__ */ jsx("br", {}),
+              "確実な金額を知るには、",
+              /* @__PURE__ */ jsx("strong", { className: "text-red-600 line-through", children: "ネットで調べる" }),
+              " のではなく、 ",
+              /* @__PURE__ */ jsx("strong", { className: "text-blue-600 underline", children: "ご自宅の図面をプロに見せる" }),
+              " のが唯一の正解です。"
+            ] })
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsx("div", { className: "text-center mb-16", children: /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-black text-[#003366] mb-4", children: "なぜ、ネットの「平均価格」を信じてはいけないのか？" }) }),
       /* @__PURE__ */ jsxs("div", { className: "mb-16", children: [
         /* @__PURE__ */ jsx("h2", { className: "text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100", children: "絶対に確認すべき「見積もりチェックリスト」" }),
         /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-6", children: "見積もりが出た際は、以下の項目が含まれているか、または金額が明記されているかを確認してください。トラブルを防ぐ防波堤になります。" }),
@@ -549,41 +723,9 @@ const Cost = () => {
             /* @__PURE__ */ jsx("div", { className: "p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4 leading-relaxed", children: "いわゆる「PPAモデル（第三者所有モデル）」やリース契約のことです。初期費用がかからない分、契約期間中は売電収入が得られなかったり、長期的には一括購入より総支払額が高くなるケースがあります。本サイトでは、補助金を活用した「購入」をご案内しています。" })
           ] })
         ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "bg-[#003366] rounded-2xl p-8 md:p-12 text-center text-white shadow-xl relative overflow-hidden", children: [
-        /* @__PURE__ */ jsx("div", { className: "absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-2xl" }),
-        /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-white rounded-full opacity-10 blur-2xl" }),
-        /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-black mb-6 relative z-10", children: "ネットの口コミより、我が家の「実数」を。" }),
-        /* @__PURE__ */ jsxs("p", { className: "mb-8 text-blue-100 leading-relaxed max-w-2xl mx-auto relative z-10", children: [
-          "「うちは結局いくら？」という疑問は、ネットを何時間検索しても答えは出ません。",
-          /* @__PURE__ */ jsx("br", { className: "hidden md:inline" }),
-          "まずは東京ガスの無料シミュレーションで、ご自宅専用の見積もりを出してみましょう。"
-        ] }),
-        /* @__PURE__ */ jsxs("div", { className: "relative z-10", children: [
-          /* @__PURE__ */ jsx(CTALink, { href: "https://home.tokyo-gas.co.jp/power/solar/index.html", eventName: "click_cta_cost", className: "inline-block bg-orange-500 text-white font-bold text-lg md:text-xl py-4 px-10 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto", children: "我が家の図面で無料見積もりをする" }),
-          /* @__PURE__ */ jsx("p", { className: "mt-4 text-xs text-blue-300", children: "※お見積もりは無料です。無理な営業等はございません。" })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "border-t-2 border-gray-100 pt-10 mt-12", children: [
-        /* @__PURE__ */ jsx("h3", { className: "font-bold text-lg text-gray-700 mb-6 text-center", children: "費用と一緒に確認すべき重要項目" }),
-        /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: [
-          /* @__PURE__ */ jsxs(Link, { to: "/cancellation", className: "bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group", children: [
-            /* @__PURE__ */ jsxs("div", { className: "text-left", children: [
-              /* @__PURE__ */ jsx("div", { className: "text-xs text-red-500 font-bold mb-1", children: "最大の不安を解消" }),
-              /* @__PURE__ */ jsx("div", { className: "font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg", children: "解約・引越しの「清算金」リスク" })
-            ] }),
-            /* @__PURE__ */ jsx("span", { className: "text-xl text-gray-300 group-hover:text-blue-600 transition-colors", children: "→" })
-          ] }),
-          /* @__PURE__ */ jsxs(Link, { to: "/subsidy-tokyo", className: "bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group", children: [
-            /* @__PURE__ */ jsxs("div", { className: "text-left", children: [
-              /* @__PURE__ */ jsx("div", { className: "text-xs text-blue-500 font-bold mb-1", children: "費用を下げるカギ" }),
-              /* @__PURE__ */ jsx("div", { className: "font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg", children: "東京都の補助金と注意点" })
-            ] }),
-            /* @__PURE__ */ jsx("span", { className: "text-xl text-gray-300 group-hover:text-blue-600 transition-colors", children: "→" })
-          ] })
-        ] })
       ] })
-    ] })
+    ] }),
+    /* @__PURE__ */ jsx(FinalCTA, {})
   ] });
 };
 const Cancellation = () => {
@@ -607,8 +749,51 @@ const Cancellation = () => {
         /* @__PURE__ */ jsx("p", { className: "text-gray-700 leading-relaxed mb-4", children: "途中解約の条件や精算金は、どのようなプラン（一括購入、ローン、リース、定額サービス等）で契約したかにより完全に異なります。" }),
         /* @__PURE__ */ jsx("p", { className: "text-gray-700 leading-relaxed font-bold bg-white p-4 rounded border border-red-100", children: "ネット上の「〇〇万円請求された！」という口コミに怯えるのではなく、見積もりの段階で担当者に「我が家のプランの場合、5年後に引っ越すとしたらどうなりますか？」と直接確認し、書面で残すことが最大の防御策です。" })
       ] }),
+      /* @__PURE__ */ jsxs("div", { className: "bg-white border-2 border-red-100 rounded-2xl p-8 mb-16 shadow-md relative overflow-hidden", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute top-0 right-0 bg-red-100 text-red-800 font-bold px-4 py-1 rounded-bl-xl text-sm", children: "モデルケース・シミュレーション" }),
+        /* @__PURE__ */ jsxs("h3", { className: "text-xl font-bold text-[#003366] mb-6 flex items-center gap-2", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-2xl", children: "👤" }),
+          "【実例】契約から8年後に転勤で家を売却することになったAさんの場合"
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "grid md:grid-cols-2 gap-6", children: [
+          /* @__PURE__ */ jsxs("div", { className: "bg-gray-50 p-5 rounded-xl border border-gray-200", children: [
+            /* @__PURE__ */ jsx("h4", { className: "font-bold text-gray-700 border-b pb-2 mb-3", children: "前提条件" }),
+            /* @__PURE__ */ jsxs("ul", { className: "space-y-2 text-sm text-gray-600", children: [
+              /* @__PURE__ */ jsx("li", { children: "・契約プラン: 初期費用0円（15年定額モデル）" }),
+              /* @__PURE__ */ jsx("li", { children: "・月額料金: 15,000円" }),
+              /* @__PURE__ */ jsx("li", { children: "・解約時期: 8年目（残り7年）" }),
+              /* @__PURE__ */ jsx("li", { children: "・次の住人: 設備を引き継がない（撤去希望）" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "bg-red-50 p-5 rounded-xl border border-red-200", children: [
+            /* @__PURE__ */ jsx("h4", { className: "font-bold text-red-800 border-b border-red-200 pb-2 mb-3", children: "Aさんの精算金（概算）" }),
+            /* @__PURE__ */ jsxs("ul", { className: "space-y-3 text-sm text-red-700", children: [
+              /* @__PURE__ */ jsxs("li", { className: "flex justify-between", children: [
+                /* @__PURE__ */ jsx("span", { children: "残期間の精算金:" }),
+                " ",
+                /* @__PURE__ */ jsx("span", { className: "font-bold", children: "約 120万円" })
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex justify-between", children: [
+                /* @__PURE__ */ jsx("span", { children: "パネル撤去・処分費:" }),
+                " ",
+                /* @__PURE__ */ jsx("span", { className: "font-bold", children: "約 30万円" })
+              ] }),
+              /* @__PURE__ */ jsxs("li", { className: "flex justify-between border-t border-red-200 pt-2 text-lg", children: [
+                /* @__PURE__ */ jsx("span", { children: "合計負担額:" }),
+                " ",
+                /* @__PURE__ */ jsx("span", { className: "font-black", children: "約 150万円の一括支払い" })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsx("p", { className: "text-xs text-red-500 mt-2", children: "※金額はあくまでモデルケースであり、実際の契約内容により大きく異なります。" })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "mt-6 bg-yellow-50 p-4 rounded-lg text-sm text-gray-700 border border-yellow-200", children: [
+          /* @__PURE__ */ jsx("strong", { className: "text-red-600", children: "【結論】" }),
+          "このように、「万が一」が発生した際のリスク（残債・撤去費）は非常に高額になります。「我が家の場合はどうなるのか？」を、見積もりの段階で必ず担当者にシミュレーションしてもらうことが、後悔しないための最大の防衛策です。"
+        ] })
+      ] }),
       /* @__PURE__ */ jsxs("div", { className: "mb-16", children: [
-        /* @__PURE__ */ jsx("h2", { className: "text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100", children: "契約前に担当者に聞くべき「質問テンプレ」" }),
+        /* @__PURE__ */ jsx("h2", { className: "text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100", children: "解約金・撤去費トラブルを防ぐ「3つの確認リスト」" }),
         /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-6", children: "以下の項目をスマホにメモ（または印刷）して、無料相談・見積もりの際に担当者にそのまま質問してください。" }),
         /* @__PURE__ */ jsx("div", { className: "bg-white rounded-xl p-8 border border-gray-200 shadow-md", children: /* @__PURE__ */ jsxs("div", { className: "space-y-6", children: [
           /* @__PURE__ */ jsx("div", { className: "border-b text-gray-700 uppercase tracking-widest text-xs font-bold pb-2 border-gray-100", children: "質問リスト（コピペ用）" }),
@@ -699,7 +884,34 @@ const SubsidyTokyo = () => {
           /* @__PURE__ */ jsx("br", { className: "hidden md:inline" }),
           "申請の「罠」"
         ] }),
-        /* @__PURE__ */ jsx("p", { className: "text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed", children: "東京都（クール・ネット東京）の補助金は、全国の自治体の中でも群を抜いて高額です。しかし、申請には厳格なルールがあり、「うっかりもらい損ねる」ケースも存在します。" })
+        /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-6 leading-relaxed", children: "東京都は全国トップクラスの手厚い補助金制度（例：太陽光最大30万円/kW、蓄電池最大15万円/kWhなど）を用意していますが、**最大の敵は「複雑な申請手続き」と「書類の不備による却下」です。**" }),
+        /* @__PURE__ */ jsxs("div", { className: "mb-12 overflow-x-auto", children: [
+          /* @__PURE__ */ jsxs("table", { className: "w-full text-left border-collapse min-w-[600px]", children: [
+            /* @__PURE__ */ jsx("thead", { children: /* @__PURE__ */ jsxs("tr", { className: "bg-gray-100 border-b-2 border-gray-300", children: [
+              /* @__PURE__ */ jsx("th", { className: "p-4 font-bold text-gray-700 w-1/4", children: "比較項目" }),
+              /* @__PURE__ */ jsx("th", { className: "p-4 font-bold text-white bg-blue-600 text-center w-3/8 rounded-tl-lg", children: "自力・激安業者で申請" }),
+              /* @__PURE__ */ jsx("th", { className: "p-4 font-bold text-white bg-orange-500 text-center w-3/8 rounded-tr-lg", children: "東京ガス（おまかせ）" })
+            ] }) }),
+            /* @__PURE__ */ jsxs("tbody", { className: "bg-white", children: [
+              /* @__PURE__ */ jsxs("tr", { className: "border-b border-gray-200 hover:bg-gray-50", children: [
+                /* @__PURE__ */ jsx("td", { className: "p-4 font-bold text-gray-700", children: "書類の準備" }),
+                /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-red-600 font-bold", children: "施主が役所と往復" }),
+                /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-blue-800 font-bold bg-orange-50", children: "東京ガスが代行支援" })
+              ] }),
+              /* @__PURE__ */ jsxs("tr", { className: "border-b border-gray-200 hover:bg-gray-50", children: [
+                /* @__PURE__ */ jsx("td", { className: "p-4 font-bold text-gray-700", children: "不備時のリスク" }),
+                /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-gray-700", children: "やり直し・最悪受給不可" }),
+                /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-blue-800 font-bold bg-orange-50", children: "プロのチェックで確実性UP" })
+              ] }),
+              /* @__PURE__ */ jsxs("tr", { className: "border-b border-gray-200 hover:bg-gray-50", children: [
+                /* @__PURE__ */ jsx("td", { className: "p-4 font-bold text-gray-700", children: "手間の少なさ" }),
+                /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-red-600 text-xl", children: "❌" }),
+                /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-orange-500 text-xl bg-orange-50", children: "◎（圧倒的ラク）" })
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsx("p", { className: "text-xs text-gray-500 mt-2 text-right", children: "※補助金の申請代行範囲は契約内容により異なります。詳細は見積もり時にご確認ください。" })
+        ] })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "bg-gradient-to-br from-yellow-50 to-orange-50 border-l-4 border-orange-500 p-6 md:p-8 rounded-r-lg mb-16 shadow-sm", children: [
         /* @__PURE__ */ jsxs("h2", { className: "text-xl font-bold text-orange-800 mb-4 flex items-center gap-2", children: [
@@ -941,6 +1153,43 @@ const Outage = () => {
           ] })
         ] })
       ] }),
+      /* @__PURE__ */ jsxs("div", { className: "bg-white border-2 border-blue-100 rounded-2xl p-8 mb-16 shadow-md relative overflow-hidden", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute top-0 right-0 bg-blue-100 text-[#003366] font-bold px-4 py-1 rounded-bl-xl text-sm", children: "モデルケース・能力早見表" }),
+        /* @__PURE__ */ jsxs("h3", { className: "text-xl font-bold text-[#003366] mb-6 flex items-center gap-2", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-2xl", children: "⚡️" }),
+          "【実例】夏場の台風で「丸1日停電」した場合の生活シミュレーション"
+        ] }),
+        /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-6 text-sm", children: "標準的な蓄電池（容量5〜7kWh）を導入した場合、「どれくらいの家電が同時に使えるのか？」の現実的なラインです。" }),
+        /* @__PURE__ */ jsx("div", { className: "bg-blue-50 rounded-xl overflow-hidden border border-blue-200", children: /* @__PURE__ */ jsxs("table", { className: "w-full text-sm text-left", children: [
+          /* @__PURE__ */ jsx("thead", { className: "bg-[#003366] text-white", children: /* @__PURE__ */ jsxs("tr", { children: [
+            /* @__PURE__ */ jsx("th", { className: "p-3", children: "状況" }),
+            /* @__PURE__ */ jsx("th", { className: "p-3", children: "使用できる主な家電（同時使用）" }),
+            /* @__PURE__ */ jsx("th", { className: "p-3", children: "消費電力の目安" })
+          ] }) }),
+          /* @__PURE__ */ jsxs("tbody", { className: "divide-y divide-blue-100", children: [
+            /* @__PURE__ */ jsxs("tr", { className: "bg-white", children: [
+              /* @__PURE__ */ jsx("td", { className: "p-3 font-bold text-blue-800", children: "昼間（晴れ）" }),
+              /* @__PURE__ */ jsxs("td", { className: "p-3 text-gray-700", children: [
+                "冷蔵庫 ＋ LDKの照明 ＋ ",
+                /* @__PURE__ */ jsx("strong", { className: "text-orange-600", children: "エアコン1台" }),
+                " ＋ スマホ充電"
+              ] }),
+              /* @__PURE__ */ jsx("td", { className: "p-3 text-gray-500", children: "太陽光の発電でまかなえる（蓄電池は充電へ）" })
+            ] }),
+            /* @__PURE__ */ jsxs("tr", { className: "bg-white", children: [
+              /* @__PURE__ */ jsx("td", { className: "p-3 font-bold text-blue-800", children: "夜間（蓄電池駆動）" }),
+              /* @__PURE__ */ jsx("td", { className: "p-3 text-gray-700", children: "冷蔵庫 ＋ 一部の照明 ＋ 扇風機 ＋ スマホ充電" }),
+              /* @__PURE__ */ jsx("td", { className: "p-3 text-gray-500", children: "約300〜500W（一晩持たせるための節約モード）" })
+            ] }),
+            /* @__PURE__ */ jsxs("tr", { className: "bg-red-50", children: [
+              /* @__PURE__ */ jsx("td", { className: "p-3 font-bold text-red-800", children: "❌ 使えない（NG）" }),
+              /* @__PURE__ */ jsx("td", { className: "p-3 text-gray-700", children: "IHクッキングヒーター、電子レンジ、ドライヤー" }),
+              /* @__PURE__ */ jsx("td", { className: "p-3 text-red-500", children: "瞬間的に1000Wを超えるため、保護機能が働き停止する恐れ" })
+            ] })
+          ] })
+        ] }) }),
+        /* @__PURE__ */ jsx("div", { className: "mt-4 text-xs text-gray-500 text-right", children: "※上記は特定負荷型の標準的な蓄電池を想定。全負荷型の場合はこの限りではありません。" })
+      ] }),
       /* @__PURE__ */ jsxs("div", { className: "mb-16", children: [
         /* @__PURE__ */ jsx("h2", { className: "text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100", children: "オール電化住宅（エコキュート・IH）の注意点" }),
         /* @__PURE__ */ jsxs("div", { className: "bg-gray-50 rounded-lg p-6 border border-gray-200", children: [
@@ -1032,6 +1281,32 @@ const Installation = () => {
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "text-center relative", children: [
         /* @__PURE__ */ jsx("h3", { className: "text-2xl font-black text-gray-800 mb-6", children: "安さよりも「安心」を選ぶ方へ" }),
+        /* @__PURE__ */ jsx("p", { className: "text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed mb-10", children: "「初期費用0円」や「格安」をアピールして突然訪問してくる業者の中には、施工を下請け・孫請けに丸投げし、十分な防水処理を行わずに屋根に穴を開ける悪質なケースが後を絶ちません。" }),
+        /* @__PURE__ */ jsx("div", { className: "mb-12 overflow-x-auto", children: /* @__PURE__ */ jsxs("table", { className: "w-full text-left border-collapse min-w-[600px] shadow-sm", children: [
+          /* @__PURE__ */ jsx("thead", { children: /* @__PURE__ */ jsxs("tr", { className: "bg-gray-100 border-b-2 border-gray-300", children: [
+            /* @__PURE__ */ jsx("th", { className: "p-4 font-bold text-gray-700 w-1/4", children: "比較ポイント" }),
+            /* @__PURE__ */ jsx("th", { className: "p-4 font-bold text-white bg-red-800 text-center w-3/8 rounded-tl-lg", children: "名もなき訪問販売業者" }),
+            /* @__PURE__ */ jsx("th", { className: "p-4 font-bold text-white bg-blue-800 text-center w-3/8 rounded-tr-lg", children: "東京ガス（大手インフラ）" })
+          ] }) }),
+          /* @__PURE__ */ jsxs("tbody", { className: "bg-white", children: [
+            /* @__PURE__ */ jsxs("tr", { className: "border-b border-gray-200 hover:bg-gray-50", children: [
+              /* @__PURE__ */ jsx("td", { className: "p-4 font-bold text-gray-700", children: "施工の品質担保" }),
+              /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-gray-700", children: "下請け丸投げでバラツキあり" }),
+              /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-blue-800 font-bold bg-blue-50", children: "独自の厳格な施工基準あり" })
+            ] }),
+            /* @__PURE__ */ jsxs("tr", { className: "border-b border-gray-200 hover:bg-gray-50", children: [
+              /* @__PURE__ */ jsx("td", { className: "p-4 font-bold text-gray-700", children: "倒産（逃亡）リスク" }),
+              /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-red-600 font-bold", children: "数年で計画倒産するリスク大" }),
+              /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-blue-800 font-bold bg-blue-50", children: "圧倒的な経営基盤で安心" })
+            ] }),
+            /* @__PURE__ */ jsxs("tr", { className: "border-b border-gray-200 hover:bg-gray-50", children: [
+              /* @__PURE__ */ jsx("td", { className: "p-4 font-bold text-gray-700", children: "アフターフォロー" }),
+              /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-gray-700", children: "トラブル時に連絡がつかない" }),
+              /* @__PURE__ */ jsx("td", { className: "p-4 text-center text-blue-800 font-bold bg-blue-50", children: "専用窓口で長期にわたり対応" })
+            ] })
+          ] })
+        ] }) }),
+        /* @__PURE__ */ jsx("div", { className: "bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-10 text-left", children: /* @__PURE__ */ jsx("p", { className: "text-orange-800 font-semibold", children: "太陽光発電は、設置したら終わりではありません。10年、20年と長く使い続ける設備だからこそ、信頼できる業者選びが最も重要です。" }) }),
         /* @__PURE__ */ jsx("a", { href: "https://home.tokyo-gas.co.jp/power/solar/index.html", target: "_blank", rel: "noopener noreferrer", className: "inline-block bg-[#003366] text-white font-bold text-lg md:text-xl py-4 px-10 rounded-full hover:bg-blue-800 transition-colors shadow-xl transform hover:-translate-y-1 w-full sm:w-auto", children: "東京ガスに無料相談をする" })
       ] }),
       /* @__PURE__ */ jsx("div", { className: "border-t-2 border-gray-100 pt-10 mt-16 text-center", children: /* @__PURE__ */ jsx(Link, { to: "/", className: "inline-block bg-gray-100 text-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow font-bold", children: "トップページへ戻る" }) })
@@ -1160,16 +1435,7 @@ const FAQ = () => {
           /* @__PURE__ */ jsx("div", { className: "p-5 pt-0 text-gray-600 border-t border-gray-100 mt-2 pt-4 leading-relaxed", children: "いいえ。現在のご家庭の「電気の契約先」が東京電力など他の会社であっても、設備の導入・契約は可能です。（※ただし、機器の契約とは別に、売電等の手続きが発生します）" })
         ] })
       ] }),
-      /* @__PURE__ */ jsxs("div", { className: "text-center relative bg-blue-50 p-8 md:p-12 rounded-2xl border border-blue-100", children: [
-        /* @__PURE__ */ jsx("h3", { className: "text-2xl font-black text-[#003366] mb-4", children: "迷っているなら、プロに計算させてみませんか？" }),
-        /* @__PURE__ */ jsxs("p", { className: "text-gray-700 mb-8 max-w-xl mx-auto", children: [
-          "ネットの情報だけでは、1円単位の正確な答えは絶対に出ません。",
-          /* @__PURE__ */ jsx("br", {}),
-          "まずは、ご自宅の図面をもとに「実際のところ、いくらお得になるのか？」を東京ガスにシミュレーションしてもらいましょう。（完全無料です）"
-        ] }),
-        /* @__PURE__ */ jsx(CTALink, { href: "https://home.tokyo-gas.co.jp/power/solar/index.html", eventName: "click_cta_faq", className: "inline-block bg-orange-500 text-white font-bold text-lg py-4 px-10 rounded-full hover:bg-orange-600 shadow-xl transform hover:-translate-y-1", children: "無料でシミュレーション・見積もりをする" })
-      ] }),
-      /* @__PURE__ */ jsx("div", { className: "border-t-2 border-gray-100 pt-10 mt-16 text-center", children: /* @__PURE__ */ jsx(Link, { to: "/", className: "inline-block bg-white text-gray-700 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 font-bold transition-colors", children: "トップページへ戻る" }) })
+      /* @__PURE__ */ jsx(FinalCTA, {})
     ] })
   ] });
 };

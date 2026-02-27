@@ -4,6 +4,7 @@ import { Layout } from '../components/Layout.jsx';
 import { Link } from 'react-router-dom';
 import { StructuredData } from '../components/StructuredData.jsx';
 import { CTALink } from '../components/CTALink.jsx';
+import { FinalCTA } from '../components/FinalCTA.jsx';
 
 const Home = () => {
     const articleData = {
@@ -73,6 +74,59 @@ const Home = () => {
                             我が家は対象？ 1分チェックへ
                         </Link>
                         <p className="text-xs text-blue-200 mt-3 font-medium">※関東1都6県・戸建て（1981年以降）の条件等を確認します</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Persona & Risk Declaration Section (Principles 4 & 7) */}
+            <section className="py-12 bg-gray-50 border-b border-gray-200">
+                <div className="max-w-4xl mx-auto px-6">
+                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 relative">
+                        {/* Red Banner Top */}
+                        <div className="bg-red-600 text-white font-bold text-center py-3 text-lg">
+                            【重要】このサイトの対象者について
+                        </div>
+
+                        <div className="p-8 md:p-10">
+                            <p className="font-bold text-gray-800 text-lg mb-6 text-center">
+                                当サイトは<span className="text-red-600 border-b-2 border-red-600">「すべての人に太陽光をすすめるサイト」ではありません。</span><br className="hidden md:block" />
+                                まず、以下の条件に当てはまるかご確認ください。
+                            </p>
+
+                            <div className="grid md:grid-cols-2 gap-8 mt-8">
+                                {/* Not For You Area */}
+                                <div className="bg-red-50 p-6 rounded-xl border border-red-100">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <h3 className="font-black text-red-800 text-lg">このような方には<br />おすすめしません</h3>
+                                    </div>
+                                    <ul className="space-y-3 text-sm text-gray-700 font-medium">
+                                        <li className="flex gap-2"><span className="text-red-500">×</span> 対象エリア外（関東1都6県以外）にお住まいの方</li>
+                                        <li className="flex gap-2"><span className="text-red-500">×</span> 1981年（昭和56年）以前に建てられた旧耐震基準の家屋</li>
+                                        <li className="flex gap-2"><span className="text-red-500">×</span> 賃貸住宅や集合住宅（※戸建て専用のサービスです）</li>
+                                        <li className="flex gap-2"><span className="text-red-500">×</span> 数年以内に確実に取り壊しや引越しの予定がある方</li>
+                                    </ul>
+                                </div>
+
+                                {/* Target Persona Area */}
+                                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <h3 className="font-black text-blue-800 text-lg">このような方に<br />「東京ガス」を推奨します</h3>
+                                    </div>
+                                    <ul className="space-y-3 text-sm text-gray-700 font-medium">
+                                        <li className="flex gap-2"><span className="text-blue-500">○</span> <span className="font-bold underline">初期費用0円</span>で太陽光と蓄電池を導入したい方</li>
+                                        <li className="flex gap-2"><span className="text-blue-500">○</span> 最近の電気代高騰に頭を悩ませている方</li>
+                                        <li className="flex gap-2"><span className="text-blue-500">○</span> もしもの災害時（停電）に備えたインフラが欲しい方</li>
+                                        <li className="flex gap-2"><span className="text-blue-500">○</span> 訪問販売などの怪しい業者ではなく、安心できる大手に頼みたい方</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="mt-8 text-center text-sm text-gray-500 bg-gray-50 p-4 rounded-lg">
+                                ※上記「おすすめしない条件」に1つでも該当する場合、審査や設置基準を通らない可能性が高いため、以降の記事を読んでいただいてもお時間を無駄にしてしまう可能性がございます。
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -166,22 +220,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Bottom CTA */}
-            <section className="py-20 px-6 bg-[#003366] text-white text-center">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-black mb-8 leading-tight">
-                        モヤモヤ悩むより、プロに<br className="md:hidden" />直接聞くのが最短です。
-                    </h2>
-                    <p className="text-blue-200 mb-10 text-lg leading-relaxed">
-                        導入できるかどうかも、いくらかかるかも、すべては図面次第です。<br />
-                        「補助金の枠が残っているうちに」まずは専門家に現状を確認してもらいましょう。
-                    </p>
-                    <CTALink href="https://home.tokyo-gas.co.jp/power/solar/index.html" eventName="generate_lead" className="inline-block bg-orange-500 text-white font-black text-xl py-5 px-10 rounded-full hover:bg-orange-600 transition-colors shadow-2xl transform hover:-translate-y-1 w-full sm:w-auto">
-                        無料相談・見積もりに申し込む
-                    </CTALink>
-                    <p className="mt-4 text-xs text-blue-300">※公式サイトへ移動します。相談後、導入を見送ることも可能です。</p>
-                </div>
-            </section>
+            <FinalCTA />
 
         </Layout>
     );

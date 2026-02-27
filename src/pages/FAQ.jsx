@@ -4,6 +4,7 @@ import { Layout } from '../components/Layout.jsx';
 import { Link } from 'react-router-dom';
 import { StructuredData } from '../components/StructuredData.jsx';
 import { CTALink } from '../components/CTALink.jsx';
+import { FinalCTA } from '../components/FinalCTA.jsx';
 
 export const FAQ = () => {
     const faqData = {
@@ -128,24 +129,7 @@ export const FAQ = () => {
                     </details>
                 </div>
 
-                {/* Call to action */}
-                <div className="text-center relative bg-blue-50 p-8 md:p-12 rounded-2xl border border-blue-100">
-                    <h3 className="text-2xl font-black text-[#003366] mb-4">迷っているなら、プロに計算させてみませんか？</h3>
-                    <p className="text-gray-700 mb-8 max-w-xl mx-auto">
-                        ネットの情報だけでは、1円単位の正確な答えは絶対に出ません。<br />
-                        まずは、ご自宅の図面をもとに「実際のところ、いくらお得になるのか？」を東京ガスにシミュレーションしてもらいましょう。（完全無料です）
-                    </p>
-                    <CTALink href="https://home.tokyo-gas.co.jp/power/solar/index.html" eventName="click_cta_faq" className="inline-block bg-orange-500 text-white font-bold text-lg py-4 px-10 rounded-full hover:bg-orange-600 shadow-xl transform hover:-translate-y-1">
-                        無料でシミュレーション・見積もりをする
-                    </CTALink>
-                </div>
-
-                <div className="border-t-2 border-gray-100 pt-10 mt-16 text-center">
-                    <Link to="/" className="inline-block bg-white text-gray-700 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 font-bold transition-colors">
-                        トップページへ戻る
-                    </Link>
-                </div>
-
+                <FinalCTA />
             </div>
         </Layout>
     );

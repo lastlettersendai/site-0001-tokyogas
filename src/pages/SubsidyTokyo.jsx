@@ -18,9 +18,41 @@ export const SubsidyTokyo = () => {
                     <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-6">
                         東京都の強力な補助金と<br className="hidden md:inline" />申請の「罠」
                     </h1>
-                    <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                        東京都（クール・ネット東京）の補助金は、全国の自治体の中でも群を抜いて高額です。しかし、申請には厳格なルールがあり、「うっかりもらい損ねる」ケースも存在します。
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                        東京都は全国トップクラスの手厚い補助金制度（例：太陽光最大30万円/kW、蓄電池最大15万円/kWhなど）を用意していますが、**最大の敵は「複雑な申請手続き」と「書類の不備による却下」です。**
                     </p>
+
+                    {/* Comparison Table (Principle 2 & 6) */}
+                    <div className="mb-12 overflow-x-auto">
+                        <table className="w-full text-left border-collapse min-w-[600px]">
+                            <thead>
+                                <tr className="bg-gray-100 border-b-2 border-gray-300">
+                                    <th className="p-4 font-bold text-gray-700 w-1/4">比較項目</th>
+                                    <th className="p-4 font-bold text-white bg-blue-600 text-center w-3/8 rounded-tl-lg">自力・激安業者で申請</th>
+                                    <th className="p-4 font-bold text-white bg-orange-500 text-center w-3/8 rounded-tr-lg">東京ガス（おまかせ）</th>
+                                </tr>
+                            </thead>
+                            <tbody className="bg-white">
+                                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                                    <td className="p-4 font-bold text-gray-700">書類の準備</td>
+                                    <td className="p-4 text-center text-red-600 font-bold">施主が役所と往復</td>
+                                    <td className="p-4 text-center text-blue-800 font-bold bg-orange-50">東京ガスが代行支援</td>
+                                </tr>
+                                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                                    <td className="p-4 font-bold text-gray-700">不備時のリスク</td>
+                                    <td className="p-4 text-center text-gray-700">やり直し・最悪受給不可</td>
+                                    <td className="p-4 text-center text-blue-800 font-bold bg-orange-50">プロのチェックで確実性UP</td>
+                                </tr>
+                                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                                    <td className="p-4 font-bold text-gray-700">手間の少なさ</td>
+                                    <td className="p-4 text-center text-red-600 text-xl">❌</td>
+                                    <td className="p-4 text-center text-orange-500 text-xl bg-orange-50">◎（圧倒的ラク）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p className="text-xs text-gray-500 mt-2 text-right">※補助金の申請代行範囲は契約内容により異なります。詳細は見積もり時にご確認ください。</p>
+                    </div>
+
                 </div>
 
                 <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-l-4 border-orange-500 p-6 md:p-8 rounded-r-lg mb-16 shadow-sm">

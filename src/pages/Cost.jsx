@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SEOHead } from '../components/SEOHead.jsx';
 import { Layout } from '../components/Layout.jsx';
 import { Link } from 'react-router-dom';
 import { CTALink } from '../components/CTALink.jsx';
+import { FinalCTA } from '../components/FinalCTA.jsx';
 
 export const Cost = () => {
+    // Simulator State
+    const [roofSize, setRoofSize] = useState('medium');
+    const [hasBattery, setHasBattery] = useState(true);
+
+    const calcEstimate = () => {
+        let baseCost = 0;
+        let kw = 0;
+        if (roofSize === 'small') { baseCost = 80; kw = 3; }
+        if (roofSize === 'medium') { baseCost = 120; kw = 5; }
+        if (roofSize === 'large') { baseCost = 180; kw = 8; }
+
+        const batteryCost = hasBattery ? 150 : 0;
+        const total = baseCost + batteryCost;
+
+        return { total, kw };
+    };
+
+    const estimate = calcEstimate();
     return (
         <Layout>
             <SEOHead
@@ -47,6 +66,54 @@ export const Cost = () => {
                             <p className="text-sm text-gray-600 leading-relaxed">ご自宅の分電盤（ブレーカー）の古さや、配線を隠すための家の構造によって、追加の電気工事費が発生するケースがあります。</p>
                         </div>
                     </div>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-sm mb-16 border border-gray-100">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <span className="text-orange-500 text-3xl">📝</span>
+                        1秒でわかる！太陽光＋蓄電池 概算シミュレーター
+                    </h2>
+
+                    <p className="text-gray-600 mb-6">ご自宅の大きさと蓄電池の希望を選ぶだけで、大まかな初期費用相場（目安）がわかります。</p>
+
+                    <div className="space-y-6 bg-gray-50 p-6 rounded-xl border border-gray-200">
+                        {/* Question 1 */}
+                        <div>
+                            <p className="font-bold text-gray-800 mb-3">Q1. ご自宅（屋根）の広さは？</p>
+                            <div className="flex flex-wrap gap-3">
+                                <button onClick={() => setRoofSize('small')} className={`px-4 py-2 rounded-full font-bold text-sm transition-colors border ${roofSize === 'small' ? 'bg-[#003366] text-white border-[#003366]' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'}`}>小さめ（約3kW）</button>
+                                <button onClick={() => setRoofSize('medium')} className={`px-4 py-2 rounded-full font-bold text-sm transition-colors border ${roofSize === 'medium' ? 'bg-[#003366] text-white border-[#003366]' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'}`}>標準サイズ（約5kW）</button>
+                                <button onClick={() => setRoofSize('large')} className={`px-4 py-2 rounded-full font-bold text-sm transition-colors border ${roofSize === 'large' ? 'bg-[#003366] text-white border-[#003366]' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'}`}>大きめ（約8kW）</button>
+                            </div>
+                        </div>
+
+                        {/* Question 2 */}
+                        <div>
+                            <p className="font-bold text-gray-800 mb-3">Q2. 蓄電池も一緒に導入したいですか？ <span className="text-xs font-normal text-gray-500">※強く推奨</span></p>
+                            <div className="flex flex-wrap gap-3">
+                                <button onClick={() => setHasBattery(true)} className={`px-4 py-2 rounded-full font-bold text-sm transition-colors border ${hasBattery ? 'bg-orange-500 text-white border-orange-500' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'}`}>はい（災害時も安心）</button>
+                                <button onClick={() => setHasBattery(false)} className={`px-4 py-2 rounded-full font-bold text-sm transition-colors border ${!hasBattery ? 'bg-gray-600 text-white border-gray-600' : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'}`}>いいえ（太陽光のみ）</button>
+                            </div>
+                        </div>
+
+                        {/* Result Block (Principle 1) */}
+                        <div className="mt-8 bg-white border-2 border-[#003366] rounded-xl p-6 text-center shadow-md">
+                            <p className="text-sm text-gray-500 font-bold mb-2">あなたの相場目安（パネル{estimate.kw}kW {hasBattery ? '+ 蓄電池' : 'のみ'}）</p>
+                            <div className="text-4xl md:text-5xl font-black text-[#003366] mb-2 tracking-tight">
+                                約<span className="text-orange-500">{estimate.total}</span>万円 <span className="text-lg text-gray-500 font-medium">〜</span>
+                            </div>
+                            <p className="text-xs text-red-500 font-bold mb-4">※上記はあくまで全国平均から算出した概算であり、実際の費用を保証するものではありません。</p>
+                            <p className="text-sm text-gray-700 bg-blue-50 p-3 rounded-lg text-left leading-relaxed">
+                                <strong className="text-blue-800">💡 安く見せるネットの情報に注意！</strong><br />
+                                太陽光は「足場代」や「分電盤工事」などの付帯費用で数十万円ブレます。そのため、ネット上で確定金額を出すことは物理的に不可能です。<br />
+                                確実な金額を知るには、<strong className="text-red-600 line-through">ネットで調べる</strong> のではなく、 <strong className="text-blue-600 underline">ご自宅の図面をプロに見せる</strong> のが唯一の正解です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-black text-[#003366] mb-4">なぜ、ネットの「平均価格」を信じてはいけないのか？</h2>
                 </div>
 
                 <div className="mb-16">
@@ -113,46 +180,10 @@ export const Cost = () => {
                         </details>
                     </div>
                 </section>
-
-                {/* Call to action */}
-                <div className="bg-[#003366] rounded-2xl p-8 md:p-12 text-center text-white shadow-xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-2xl"></div>
-                    <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-white rounded-full opacity-10 blur-2xl"></div>
-
-                    <h2 className="text-2xl md:text-3xl font-black mb-6 relative z-10">ネットの口コミより、我が家の「実数」を。</h2>
-                    <p className="mb-8 text-blue-100 leading-relaxed max-w-2xl mx-auto relative z-10">
-                        「うちは結局いくら？」という疑問は、ネットを何時間検索しても答えは出ません。<br className="hidden md:inline" />まずは東京ガスの無料シミュレーションで、ご自宅専用の見積もりを出してみましょう。
-                    </p>
-                    <div className="relative z-10">
-                        <CTALink href="https://home.tokyo-gas.co.jp/power/solar/index.html" eventName="click_cta_cost" className="inline-block bg-orange-500 text-white font-bold text-lg md:text-xl py-4 px-10 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
-                            我が家の図面で無料見積もりをする
-                        </CTALink>
-                        <p className="mt-4 text-xs text-blue-300">※お見積もりは無料です。無理な営業等はございません。</p>
-                    </div>
-                </div>
-
-                {/* Internal Links Navigation */}
-                <div className="border-t-2 border-gray-100 pt-10 mt-12">
-                    <h3 className="font-bold text-lg text-gray-700 mb-6 text-center">費用と一緒に確認すべき重要項目</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Link to="/cancellation" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
-                            <div className="text-left">
-                                <div className="text-xs text-red-500 font-bold mb-1">最大の不安を解消</div>
-                                <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">解約・引越しの「清算金」リスク</div>
-                            </div>
-                            <span className="text-xl text-gray-300 group-hover:text-blue-600 transition-colors">&rarr;</span>
-                        </Link>
-                        <Link to="/subsidy-tokyo" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
-                            <div className="text-left">
-                                <div className="text-xs text-blue-500 font-bold mb-1">費用を下げるカギ</div>
-                                <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">東京都の補助金と注意点</div>
-                            </div>
-                            <span className="text-xl text-gray-300 group-hover:text-blue-600 transition-colors">&rarr;</span>
-                        </Link>
-                    </div>
-                </div>
-
             </div>
+
+            <FinalCTA />
+
         </Layout>
     );
 };

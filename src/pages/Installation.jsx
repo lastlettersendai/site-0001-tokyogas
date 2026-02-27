@@ -74,6 +74,46 @@ export const Installation = () => {
                 {/* Call to action */}
                 <div className="text-center relative">
                     <h3 className="text-2xl font-black text-gray-800 mb-6">安さよりも「安心」を選ぶ方へ</h3>
+                    <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+                        「初期費用0円」や「格安」をアピールして突然訪問してくる業者の中には、施工を下請け・孫請けに丸投げし、十分な防水処理を行わずに屋根に穴を開ける悪質なケースが後を絶ちません。
+                    </p>
+
+                    {/* Comparison Table (Principle 2 & 6) */}
+                    <div className="mb-12 overflow-x-auto">
+                        <table className="w-full text-left border-collapse min-w-[600px] shadow-sm">
+                            <thead>
+                                <tr className="bg-gray-100 border-b-2 border-gray-300">
+                                    <th className="p-4 font-bold text-gray-700 w-1/4">比較ポイント</th>
+                                    <th className="p-4 font-bold text-white bg-red-800 text-center w-3/8 rounded-tl-lg">名もなき訪問販売業者</th>
+                                    <th className="p-4 font-bold text-white bg-blue-800 text-center w-3/8 rounded-tr-lg">東京ガス（大手インフラ）</th>
+                                </tr>
+                            </thead>
+                            <tbody className="bg-white">
+                                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                                    <td className="p-4 font-bold text-gray-700">施工の品質担保</td>
+                                    <td className="p-4 text-center text-gray-700">下請け丸投げでバラツキあり</td>
+                                    <td className="p-4 text-center text-blue-800 font-bold bg-blue-50">独自の厳格な施工基準あり</td>
+                                </tr>
+                                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                                    <td className="p-4 font-bold text-gray-700">倒産（逃亡）リスク</td>
+                                    <td className="p-4 text-center text-red-600 font-bold">数年で計画倒産するリスク大</td>
+                                    <td className="p-4 text-center text-blue-800 font-bold bg-blue-50">圧倒的な経営基盤で安心</td>
+                                </tr>
+                                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                                    <td className="p-4 font-bold text-gray-700">アフターフォロー</td>
+                                    <td className="p-4 text-center text-gray-700">トラブル時に連絡がつかない</td>
+                                    <td className="p-4 text-center text-blue-800 font-bold bg-blue-50">専用窓口で長期にわたり対応</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-10 text-left">
+                        <p className="text-orange-800 font-semibold">
+                            太陽光発電は、設置したら終わりではありません。10年、20年と長く使い続ける設備だからこそ、信頼できる業者選びが最も重要です。
+                        </p>
+                    </div>
+
                     <a href="https://home.tokyo-gas.co.jp/power/solar/index.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#003366] text-white font-bold text-lg md:text-xl py-4 px-10 rounded-full hover:bg-blue-800 transition-colors shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
                         東京ガスに無料相談をする
                     </a>

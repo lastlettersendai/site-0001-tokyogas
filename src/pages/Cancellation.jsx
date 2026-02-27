@@ -33,9 +33,46 @@ export const Cancellation = () => {
                     </p>
                 </div>
 
+                {/* Case Study Block (Principle 3) */}
+                <div className="bg-white border-2 border-red-100 rounded-2xl p-8 mb-16 shadow-md relative overflow-hidden">
+                    <div className="absolute top-0 right-0 bg-red-100 text-red-800 font-bold px-4 py-1 rounded-bl-xl text-sm">
+                        モデルケース・シミュレーション
+                    </div>
+                    <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center gap-2">
+                        <span className="text-2xl">👤</span>
+                        【実例】契約から8年後に転勤で家を売却することになったAさんの場合
+                    </h3>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 className="font-bold text-gray-700 border-b pb-2 mb-3">前提条件</h4>
+                            <ul className="space-y-2 text-sm text-gray-600">
+                                <li>・契約プラン: 初期費用0円（15年定額モデル）</li>
+                                <li>・月額料金: 15,000円</li>
+                                <li>・解約時期: 8年目（残り7年）</li>
+                                <li>・次の住人: 設備を引き継がない（撤去希望）</li>
+                            </ul>
+                        </div>
+                        <div className="bg-red-50 p-5 rounded-xl border border-red-200">
+                            <h4 className="font-bold text-red-800 border-b border-red-200 pb-2 mb-3">Aさんの精算金（概算）</h4>
+                            <ul className="space-y-3 text-sm text-red-700">
+                                <li className="flex justify-between"><span>残期間の精算金:</span> <span className="font-bold">約 120万円</span></li>
+                                <li className="flex justify-between"><span>パネル撤去・処分費:</span> <span className="font-bold">約 30万円</span></li>
+                                <li className="flex justify-between border-t border-red-200 pt-2 text-lg">
+                                    <span>合計負担額:</span> <span className="font-black">約 150万円の一括支払い</span>
+                                </li>
+                            </ul>
+                            <p className="text-xs text-red-500 mt-2">※金額はあくまでモデルケースであり、実際の契約内容により大きく異なります。</p>
+                        </div>
+                    </div>
+                    <div className="mt-6 bg-yellow-50 p-4 rounded-lg text-sm text-gray-700 border border-yellow-200">
+                        <strong className="text-red-600">【結論】</strong>このように、「万が一」が発生した際のリスク（残債・撤去費）は非常に高額になります。「我が家の場合はどうなるのか？」を、見積もりの段階で必ず担当者にシミュレーションしてもらうことが、後悔しないための最大の防衛策です。
+                    </div>
+                </div>
+
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100">
-                        契約前に担当者に聞くべき「質問テンプレ」
+                        解約金・撤去費トラブルを防ぐ「3つの確認リスト」
                     </h2>
                     <p className="text-gray-600 mb-6">以下の項目をスマホにメモ（または印刷）して、無料相談・見積もりの際に担当者にそのまま質問してください。</p>
 
