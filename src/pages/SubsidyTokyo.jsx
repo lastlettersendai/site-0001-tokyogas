@@ -79,7 +79,7 @@ export const SubsidyTokyo = () => {
                 <div className="bg-gradient-to-br from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-20 shadow-sm relative overflow-hidden">
                     <div className="absolute top-0 right-0 text-red-100 opacity-30 text-9xl font-black -mt-4 -mr-4">!</div>
                     <h2 className="text-2xl font-black text-red-800 mb-6 flex items-center gap-3 relative z-10">
-                        <span className="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shadow-md">警</span>
+                        <Icon name="shieldAlert" className="size-8 text-red-600" />
                         補助金に関する「失敗できない」大前提
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
@@ -111,11 +111,11 @@ export const SubsidyTokyo = () => {
                                 <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-gray-500">
                                     <span className="text-red-500 font-bold mr-2">苦労1</span>各省庁・都庁の複雑な要綱を解読
                                 </div>
-                                <div className="text-center text-gray-300">⬇</div>
+                                <div className="text-center text-gray-300"><Icon name="arrowDown" className="size-6 inline-block" /></div>
                                 <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-gray-500">
                                     <span className="text-red-500 font-bold mr-2">苦労2</span>専門的な図面（結線図等）を自作
                                 </div>
-                                <div className="text-center text-gray-300">⬇</div>
+                                <div className="text-center text-gray-300"><Icon name="arrowDown" className="size-6 inline-block" /></div>
                                 <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 border-l-4 border-l-red-500">
                                     <p className="text-red-600 font-bold mb-1">少しでも不備があると…</p>
                                     <p className="text-sm text-gray-600">差し戻しで期限切れになり補助金ゼロの悲劇に。</p>
@@ -196,14 +196,14 @@ export const SubsidyTokyo = () => {
                                 <div className="text-xs text-orange-500 font-bold mb-1 tracking-wider uppercase">Timing</div>
                                 <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">補助金はいつ振り込まれる？</div>
                             </div>
-                            <span className="text-2xl text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2">&rarr;</span>
+                            <Icon name="arrowRight" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2" />
                         </Link>
                         <Link to="/" className="bg-[#003366] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex items-center justify-between group">
                             <div className="text-left w-full">
                                 <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
                                 <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
                             </div>
-                            <span className="text-xl text-blue-300 transition-transform group-hover:-translate-x-1">&rarr;</span>
+                            <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:-translate-x-1" />
                         </Link>
                     </div>
                 </div>

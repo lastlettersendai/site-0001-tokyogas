@@ -68,15 +68,15 @@ export const Outage = () => {
                             </div>
                             <ul className="space-y-4 text-sm text-gray-700 flex-1">
                                 <li className="flex items-start gap-3">
-                                    <span className="text-red-500 shrink-0 mt-0.5 font-black text-lg">✗</span>
+                                    <Icon name="x" className="text-red-500 shrink-0 mt-0.5 size-5" />
                                     家中の家電が使えるわけではない
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-red-500 shrink-0 mt-0.5 font-black text-lg">✗</span>
+                                    <Icon name="x" className="text-red-500 shrink-0 mt-0.5 size-5" />
                                     200V機器（大型エアコンやIH）は動かないことが多い
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-green-500 shrink-0 mt-0.5 font-black text-lg">✓</span>
+                                    <Icon name="check" className="text-green-500 shrink-0 mt-0.5 size-5" />
                                     <span className="font-bold">システム費用は比較的安く抑えられる</span>
                                 </li>
                             </ul>
@@ -99,7 +99,7 @@ export const Outage = () => {
                             </div>
                             <ul className="space-y-4 text-sm text-gray-700 flex-1">
                                 <li className="flex items-start gap-3">
-                                    <span className="text-green-500 shrink-0 mt-0.5 font-black text-lg">✓</span>
+                                    <Icon name="check" className="text-green-500 shrink-0 mt-0.5 size-5" />
                                     200V対応機なら大型エアコンやエコキュートも一応動かせる
                                 </li>
                                 <li className="flex items-start gap-3">
@@ -107,7 +107,7 @@ export const Outage = () => {
                                     <span className="font-bold text-orange-700">調子に乗って使いすぎるとすぐに電気が枯渇する（要注意）</span>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-red-500 shrink-0 mt-0.5 font-black text-lg">✗</span>
+                                    <Icon name="x" className="text-red-500 shrink-0 mt-0.5 size-5" />
                                     システム費用が高額になる
                                 </li>
                             </ul>
@@ -211,14 +211,14 @@ export const Outage = () => {
                             <div className="text-xs text-orange-500 font-bold mb-1 tracking-wider uppercase">Installation</div>
                             <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">工事に関する不安</div>
                         </div>
-                        <span className="text-2xl text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2">&rarr;</span>
+                        <Icon name="arrowRight" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2" />
                     </Link>
                     <Link to="/" className="bg-[#003366] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex items-center justify-between group">
                         <div className="text-left w-full">
                             <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
                             <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
                         </div>
-                        <span className="text-xl text-blue-300 transition-transform group-hover:-translate-x-1">&rarr;</span>
+                        <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:-translate-x-1" />
                     </Link>
                 </div>
             </div>

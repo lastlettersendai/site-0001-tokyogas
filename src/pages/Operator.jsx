@@ -146,10 +146,10 @@ export const Operator = () => {
 
                 <div className="mt-20 pt-10 border-t border-gray-200 flex flex-col sm:flex-row gap-6 justify-between items-center text-center sm:text-left">
                     <Link to="/" className="text-gray-500 font-bold hover:text-[#003366] transition-colors flex items-center gap-2 group">
-                        <span className="text-xl group-hover:-translate-x-1 transition-transform">&larr;</span> トップページへ戻る
+                        <Icon name="arrowLeft" className="size-5 group-hover:-translate-x-1 transition-transform" /> トップページへ戻る
                     </Link>
                     <Link to="/eligible" className="text-[#003366] font-bold hover:text-blue-800 transition-colors flex items-center gap-2 bg-blue-50 px-6 py-3 rounded-full group">
-                        事前準備・対象条件をチェックする <span className="text-xl group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        事前準備・対象条件をチェックする <Icon name="arrowRight" className="size-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
             </div>

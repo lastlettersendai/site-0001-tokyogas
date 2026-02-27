@@ -47,11 +47,11 @@ export const SubsidyPayment = () => {
                         </p>
                         <ul className="space-y-3 text-sm text-gray-600">
                             <li className="flex items-start gap-2">
-                                <span className="text-red-500 mt-0.5">✘</span>
+                                <Icon name="x" className="text-red-500 size-4 mt-0.5" />
                                 契約時に見積もり金額から値引きされるわけではない
                             </li>
                             <li className="flex items-start gap-2">
-                                <span className="text-red-500 mt-0.5">✘</span>
+                                <Icon name="x" className="text-red-500 size-4 mt-0.5" />
                                 工事の支払いタイミングには補助金の手続きは間に合わせられない
                             </li>
                         </ul>
@@ -101,7 +101,7 @@ export const SubsidyPayment = () => {
                             {/* Step 3 (CRITICAL) */}
                             <div className="relative flex items-start group">
                                 <div className="absolute left-[39px] md:left-[50px] top-8 bottom-[-48px] w-1 bg-gradient-to-b from-red-500 to-orange-500 -z-10"></div>
-                                <div className="w-16 h-16 bg-red-500 border-4 border-red-100 text-white rounded-full flex items-center justify-center font-black text-2xl shrink-0 z-10 mr-6 shadow-lg animate-pulse">💸</div>
+                                <div className="w-16 h-16 bg-red-500 border-4 border-red-100 text-white rounded-full flex items-center justify-center font-black text-2xl shrink-0 z-10 mr-6 shadow-lg animate-pulse"><Icon name="banknote" className="size-8 text-white" /></div>
                                 <div className="bg-red-50 p-6 rounded-2xl shadow-md border-2 border-red-200 flex-1">
                                     <h3 className="font-black text-xl text-red-700 mb-3 border-b border-red-200 pb-2">工事開始 ＆ お支払い（出費！）</h3>
                                     <p className="text-red-900 text-sm font-bold mb-3">ここで販売会社へのお支払いが発生します。</p>
@@ -157,7 +157,7 @@ export const SubsidyPayment = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-6">
                                 <div className="bg-white p-4 rounded-xl text-center shadow-sm border border-gray-100">
-                                    <div className="text-3xl mb-2">🏦</div>
+                                    <Icon name="landmark" className="size-8 text-blue-700 mb-2 block mx-auto" />
                                     <div className="font-bold text-gray-700 text-sm mb-1">契約時</div>
                                     <div className="text-xs text-gray-500">全額（補助金引く前）でローンを組み、月々支払い開始</div>
                                 </div>
@@ -188,14 +188,14 @@ export const SubsidyPayment = () => {
                             <div className="text-xs text-red-500 font-bold mb-1 tracking-wider uppercase">Risk</div>
                             <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">引越し・解体リスク</div>
                         </div>
-                        <span className="text-2xl text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2">&rarr;</span>
+                        <Icon name="arrowRight" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2" />
                     </Link>
                     <Link to="/" className="bg-[#003366] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex items-center justify-between group">
                         <div className="text-left w-full">
                             <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
                             <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
                         </div>
-                        <span className="text-xl text-blue-300 transition-transform group-hover:-translate-x-1">&rarr;</span>
+                        <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:-translate-x-1" />
                     </Link>
                 </div>
             </div>

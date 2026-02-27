@@ -31,7 +31,7 @@ export const Cancellation = () => {
                             loading="lazy"
                         />
                         <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-gray-100 font-bold text-gray-800 flex items-center gap-2">
-                            <span className="text-xl">🚚</span> 予測不能なライフイベントへの備え
+                            <Icon name="truck" className="size-6 text-gray-600" /> 予測不能なライフイベントへの備え
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export const Cancellation = () => {
                 <div className="bg-gradient-to-br from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-2xl mb-16 shadow-lg relative overflow-hidden group">
                     <div className="absolute -right-4 -top-4 text-red-100 opacity-40 text-9xl font-black transition-transform group-hover:scale-110">!</div>
                     <h2 className="text-2xl font-black text-red-800 mb-4 relative z-10 flex items-center gap-2">
-                        <span className="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shadow-md shrink-0">警</span>
+                        <Icon name="shieldAlert" className="size-8 text-red-600 shrink-0" />
                         結論：金額を決めるのは「契約形態」です
                     </h2>
                     <div className="relative z-10 space-y-4">
@@ -49,7 +49,7 @@ export const Cancellation = () => {
                         </p>
                         <div className="bg-red-600 text-white p-5 rounded-xl shadow-md">
                             <p className="flex items-start">
-                                <Icon name="idea" className="text-blue-500 mr-2 size-6 shrink-0 mt-0.5 align-middle" />
+                                <Icon name="idea" className="text-blue-500 mr-2 size-6 shrink-0 mt-0.5" />
                                 <span>ネット上の「〇〇万円請求された！」という極端な口コミに怯えるのではなく、見積もりの段階で担当者に<span className="text-yellow-300 underline decoration-yellow-500 decoration-2 ml-1">「5年後に引っ越すとしたらどうなりますか？」</span>と直接確認し、書面で残すことが最大の防御策です。</span>
                             </p>
                         </div>
@@ -62,7 +62,7 @@ export const Cancellation = () => {
                         モデルケース・シミュレーション
                     </div>
                     <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center gap-2">
-                        <span className="text-2xl">👤</span>
+                        <Icon name="user" className="size-6 text-blue-600" />
                         【実例】契約から8年後に転勤で家を売却することになったAさんの場合
                     </h3>
 
@@ -139,7 +139,7 @@ export const Cancellation = () => {
 
                         {/* Top Node */}
                         <div className="bg-white border-2 border-gray-800 rounded-2xl p-6 text-center shadow-lg relative z-10 md:w-2/3 mx-auto mb-10">
-                            <span className="text-3xl mb-2 block">🏠</span>
+                            <Icon name="home" className="size-8 text-gray-800 mb-2 block mx-auto" />
                             <h3 className="font-black text-xl text-gray-800">契約途中で家を手放す理由が発生</h3>
                             <p className="text-sm text-gray-600 mt-2">転勤、実家への帰省、建て替えなど</p>
                         </div>
@@ -158,7 +158,7 @@ export const Cancellation = () => {
                                         パターン A
                                     </div>
                                     <h4 className="font-black text-lg text-blue-900 mb-3 flex items-center gap-2">
-                                        <span className="text-2xl">🤝</span> 家を第三者に売却する
+                                        <Icon name="handshake" className="size-6 text-blue-600" /> 家を第三者に売却する
                                     </h4>
                                     <p className="text-sm text-gray-700 leading-relaxed bg-white p-4 rounded-xl border border-blue-100 flex-1">
                                         ご自宅の売却価格に「太陽光の価値（ローン残債分等）」を上乗せして販売し、買主に設備をそのまま使ってもらうことで違約金を回避・相殺できるケースがあります。<br /><br />
@@ -179,7 +179,7 @@ export const Cancellation = () => {
                                         パターン B
                                     </div>
                                     <h4 className="font-black text-lg text-red-900 mb-3 flex items-center gap-2">
-                                        <span className="text-2xl">🏗️</span> 建物を壊して更地にする
+                                        <Icon name="construction" className="size-6 text-red-600" /> 建物を壊して更地にする
                                     </h4>
                                     <p className="text-sm text-gray-700 leading-relaxed bg-white p-4 rounded-xl border border-red-100 flex-1">
                                         設備の契約自体を中途解約し、残債等の<strong className="text-red-600">「清算金」を一括</strong>で支払うのが一般的です。<br /><br />
@@ -194,7 +194,7 @@ export const Cancellation = () => {
 
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 text-gray-700 leading-relaxed text-sm mb-16 shadow-sm">
                     <p className="mb-3 font-bold text-[#003366] text-lg flex items-center gap-2">
-                        <span className="text-blue-500">🛡️</span> なぜ「東京ガス」のような大手を選ぶべきか
+                        <Icon name="shield" className="size-6 text-blue-600" /> なぜ「東京ガス」のような大手を選ぶべきか
                     </p>
                     <p className="bg-white p-4 rounded-lg border border-blue-50 mb-3">
                         無名の悪質な販売代理店の場合、解約に関する重要事項（清算金の計算方法や撤去時の莫大な負担金）を<strong className="text-red-500">わざと極小文字で記載</strong>し、契約をせかすケースがあります。東京ガスのような長期間のインフラを提供する企業の場合、コンプライアンス上、こうした出口のリスクについて事前にしっかりと書面や対面で説明を行う責任を持ちます。
@@ -212,7 +212,7 @@ export const Cancellation = () => {
                     <h3 className="font-bold text-lg text-gray-700 mb-6 text-center">疑問が残る方はこちらもチェック</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <Link to="/subsidy-tokyo" className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
-                            <span className="text-2xl text-gray-300 group-hover:text-blue-600 transition-transform group-hover:-translate-x-2">&larr;</span>
+                            <Icon name="arrowLeft" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:-translate-x-2" />
                             <div className="text-right">
                                 <div className="text-xs text-orange-500 font-bold mb-1 tracking-wider uppercase">Money</div>
                                 <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">東京都の補助金と罠</div>
@@ -223,7 +223,7 @@ export const Cancellation = () => {
                                 <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
                                 <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
                             </div>
-                            <span className="text-xl text-blue-300 transition-transform group-hover:translate-x-2">&rarr;</span>
+                            <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:translate-x-2" />
                         </Link>
                     </div>
                 </div>

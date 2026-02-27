@@ -165,7 +165,7 @@ export const Eligible = () => {
                         <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
                             <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
                                 <span className="text-blue-600 mr-3">Q.</span> 建築確認日（1981年以降）って何を見ればわかりますか？
-                                <span className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
                             </summary>
                             <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
                                 ご自宅を建てた際の「建築確認済証」または「検査済証」の日付をご確認ください。（※建物の完成日や引き渡し日ではありません）。手元に資料がない場合でも、無料相談の際に担当者に「資料がない」旨を伝えて確認してもらうことが可能です。
@@ -175,7 +175,7 @@ export const Eligible = () => {
                         <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
                             <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
                                 <span className="text-blue-600 mr-3">Q.</span> 現在建築中の家でも申し込みできますか？
-                                <span className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
                             </summary>
                             <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
                                 基本的に既築（すでに建っている）住宅への「後付け」を想定したパッケージとなっています。新築建築中の場合は、まずはハウスメーカーや工務店へ「東京ガスのシステムを導入できるか」ご自身で相談・調整していただく必要があります。
@@ -185,7 +185,7 @@ export const Eligible = () => {
                         <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
                             <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
                                 <span className="text-blue-600 mr-3">Q.</span> 東京ガスとガスや電気の契約をしていなくても申し込めますか？
-                                <span className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
                             </summary>
                             <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
                                 はい、可能です。現在のガスや電気の契約会社が他社であっても、対象エリア等その他の条件を満たしていれば申し込み・契約ができます。
@@ -193,7 +193,7 @@ export const Eligible = () => {
                         </details>
                     </div>
                     <div className="text-right mt-4">
-                        <Link to="/faq" className="text-sm text-blue-600 hover:underline">もっと質問を見る &rarr;</Link>
+                        <Link to="/faq" className="text-sm text-blue-600 hover:underline">もっと質問を見る <Icon name="arrowRight" className="size-4 ml-1" /></Link>
                     </div>
                 </section>
 

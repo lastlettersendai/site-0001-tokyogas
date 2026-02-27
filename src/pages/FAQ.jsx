@@ -161,7 +161,7 @@ export const FAQ = () => {
                                     <span className="bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center font-black shrink-0">Q</span>
                                     <span>築年数が古い家でも設置できますか？</span>
                                 </span>
-                                <span className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-open:-rotate-180 transition-transform">▼</span>
+                                <span className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-open:-rotate-180 transition-transform"><Icon name="chevronDown" className="size-5" /></span>
                             </summary>
                             <div className="p-6 pt-0 bg-gray-50">
                                 <div className="border-t border-gray-200 pt-6 mt-2 flex items-start gap-4">
@@ -180,7 +180,7 @@ export const FAQ = () => {
                                     <span className="bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center font-black shrink-0">Q</span>
                                     <span>補助金の手続きは自分で行う必要がありますか？</span>
                                 </span>
-                                <span className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-open:-rotate-180 transition-transform">▼</span>
+                                <span className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-open:-rotate-180 transition-transform"><Icon name="chevronDown" className="size-5" /></span>
                             </summary>
                             <div className="p-6 pt-0 bg-gray-50">
                                 <div className="border-t border-gray-200 pt-6 mt-2 flex items-start gap-4">

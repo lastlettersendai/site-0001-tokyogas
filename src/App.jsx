@@ -12,21 +12,26 @@ import { Installation } from './pages/Installation.jsx';
 import { FAQ } from './pages/FAQ.jsx';
 import { Operator } from './pages/Operator.jsx';
 
+import ScrollToTop from './components/ScrollToTop.jsx';
+
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/eligible" element={<Eligible />} />
-            <Route path="/cost" element={<Cost />} />
-            <Route path="/cancellation" element={<Cancellation />} />
-            <Route path="/subsidy-tokyo" element={<SubsidyTokyo />} />
-            <Route path="/subsidy-payment" element={<SubsidyPayment />} />
-            <Route path="/outage" element={<Outage />} />
-            <Route path="/installation" element={<Installation />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/operator" element={<Operator />} />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
+        <>
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/eligible" element={<Eligible />} />
+                <Route path="/cost" element={<Cost />} />
+                <Route path="/cancellation" element={<Cancellation />} />
+                <Route path="/subsidy-tokyo" element={<SubsidyTokyo />} />
+                <Route path="/subsidy-payment" element={<SubsidyPayment />} />
+                <Route path="/outage" element={<Outage />} />
+                <Route path="/installation" element={<Installation />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/operator" element={<Operator />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </>
     );
 }
 

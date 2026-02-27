@@ -92,10 +92,10 @@ export const Installation = () => {
                             <div className="absolute bottom-6 left-6 right-6">
                                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl text-white">
                                     <p className="font-bold flex items-center gap-2">
-                                        <span className="text-orange-400">✓</span> 徹底した安全管理
+                                        <Icon name="check" className="text-orange-400 size-5" /> 徹底した安全管理
                                     </p>
                                     <p className="font-bold flex items-center gap-2 mt-1">
-                                        <span className="text-orange-400">✓</span> 熟練の施工技術
+                                        <Icon name="check" className="text-orange-400 size-5" /> 熟練の施工技術
                                     </p>
                                 </div>
                             </div>

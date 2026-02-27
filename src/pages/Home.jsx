@@ -131,10 +131,10 @@ const Home = () => {
                                         <h3 className="font-black text-red-800 text-lg">このような方には<br />おすすめしません</h3>
                                     </div>
                                     <ul className="space-y-3 text-sm text-gray-700 font-medium">
-                                        <li className="flex gap-2"><span className="text-red-500">×</span> 対象エリア外（関東1都6県以外）にお住まいの方</li>
-                                        <li className="flex gap-2"><span className="text-red-500">×</span> 1981年（昭和56年）以前に建てられた旧耐震基準の家屋</li>
-                                        <li className="flex gap-2"><span className="text-red-500">×</span> 賃貸住宅や集合住宅（※戸建て専用のサービスです）</li>
-                                        <li className="flex gap-2"><span className="text-red-500">×</span> 数年以内に確実に取り壊しや引越しの予定がある方</li>
+                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 対象エリア外（関東1都6県以外）にお住まいの方</li>
+                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 1981年（昭和56年）以前に建てられた旧耐震基準の家屋</li>
+                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 賃貸住宅や集合住宅（※戸建て専用のサービスです）</li>
+                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 数年以内に確実に取り壊しや引越しの予定がある方</li>
                                     </ul>
                                 </div>
 
@@ -145,10 +145,10 @@ const Home = () => {
                                         <h3 className="font-black text-blue-800 text-lg">このような方に<br />「東京ガス」を推奨します</h3>
                                     </div>
                                     <ul className="space-y-3 text-sm text-gray-700 font-medium">
-                                        <li className="flex gap-2"><span className="text-blue-500">○</span> <span className="font-bold underline">初期費用0円</span>で太陽光と蓄電池を導入したい方</li>
-                                        <li className="flex gap-2"><span className="text-blue-500">○</span> 最近の電気代高騰に頭を悩ませている方</li>
-                                        <li className="flex gap-2"><span className="text-blue-500">○</span> もしもの災害時（停電）に備えたインフラが欲しい方</li>
-                                        <li className="flex gap-2"><span className="text-blue-500">○</span> 訪問販売などの怪しい業者ではなく、安心できる大手に頼みたい方</li>
+                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> <span className="font-bold underline">初期費用0円</span>で太陽光と蓄電池を導入したい方</li>
+                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> 最近の電気代高騰に頭を悩ませている方</li>
+                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> もしもの災害時（停電）に備えたインフラが欲しい方</li>
+                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> 訪問販売などの怪しい業者ではなく、安心できる大手に頼みたい方</li>
                                     </ul>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@ const Home = () => {
                                 <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-red-600 transition-colors">「途中で家を手放したらどうなるの？」</h3>
                                 <p className="text-gray-600 mb-8 text-sm leading-relaxed flex-grow">引っ越しや解体時の「解約金・撤去費」トラブルが最大の恐怖です。契約形態による影響と、見積もり時に聞くべき必須の質問リストをまとめました。</p>
                                 <Link to="/cancellation" className="inline-block bg-red-50 text-red-600 font-bold text-sm py-3 px-6 rounded-full hover:bg-red-100 transition-colors border border-red-100">
-                                    清算金リスクを確認 &rarr;
+                                    清算金リスクを確認 <Icon name="arrowRight" className="size-4 ml-1" />
                                 </Link>
                             </div>
                         </div>
@@ -201,7 +201,7 @@ const Home = () => {
                                 <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-orange-600 transition-colors">「結局、我が家だったらいくらなの？」</h3>
                                 <p className="text-gray-600 mb-8 text-sm leading-relaxed flex-grow">屋根形状、足場、分電盤の古さで値段は大きく変わります。ネットの平均価格は役に立ちません。見積もりの「罠」と内訳の見方を解説します。</p>
                                 <Link to="/cost" className="inline-block bg-orange-50 text-orange-600 font-bold text-sm py-3 px-6 rounded-full hover:bg-orange-100 transition-colors border border-orange-100">
-                                    見積もりの見方へ &rarr;
+                                    見積もりの見方へ <Icon name="arrowRight" className="size-4 ml-1" />
                                 </Link>
                             </div>
                         </div>
@@ -217,8 +217,8 @@ const Home = () => {
                                 <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#003366] transition-colors">「高額な補助金は本当に絶対もらえる？」</h3>
                                 <p className="text-gray-600 mb-8 text-sm leading-relaxed flex-grow">補助金は「予算上限」や「厳格な期限・書類」に縛られます。確定事項ではないからこそ、申請の事実と資金繰りの注意点を知る必要があります。</p>
                                 <div className="flex flex-col gap-3 w-full">
-                                    <Link to="/subsidy-tokyo" className="inline-block w-full bg-blue-50 text-[#003366] font-bold text-sm py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors border border-blue-100">東京都の補助金とは &rarr;</Link>
-                                    <Link to="/subsidy-payment" className="inline-block w-full bg-blue-50 text-[#003366] font-bold text-sm py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors border border-blue-100">補助金はいつ入る？ &rarr;</Link>
+                                    <Link to="/subsidy-tokyo" className="inline-block w-full bg-blue-50 text-[#003366] font-bold text-sm py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors border border-blue-100">東京都の補助金とは <Icon name="arrowRight" className="size-4 ml-1" /></Link>
+                                    <Link to="/subsidy-payment" className="inline-block w-full bg-blue-50 text-[#003366] font-bold text-sm py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors border border-blue-100">補助金はいつ入る？ <Icon name="arrowRight" className="size-4 ml-1" /></Link>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +284,7 @@ const Home = () => {
 
                     <div className="text-center mt-12">
                         <Link to="/installation" className="inline-flex items-center justify-center gap-2 text-blue-300 font-bold hover:text-white transition-colors bg-white/5 px-6 py-3 rounded-full hover:bg-white/10">
-                            工事・施工の不安について詳しく見る <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            工事・施工の不安について詳しく見る <Icon name="arrowRight" className="size-5" />
                         </Link>
                     </div>
                 </div>

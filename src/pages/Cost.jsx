@@ -204,7 +204,7 @@ export const Cost = () => {
                         <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
                             <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
                                 <span className="text-blue-600 mr-3">Q.</span> 他社と相見積もりをした方がいいですか？
-                                <span className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
                             </summary>
                             <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4 leading-relaxed">
                                 基本的に相見積もりは推奨されます。ただし、比較する際は<strong className="text-gray-800">「パネルのメーカー」「蓄電池の容量」「保証年数」「足場代の有無」などを同条件に揃えて</strong>比較しないと、安かろう悪かろうの業者を選んでしまうリスクがあります。価格だけでなく、アフターサポートの安心感（東京ガスという看板の強みなど）も含めて総合的に判断してください。
@@ -214,7 +214,7 @@ export const Cost = () => {
                         <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
                             <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
                                 <span className="text-blue-600 mr-3">Q.</span> 初期費用0円のプランもあると聞きましたが？
-                                <span className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
                             </summary>
                             <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4 leading-relaxed">
                                 いわゆる「PPAモデル（第三者所有モデル）」やリース契約のことです。初期費用がかからない分、契約期間中は売電収入が得られなかったり、長期的には一括購入より総支払額が高くなるケースがあります。本サイトでは、補助金を活用した「購入」をご案内しています。

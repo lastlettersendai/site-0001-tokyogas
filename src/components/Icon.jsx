@@ -6,7 +6,8 @@ import {
     HandHeart, Plug, Zap, Sun, Moon,
     HardHat, Wrench, Package, Hammer, ShieldCheck, FileText,
     Battery, Clock, Ban, PenTool, MessageCircle, Handshake,
-    Droplet, Wind, PhoneOff, Shield, Star
+    Droplet, Wind, PhoneOff, Shield, Star,
+    ArrowRight, ArrowLeft, ArrowDown, Circle, Banknote, Landmark, Construction, User, Truck, ShieldAlert, ChevronDown
 } from 'lucide-react';
 
 const ICON_MAP = {
@@ -44,7 +45,18 @@ const ICON_MAP = {
     wind: Wind,
     phoneOff: PhoneOff,
     safeshield: Shield,
-    star: Star
+    star: Star,
+    arrowRight: ArrowRight,
+    arrowLeft: ArrowLeft,
+    arrowDown: ArrowDown,
+    circle: Circle,
+    banknote: Banknote,
+    landmark: Landmark,
+    construction: Construction,
+    user: User,
+    truck: Truck,
+    shieldAlert: ShieldAlert,
+    chevronDown: ChevronDown
 };
 
 export const Icon = ({ name, className = "" }) => {
