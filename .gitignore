@@ -3,3 +3,7 @@ dist
 build.log
 .DS_Store
 .env
+node_modules/
+dist/
+.DS_Store
+build.log
