@@ -80,12 +80,19 @@ const Home = () => {
                     {/* Hero Image Block */}
                     <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
                         <div className="absolute -inset-4 bg-gradient-to-tr from-blue-400 to-orange-400 rounded-2xl blur-lg opacity-40 animate-pulse"></div>
-                        <img
-                            src="/images/home_hero.png"
-                            alt="東京ガスの太陽光・蓄電池が設置されたエコな住宅"
-                            className="relative rounded-2xl shadow-2xl border-4 border-white/20 w-full object-cover aspect-[4/3]"
-                            loading="lazy"
-                        />
+                        <picture>
+                            <source srcSet="/images/home_hero.webp" type="image/webp" />
+                            <img
+                                src="/images/home_hero.png"
+                                alt="東京ガスの太陽光・蓄電池が設置されたエコな住宅"
+                                className="relative rounded-2xl shadow-2xl border-4 border-white/20 w-full object-cover aspect-[4/3]"
+                                width="640"
+                                height="640"
+                                decoding="async"
+                                fetchPriority="high"
+                                loading="eager"
+                            />
+                        </picture>
                         <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 hidden md:block animate-bounce z-20">
                             <div className="flex items-center gap-3">
                                 <div className="bg-green-100 p-2 rounded-full">

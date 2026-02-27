@@ -65,7 +65,7 @@ export const Eligible = () => {
                         </h2>
                     </div>
 
-                    <div className="p-6 md:p-10 space-y-8" style={{ backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMjBoNDBNMjAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDAsMCwwLDAuMDMpIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+")` }}>
+                    <div className="p-6 md:p-10 space-y-8" style={{ backgroundImage: `url("/assets/pattern-grid.svg")` }}>
                         {/* Question 1 */}
                         <div className={`bg-white rounded-2xl p-6 md:p-8 border-2 transition-all duration-300 shadow-sm ${steps[1] ? 'border-green-400 bg-green-50/20' : 'border-blue-100 hover:border-blue-300 hover:shadow-md'}`}>
                             <div className="flex items-start gap-4 mb-6">
