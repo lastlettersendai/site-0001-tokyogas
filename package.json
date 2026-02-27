@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000 --strictPort",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && node scripts/prerender.js",
     "preview": "vite preview",
     "deploy": "pnpm build && npx vercel --prod --yes",
     "deploy:auto": "node scripts/deploy.js"
