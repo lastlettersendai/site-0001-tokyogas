@@ -1,67 +1,57 @@
-import { exec } from 'child_process';
-import { promisify } from 'util';
+/*
+ * GodMaster Auto-Deploy Macro (Modified for Manual Vercel Push)
+ * Git Add, Commit, Pushを自動化し、Vercelデプロイ用コマンドを生成します。
+ */
+import { execSync } from 'node:child_process';
+import process from 'node:process';
 
-const execAsync = promisify(exec);
-
-async function runCommand(command, name) {
-    console.log(`\n🚀 実行中: ${name} (${command})`);
+const run = (command, errorMessage) => {
     try {
-        const { stdout, stderr } = await execAsync(command);
-        console.log(`✅ 成功: ${name}`);
-        if (stdout) console.log(stdout.trim());
-        if (stderr) console.error(stderr.trim());
+        console.log(`\n🚀 実行中: ${command.name} (${command.cmd})`);
+        execSync(command.cmd, { stdio: 'inherit' });
+        console.log(`✅ 成功: ${command.name}`);
         return true;
     } catch (error) {
-        console.error(`❌ エラー: ${name}`);
+        console.error(`❌ エラー: ${command.name}`);
         console.error(error.message);
+        if (errorMessage) console.error(errorMessage);
         return false;
     }
-}
+};
 
-async function deployWithRetry(maxRetries = 3) {
+const executeDeploy = async () => {
     console.log('\n=============================================');
-    console.log('✨ 全自動デプロイを開始します ✨');
-    console.log('=============================================');
+    console.log('✨ 全自動コミットプロセスを開始します ✨');
+    console.log('=============================================\n');
 
-    // 1. git add
-    await runCommand('git add .', 'Git Add');
+    // 1. Git Add
+    run(
+        { name: 'Git Add', cmd: 'git add .' },
+        'Git addに失敗しました。Gitリポジトリが初期化されているか確認してください。'
+    );
 
-    // 2. git commit (エラーになってもスキップ: 変更がない場合など)
-    console.log(`\n🚀 実行中: Git Commit`);
-    try {
-        const { stdout } = await execAsync('git commit -m "auto update"');
-        console.log(`✅ 成功: Git Commit`);
-        console.log(stdout.trim());
-    } catch (e) {
-        console.log(`ℹ️ スキップ: 新しい変更はありません`);
-    }
+    // 2. Git Commit
+    const dateStr = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    run(
+        { name: 'Git Commit', cmd: `git commit -m "auto update"` },
+        '変更がないか、コミットに失敗しました。'
+    );
 
-    // 3. git push
-    const pushSuccess = await runCommand('git push', 'Git Push');
-    if (!pushSuccess) {
-        console.log('⚠️ GitHubへのPushに失敗しましたが、Vercelデプロイは続行します。');
-    }
+    // 3. Git Push
+    run(
+        { name: 'Git Push', cmd: 'git push' },
+        'GitHubへのPushに失敗しました。Git認証設定を確認してください。'
+    );
 
-    // 4. pnpm build && npx vercel --prod --yes (自動リトライ処理付き)
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-        console.log(`\n🔄 Vercelデプロイ (試行 ${attempt}/${maxRetries})`);
+    console.log('\n=============================================');
+    console.log('🛑 司令官殿、ここからは「手動デプロイ」の時間です！');
+    console.log('以下のコマンドをコピーして、ターミナルに貼り付けて実行してください。');
+    console.log('=============================================\n');
+    console.log('cd /Users/mac/product/GodMaster-Orchestrator/sites/site-0001-tokyogas');
+    console.log('npx vercel --prod --yes\n');
+    console.log('=============================================\n');
 
-        const success = await runCommand('pnpm build && npx vercel --prod --yes', 'Vercel Deploy');
+    process.exit(0);
+};
 
-        if (success) {
-            console.log('\n🎉 デプロイが完全に成功しました！');
-            console.log('=============================================');
-            return;
-        }
-
-        if (attempt < maxRetries) {
-            console.log(`⏳ 5秒後にリトライします...`);
-            await new Promise(resolve => setTimeout(resolve, 5000));
-        }
-    }
-
-    console.error('\n🚨 全ての試行が失敗しました。手動で確認してください。');
-    process.exit(1);
-}
-
-deployWithRetry();
+executeDeploy();
