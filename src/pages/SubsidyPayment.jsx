@@ -3,6 +3,7 @@ import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 
 export const SubsidyPayment = () => {
     return (
@@ -13,24 +14,35 @@ export const SubsidyPayment = () => {
         >
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                {/* Hero Section */}
+                {/* Block 1: 冒頭3行 (Who/What) */}
+                <div className="mb-8 text-left">
+                    <span className="inline-block bg-red-100 text-red-800 font-bold px-4 py-1.5 rounded-full text-xs mb-4 border border-red-300 tracking-wider">PAYMENT TIMING</span>
+                    <p className="text-gray-600 text-sm font-bold leading-relaxed">
+                        「補助金でお得」という言葉だけを信じてはいけません。<br />
+                        いつお金が出ていき、いつ戻ってくるのか。<br />
+                        家計を守るための「キャッシュフローの真実」を解説します。
+                    </p>
+                </div>
+
+                {/* Block 2: 結論1行 */}
+                <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+                    補助金は「完全な後払い」です。立て替えが必要です。
+                </h1>
+
+                {/* Block 3: 前提条件 (3行以内) */}
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12">
+                    <p className="text-xs font-black text-red-600 mb-2 tracking-widest uppercase">Prerequisite for Cash Flow</p>
+                    <ul className="text-sm font-bold text-slate-700 space-y-1">
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> 手元の現金を一時的に100万円以上動かせる</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> 入金まで「半年」待てる余裕がある</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> 補助金を「あてにしすぎない」資金計画を立てている</li>
+                    </ul>
+                </div>
+
                 <div className="text-center mb-16 border-b border-gray-100 pb-12">
-                    <span className="inline-block bg-red-100 text-red-800 font-bold px-4 py-1.5 rounded-full text-sm mb-4 border border-red-200 tracking-wider">見落としがちな資金繰りの罠</span>
-                    <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
-                        補助金は「いつ」<br className="hidden md:inline" />振り込まれるのか？
-                    </h1>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
                         「補助金を使って実質100万円で導入できる！」という言葉には注意が必要です。<strong className="text-red-600">補助金は商品を買う時のレジでそのまま「値引き」されるわけではありません。</strong>
                     </p>
-
-                    <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl relative border border-gray-200">
-                        <img
-                            src="/images/subsidy_payment.png"
-                            alt="補助金の入金タイミングと資金繰りのイメージ"
-                            className="w-full h-auto object-cover max-h-[450px]"
-                            loading="lazy"
-                        />
-                    </div>
                 </div>
 
                 {/* Wait Time Card (Conclusion) */}
@@ -45,13 +57,13 @@ export const SubsidyPayment = () => {
                         <p className="text-gray-700 leading-relaxed font-bold text-lg mb-4">
                             太陽光・蓄電池の補助金は、<span className="text-red-600 border-b-2 border-red-200">工事がすべて完了し、役所の審査に合格した「数ヶ月後」</span>に、お客様の銀行口座に直接振り込まれます。
                         </p>
-                        <ul className="space-y-3 text-sm text-gray-600">
+                        <ul className="space-y-3 text-sm text-gray-600 [&>li>svg]:size-4 [&>li>svg]:shrink-0 [&>li>svg]:align-middle [&>li>svg]:mt-0.5">
                             <li className="flex items-start gap-2">
-                                <Icon name="x" className="text-red-500 size-4 mt-0.5" />
+                                <Icon name="x" className="text-red-500" />
                                 契約時に見積もり金額から値引きされるわけではない
                             </li>
                             <li className="flex items-start gap-2">
-                                <Icon name="x" className="text-red-500 size-4 mt-0.5" />
+                                <Icon name="x" className="text-red-500" />
                                 工事の支払いタイミングには補助金の手続きは間に合わせられない
                             </li>
                         </ul>
@@ -137,67 +149,75 @@ export const SubsidyPayment = () => {
                     </div>
                 </div>
 
-                {/* Solar Loan Section */}
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「販売会社が立て替えてくれる」</h2>
+                    </div>
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        「補助金を差し引いた残額だけ払えばいい」という業者は、<span className="underline decoration-red-500 decoration-2">補助金が不採択になった場合のリスクを説明していません。</span>
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        原則として補助金は「申請者（お客様）」の口座に振り込まれます。販売会社が立て替える形式の契約は、万が一補助金が却下された際にトラブルになりやすく、東京都などの公的機関も推奨していません。東京ガスでは、不透明な値引きではなく、健全な支払い計画をサポートします。
+                    </p>
+                </div>
+
+                {/* Block 5: 判断基準 (Criteria) */}
                 <div className="mb-20">
-                    <h2 className="text-2xl md:text-3xl font-black text-center text-gray-800 mb-8">
-                        資金繰り対策：「ソーラーローン」の賢い使い方
-                    </h2>
-
-                    <div className="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-                        <p className="text-gray-600 mb-8 text-center text-lg">
-                            数百万円の現金を一気に減らしたくない場合、多くの人が金利の安い「専用ソーラーローン」を活用します。<br className="hidden md:block" />この際、補助金の入金を見越したテクニックがあります。
-                        </p>
-
-                        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 relative">
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#003366] text-white font-bold px-6 py-2 rounded-full text-sm shadow-md">鉄則テクニック</div>
-
-                            <h3 className="font-black text-gray-800 text-2xl text-center mt-4 mb-6 text-blue-900">
-                                補助金が入ったら「繰り上げ返済」で<br className="md:hidden" />負担を激減させる
-                            </h3>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-6">
-                                <div className="bg-white p-4 rounded-xl text-center shadow-sm border border-gray-100">
-                                    <Icon name="landmark" className="size-8 text-blue-700 mb-2 block mx-auto" />
-                                    <div className="font-bold text-gray-700 text-sm mb-1">契約時</div>
-                                    <div className="text-xs text-gray-500">全額（補助金引く前）でローンを組み、月々支払い開始</div>
-                                </div>
-                                <div className="bg-white p-4 rounded-xl text-center shadow-sm border border-gray-100">
-                                    <div className="text-3xl mb-2 flex justify-center"><Icon name="money" className="text-blue-700 size-8" /></div>
-                                    <div className="font-bold text-blue-700 text-sm mb-1">数ヶ月後（補助金入金）</div>
-                                    <div className="text-xs text-gray-500">口座に入った補助金（数十万円〜）をそのまま一部繰り上げ返済に充てる</div>
-                                </div>
-                            </div>
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-red-600 pl-4">あなたに合った「資金計画」の選び方</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">「現金一括」を選ぶべき人</h3>
+                            <ul className="text-sm space-y-2 text-slate-600 italic">
+                                <li>・手元に500万円以上の現預金余力がある</li>
+                                <li>・金利（年利2〜3%）を1円も払いたくない</li>
+                                <li>・複雑なローン審査の手続きを省きたい</li>
+                            </ul>
                         </div>
-
-                        <p className="text-sm text-gray-600 bg-white p-4 rounded-xl border border-yellow-200 border-l-4 border-l-yellow-400">
-                            <strong>メリット：</strong> 実質的な借入総額が一気に下がり、「月々の支払い額を下げる」または「返済期間を短縮」することが可能です。<br />
-                            <span className="text-xs text-gray-500 mt-1 block">※金融機関によって繰り上げ返済の手数料ルールが異なるため、ローンの見積もり時に必ず担当者へ確認してください。</span>
-                        </p>
+                        <div className="bg-red-50 p-6 rounded-2xl border border-red-200">
+                            <h3 className="font-bold mb-4 text-red-900">「ローン＋補助金返済」を選ぶべき人</h3>
+                            <ul className="text-sm space-y-2 text-red-800 italic">
+                                <li>・教育費や住宅ローン用に現金を残しておきたい</li>
+                                <li>・入ってきた補助金をそのまま「繰り上げ返済」に充てたい</li>
+                                <li>・家計のキャッシュフローを一定に保ちたい</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <FinalCTA />
-
-            {/* Internal Links Navigation */}
-            <div className="border-t-2 border-gray-100 pt-10">
-                <h3 className="font-bold text-lg text-gray-700 mb-6 text-center">次はこちらも確認してください</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Link to="/cancellation" className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
-                        <div className="text-left w-full">
-                            <div className="text-xs text-red-500 font-bold mb-1 tracking-wider uppercase">Risk</div>
-                            <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">引越し・解体リスク</div>
+                {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        入金スケジュール実例
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">1月契約・3月工事・東京都補助金を申請</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">補助金（80万円）の入金：7月下旬</p>
+                            </div>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                工事完了（3月末）→ 実績報告提出（4月初旬）→ 都の審査（約3ヶ月）→ 入金決定。約4ヶ月間の立て替え期間が発生しました。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/cancellation" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「もし入金前に家を売却したらどうなる？」<Icon name="arrowRight" className="size-4" />
+                                </Link>
+                            </div>
                         </div>
-                        <Icon name="arrowRight" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2" />
-                    </Link>
-                    <Link to="/" className="bg-[#003366] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex items-center justify-between group">
-                        <div className="text-left w-full">
-                            <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
-                            <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
-                        </div>
-                        <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:-translate-x-1" />
-                    </Link>
+                    </div>
                 </div>
+
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
+
+                <FinalCTA />
+
             </div>
 
         </PageTemplate>

@@ -3,6 +3,7 @@ import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 
 export const Cancellation = () => {
     return (
@@ -13,27 +14,35 @@ export const Cancellation = () => {
         >
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                {/* Hero Section */}
+                {/* Block 1: 冒頭3行 (Who/What) */}
+                <div className="mb-8 text-left">
+                    <span className="inline-block bg-red-100 text-red-800 font-bold px-4 py-1.5 rounded-full text-xs mb-4 border border-red-300 tracking-wider">EXIT STRATEGY</span>
+                    <p className="text-gray-600 text-sm font-bold leading-relaxed">
+                        「一生この家に住む」とは限りません。<br />
+                        転勤、売却、そして解体。未来のライフイベントにおいて、太陽光が「足枷」にならないために。<br />
+                        契約前に知っておくべき「出口の真実」を公開します。
+                    </p>
+                </div>
+
+                {/* Block 2: 結論1行 */}
+                <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+                    「家と一緒に売却」できるプランを選ぶのが正解です
+                </h1>
+
+                {/* Block 3: 前提条件 (3行以内) */}
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12">
+                    <p className="text-xs font-black text-red-600 mb-2 tracking-widest uppercase">Prerequisite for Cancellation</p>
+                    <ul className="text-sm font-bold text-slate-700 space-y-1">
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> 10年以内に引越しや建て替えの可能性がある</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> 違約金という言葉に強い不安を感じている</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> 次の住人へ設備をスムーズに引き継ぎたい</li>
+                    </ul>
+                </div>
+
                 <div className="text-center mb-16 border-b border-gray-100 pb-12">
-                    <span className="inline-block bg-red-100 text-red-700 font-bold px-4 py-1.5 rounded-full text-sm mb-4 border border-red-200 tracking-wider">長期契約における最大の不安要素</span>
-                    <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-6">
-                        途中解約・引っ越しのリスク
-                    </h1>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
                         太陽光・蓄電池は10年、15年と長く使うシステムです。「途中で家を手放すことになったら<strong className="text-red-600">莫大な違約金</strong>がかかるのでは？」と不安に思うのは当然です。
                     </p>
-
-                    <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl relative border border-gray-200 bg-white">
-                        <img
-                            src="/images/cancellation_truck.png"
-                            alt="引っ越しや解体時の太陽光パネル移設・撤去のリスク"
-                            className="w-full h-auto object-cover max-h-[450px]"
-                            loading="lazy"
-                        />
-                        <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-gray-100 font-bold text-gray-800 flex items-center gap-2">
-                            <Icon name="truck" className="size-6 text-gray-600" /> 予測不能なライフイベントへの備え
-                        </div>
-                    </div>
                 </div>
 
                 {/* Warning Card */}
@@ -56,42 +65,72 @@ export const Cancellation = () => {
                     </div>
                 </div>
 
-                {/* Case Study Block (Principle 3) */}
-                <div className="bg-white border-2 border-red-100 rounded-2xl p-8 mb-16 shadow-md relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-red-100 text-red-800 font-bold px-4 py-1 rounded-bl-xl text-sm">
-                        モデルケース・シミュレーション
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「解約金は一律で一、二百万円かかる」</h2>
                     </div>
-                    <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center gap-2">
-                        <Icon name="user" className="size-6 text-blue-600" />
-                        【実例】契約から8年後に転勤で家を売却することになったAさんの場合
-                    </h3>
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        「〇〇万円請求された！」というネットの口コミは、<span className="underline decoration-red-500 decoration-2">多くの場合、悪質な業者の不透明な契約内容によるものです。</span>
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        大手インフラの東京ガスが提供するプランでは、残債の計算式が明確に定められています。また、一括購入であればそもそも「解約金」という概念自体が存在しません。リスクを過大評価して導入を見送るのではなく、正しい「清算ルール」を書面で確認することが重要です。
+                    </p>
+                </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
-                            <h4 className="font-bold text-gray-700 border-b pb-2 mb-3">前提条件</h4>
-                            <ul className="space-y-2 text-sm text-gray-600">
-                                <li>・契約プラン: 初期費用0円（15年定額モデル）</li>
-                                <li>・月額料金: 15,000円</li>
-                                <li>・解約時期: 8年目（残り7年）</li>
-                                <li>・次の住人: 設備を引き継がない（撤去希望）</li>
+                {/* Block 5: 判断基準 (Criteria) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-red-600 pl-4">将来の不安に合わせた「契約の選び方」</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">引越しの可能性があるなら「一括購入」</h3>
+                            <ul className="text-sm space-y-2 text-slate-600 italic">
+                                <li>・売却価格にシステムの価値をそのまま上乗せできる</li>
+                                <li>・解約に伴う「事務手数料」などの無駄な出費がない</li>
+                                <li>・名義変更が最もスムーズで、買主に喜ばれる</li>
                             </ul>
                         </div>
-                        <div className="bg-red-50 p-5 rounded-xl border border-red-200">
-                            <h4 className="font-bold text-red-800 border-b border-red-200 pb-2 mb-3">Aさんの精算金（概算）</h4>
-                            <ul className="space-y-3 text-sm text-red-700">
-                                <li className="flex justify-between"><span>残期間の精算金:</span> <span className="font-bold">約 120万円</span></li>
-                                <li className="flex justify-between"><span>パネル撤去・処分費:</span> <span className="font-bold">約 30万円</span></li>
-                                <li className="flex justify-between border-t border-red-200 pt-2 text-lg">
-                                    <span>合計負担額:</span> <span className="font-black">約 150万円の一括支払い</span>
-                                </li>
+                        <div className="bg-red-50 p-6 rounded-2xl border border-red-200">
+                            <h3 className="font-bold mb-4 text-red-900">手元の現金を残したいなら「承継可能なリース」</h3>
+                            <ul className="text-sm space-y-2 text-red-800 italic">
+                                <li>・次の住人に月々の支払いをそのまま引き継げる（承継）</li>
+                                <li>・一括清算の負担を次のオーナーに交渉できる</li>
+                                <li>・東京ガスのブランドがあるため、中古住宅としての信頼性が高い</li>
                             </ul>
-                            <p className="text-xs text-red-500 mt-2">※金額はあくまでモデルケースであり、実際の契約内容により大きく異なります。</p>
                         </div>
-                    </div>
-                    <div className="mt-6 bg-yellow-50 p-4 rounded-lg text-sm text-gray-700 border border-yellow-200">
-                        <strong className="text-red-600">【結論】</strong>このように、「万が一」が発生した際のリスク（残債・撤去費）は非常に高額になります。「我が家の場合はどうなるのか？」を、見積もりの段階で必ず担当者にシミュレーションしてもらうことが、後悔しないための最大の防衛策です。
                     </div>
                 </div>
+
+                {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        売却・解約シミュレーション
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">築10年で売却・「エネカリ（15年）」の8年目に引越し</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">実質負担 0円 で次の住人に引き継ぎ成功</p>
+                            </div>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                東京ガスの「承継手続き」を活用。次の住人が「光熱費が安い家」というメリットに納得し、残りのリース期間を引き継いでくれたため、Aさんの解約金負担は発生しませんでした。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/faq" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「名義変更の手続きはどれくらい大変？」<Icon name="arrowRight" className="size-4" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
 
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100">
@@ -207,26 +246,6 @@ export const Cancellation = () => {
 
                 <FinalCTA />
 
-                {/* Internal Links Navigation */}
-                <div className="border-t-2 border-gray-100 pt-10 mt-16">
-                    <h3 className="font-bold text-lg text-gray-700 mb-6 text-center">疑問が残る方はこちらもチェック</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Link to="/subsidy-tokyo" className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
-                            <Icon name="arrowLeft" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:-translate-x-2" />
-                            <div className="text-right">
-                                <div className="text-xs text-orange-500 font-bold mb-1 tracking-wider uppercase">Money</div>
-                                <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">東京都の補助金と罠</div>
-                            </div>
-                        </Link>
-                        <Link to="/" className="bg-[#003366] text-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex justify-center items-center group">
-                            <div className="text-left w-full">
-                                <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
-                                <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
-                            </div>
-                            <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:translate-x-2" />
-                        </Link>
-                    </div>
-                </div>
             </div>
         </PageTemplate>
     );

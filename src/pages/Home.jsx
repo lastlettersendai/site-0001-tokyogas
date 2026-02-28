@@ -5,6 +5,8 @@ import { StructuredData } from '../components/StructuredData.jsx';
 import { CTALink } from '../components/CTALink.jsx';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
+import { DiagnosisBlock } from '../components/DiagnosisBlock.jsx';
 
 const Home = () => {
     const articleData = {
@@ -58,22 +60,36 @@ const Home = () => {
 
                 <div className="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
                     <div className="w-full lg:w-1/2">
-                        <span className="inline-block bg-blue-800 text-blue-100 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-6 border border-blue-700 tracking-wider shadow-inner">ネットの口コミより、我が家の実数を</span>
-                        <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black leading-tight mb-8 tracking-tight">
-                            太陽光・蓄電池で<br />
-                            <span className="text-orange-400">後悔しない</span>ための<br />
-                            <span className="underline decoration-orange-500 decoration-4 underline-offset-8">最後の確認ポイント</span>
-                        </h1>
-                        <p className="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            高額な買い物だからこそ「途中解約の恐怖」や「補助金の不確実性」に直面します。でも、条件さえ合えば最大のメリットを生み出せるのが東京ガスのパッケージ。
-                        </p>
+                        {/* Block 1: 冒頭3行 (Who/What) */}
+                        <div className="mb-6">
+                            <span className="inline-block bg-blue-800 text-blue-100 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm border border-blue-700 tracking-wider shadow-inner mb-4">TOKYO GAS SOLAR SOLUTIONS</span>
+                            <p className="text-blue-100/80 text-sm font-bold leading-relaxed">
+                                太陽光か蓄電池か、それとも両方か。<br />
+                                溢れる情報に迷う時間を、この1ページで終わらせます。<br />
+                                あなたの家にとっての「真実の数字」を今、提示します。
+                            </p>
+                        </div>
 
-                        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 inline-block w-full max-w-md">
-                            <p className="font-bold text-white mb-4 text-lg text-center lg:text-left">検討中ですか？まずは『1分』で対象外判定を。</p>
-                            <Link to="/eligible" className="block bg-orange-500 text-white font-black text-xl py-4 px-8 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full text-center">
-                                我が家は対象？ 1分チェックへ
+                        {/* Block 2: 結論1行 */}
+                        <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black leading-tight mb-8 tracking-tight">
+                            東京ガスの<span className="text-orange-400">0円設置</span>と<br />
+                            <span className="underline decoration-orange-500 decoration-4 underline-offset-8">15年保証</span>を選ぶのが正解です
+                        </h1>
+
+                        {/* Block 3: 前提条件 (3行以内) */}
+                        <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 inline-block w-full max-w-md text-left mb-10">
+                            <p className="text-xs font-black text-orange-400 mb-2 tracking-widest uppercase">Target & Premise</p>
+                            <ul className="text-sm font-bold text-white space-y-1">
+                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> 関東1都6県の戸建てにお住まいの方</li>
+                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> 1981年以降に建てられた家屋であること</li>
+                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> 数年内の解体・引越しの予定がないこと</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <Link to="/eligible" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white font-black text-xl py-4 px-8 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                                我が家は対象？ 1分判定へ <Icon name="arrowRight" className="size-6" />
                             </Link>
-                            <p className="text-xs text-blue-200 mt-3 font-medium text-center lg:text-left">※関東1都6県・戸建て（1981年以降）の条件等を確認します</p>
                         </div>
                     </div>
 
@@ -83,7 +99,7 @@ const Home = () => {
                         <picture>
                             <source srcSet="/images/home_hero.webp" type="image/webp" />
                             <img
-                                src="/images/home_hero.png"
+                                src="/images/home_hero.webp"
                                 alt="東京ガスの太陽光・蓄電池が設置されたエコな住宅"
                                 className="relative rounded-2xl shadow-2xl border-4 border-white/20 w-full object-cover aspect-[4/3]"
                                 width="640"
@@ -108,187 +124,129 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Persona & Risk Declaration Section (Principles 4 & 7) */}
-            <section className="py-12 bg-gray-50 border-b border-gray-200">
+            {/* Block 4: 誤解の解体 (Misconception) */}
+            <section className="py-16 bg-[#001a33] text-white">
                 <div className="max-w-4xl mx-auto px-6">
-                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 relative">
-                        {/* Red Banner Top */}
-                        <div className="bg-red-600 text-white font-bold text-center py-3 text-lg">
-                            【重要】このサイトの対象者について
+                    <div className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-md">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="bg-red-500 text-white p-2 rounded-lg">
+                                <Icon name="x" className="size-6" />
+                            </div>
+                            <h2 className="text-xl md:text-2xl font-black">よくある「最大の間違い」</h2>
                         </div>
-
-                        <div className="p-8 md:p-10">
-                            <p className="font-bold text-gray-800 text-lg mb-6 text-center">
-                                当サイトは<span className="text-red-600 border-b-2 border-red-600">「すべての人に太陽光をすすめるサイト」ではありません。</span><br className="hidden md:block" />
-                                まず、以下の条件に当てはまるかご確認ください。
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-8 mt-8">
-                                {/* Not For You Area */}
-                                <div className="bg-red-50 p-6 rounded-xl border border-red-100">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        <h3 className="font-black text-red-800 text-lg">このような方には<br />おすすめしません</h3>
-                                    </div>
-                                    <ul className="space-y-3 text-sm text-gray-700 font-medium">
-                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 対象エリア外（関東1都6県以外）にお住まいの方</li>
-                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 1981年（昭和56年）以前に建てられた旧耐震基準の家屋</li>
-                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 賃貸住宅や集合住宅（※戸建て専用のサービスです）</li>
-                                        <li className="flex gap-2"><Icon name="x" className="text-red-500 size-4 mt-0.5" /> 数年以内に確実に取り壊しや引越しの予定がある方</li>
-                                    </ul>
-                                </div>
-
-                                {/* Target Persona Area */}
-                                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        <h3 className="font-black text-blue-800 text-lg">このような方に<br />「東京ガス」を推奨します</h3>
-                                    </div>
-                                    <ul className="space-y-3 text-sm text-gray-700 font-medium">
-                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> <span className="font-bold underline">初期費用0円</span>で太陽光と蓄電池を導入したい方</li>
-                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> 最近の電気代高騰に頭を悩ませている方</li>
-                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> もしもの災害時（停電）に備えたインフラが欲しい方</li>
-                                        <li className="flex gap-2"><Icon name="check" className="text-blue-500 size-4 mt-0.5" /> 訪問販売などの怪しい業者ではなく、安心できる大手に頼みたい方</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="mt-8 text-center text-sm text-gray-500 bg-gray-50 p-4 rounded-lg">
-                                ※上記「おすすめしない条件」に1つでも該当する場合、審査や設置基準を通らない可能性が高いため、以降の記事を読んでいただいてもお時間を無駄にしてしまう可能性がございます。
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Core Issues Section - Number Cards UI */}
-            <section className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white relative">
-                {/* Background Decorators */}
-                <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent top-0 left-0"></div>
-
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16 relative z-10">
-                        <span className="text-blue-600 font-black tracking-widest text-sm mb-2 block uppercase">Must Check</span>
-                        <h2 className="text-3xl md:text-4xl font-black text-[#003366] mb-6">導入前に潰すべき「3つの不安」</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">このポイントを曖昧にしたまま契約するのは危険です。<br className="hidden md:block" />各専門ページで対処法を確認してください。</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Issue 1: Exit strategy */}
-                        <div className="bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col items-center group transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-400 to-red-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-
-                            <div className="w-20 h-20 bg-gradient-to-br from-red-50 to-red-100 text-red-600 flex items-center justify-center rounded-2xl text-4xl font-black shrink-0 mb-6 shadow-sm border border-red-100 group-hover:scale-110 transition-transform duration-300">
-                                1
-                            </div>
-                            <div className="text-center flex-grow flex flex-col">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-red-600 transition-colors">「途中で家を手放したらどうなるの？」</h3>
-                                <p className="text-gray-600 mb-8 text-sm leading-relaxed flex-grow">引っ越しや解体時の「解約金・撤去費」トラブルが最大の恐怖です。契約形態による影響と、見積もり時に聞くべき必須の質問リストをまとめました。</p>
-                                <Link to="/cancellation" className="inline-block bg-red-50 text-red-600 font-bold text-sm py-3 px-6 rounded-full hover:bg-red-100 transition-colors border border-red-100">
-                                    清算金リスクを確認 <Icon name="arrowRight" className="size-4 ml-1" />
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Issue 2: Cost calculation */}
-                        <div className="bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col items-center group transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden md:mt-8">
-                            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-
-                            <div className="w-20 h-20 bg-gradient-to-br from-orange-50 to-orange-100 text-orange-600 flex items-center justify-center rounded-2xl text-4xl font-black shrink-0 mb-6 shadow-sm border border-orange-100 group-hover:scale-110 transition-transform duration-300">
-                                2
-                            </div>
-                            <div className="text-center flex-grow flex flex-col">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-orange-600 transition-colors">「結局、我が家だったらいくらなの？」</h3>
-                                <p className="text-gray-600 mb-8 text-sm leading-relaxed flex-grow">屋根形状、足場、分電盤の古さで値段は大きく変わります。ネットの平均価格は役に立ちません。見積もりの「罠」と内訳の見方を解説します。</p>
-                                <Link to="/cost" className="inline-block bg-orange-50 text-orange-600 font-bold text-sm py-3 px-6 rounded-full hover:bg-orange-100 transition-colors border border-orange-100">
-                                    見積もりの見方へ <Icon name="arrowRight" className="size-4 ml-1" />
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Issue 3: Subsidies */}
-                        <div className="bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col items-center group transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden md:mt-16">
-                            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-400 to-blue-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-
-                            <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 text-[#003366] flex items-center justify-center rounded-2xl text-4xl font-black shrink-0 mb-6 shadow-sm border border-blue-100 group-hover:scale-110 transition-transform duration-300">
-                                3
-                            </div>
-                            <div className="text-center flex-grow flex flex-col">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#003366] transition-colors">「高額な補助金は本当に絶対もらえる？」</h3>
-                                <p className="text-gray-600 mb-8 text-sm leading-relaxed flex-grow">補助金は「予算上限」や「厳格な期限・書類」に縛られます。確定事項ではないからこそ、申請の事実と資金繰りの注意点を知る必要があります。</p>
-                                <div className="flex flex-col gap-3 w-full">
-                                    <Link to="/subsidy-tokyo" className="inline-block w-full bg-blue-50 text-[#003366] font-bold text-sm py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors border border-blue-100">東京都の補助金とは <Icon name="arrowRight" className="size-4 ml-1" /></Link>
-                                    <Link to="/subsidy-payment" className="inline-block w-full bg-blue-50 text-[#003366] font-bold text-sm py-2 px-4 rounded-lg hover:bg-blue-100 transition-colors border border-blue-100">補助金はいつ入る？ <Icon name="arrowRight" className="size-4 ml-1" /></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Tokyo Gas Section - Flowchart UI */}
-            <section className="py-24 px-6 bg-[#001a33] text-white">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16">
-                        <span className="text-orange-400 font-bold tracking-widest text-sm mb-2 block uppercase">Trust & Reliability</span>
-                        <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
-                            なぜ、あえて<br className="md:hidden" />「東京ガス」を選ぶのか？
-                        </h2>
-                        <p className="text-blue-200 leading-relaxed max-w-2xl mx-auto text-lg">
-                            世の中には「初期費用0円」や「格安」を謳う販売代理店が星の数ほど存在します。しかしインフラは15年以上使い続けるものです。
+                        <p className="text-lg md:text-xl font-bold leading-relaxed mb-6 italic">
+                            「安い海外メーカーの太陽光パネルを選べば、早く元が取れる」<br className="hidden md:block" />
+                            <span className="text-red-400">――それは大きな間違いです。</span>
+                        </p>
+                        <p className="text-gray-300 leading-relaxed">
+                            太陽光と蓄電池は15年、20年と使い続けるインフラです。安価な海外製品は初期コストを抑えられますが、変換効率の劣化や、メーカー撤退時の保証消失リスクを考慮すると、長期的には赤字になるケースが多発しています。東京ガスの15年長期保証は、「最後まで利益を出し切る」ための保険です。
                         </p>
                     </div>
+                </div>
+            </section>
 
-                    {/* Visual Flow / Comparison Block */}
-                    <div className="flex flex-col md:flex-row items-center gap-6 justify-center">
-                        {/* Bad Flow */}
-                        <div className="bg-white/5 border border-white/10 p-6 rounded-2xl w-full md:w-80 backdrop-blur-sm shadow-xl">
-                            <p className="text-center font-bold text-red-400 mb-6 pb-2 border-b border-white/10"><Icon name="x" className="text-red-400 mr-2 size-5 align-middle" />名もなき代理店のリスク</p>
-                            <div className="flex flex-col gap-4 relative">
-                                <div className="bg-black/40 p-4 rounded-lg border border-red-500/30 text-center relative z-10">
-                                    <p className="text-sm text-gray-300">格安で契約</p>
-                                </div>
-                                <div className="w-0.5 h-6 bg-red-500/30 mx-auto -my-4 relative z-0"></div>
-                                <div className="bg-black/40 p-4 rounded-lg border border-red-500/30 text-center relative z-10 mt-2">
-                                    <p className="text-sm text-gray-300">下請けの低品質な工事<br /><span className="text-xs text-red-300">(雨漏りの危険)</span></p>
-                                </div>
-                                <div className="w-0.5 h-6 bg-red-500/30 mx-auto -my-4 relative z-0"></div>
-                                <div className="bg-black/40 p-4 rounded-lg border border-red-500/30 text-center relative z-10 mt-2">
-                                    <p className="text-sm font-bold text-red-400">数年後、倒産して連絡不可<br /><span className="text-xs font-normal">保証が紙切れに…</span></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Versus Divider */}
-                        <div className="text-3xl font-black text-gray-500 md:-rotate-90 md:mx-4">VS</div>
-
-                        {/* Good Flow (Tokyo Gas) */}
-                        <div className="bg-gradient-to-b from-blue-900 to-blue-950 border border-blue-500/30 p-8 rounded-2xl w-full md:w-96 backdrop-blur-sm shadow-[0_0_50px_rgba(59,130,246,0.15)] relative transform md:scale-105">
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-black px-4 py-1 rounded-full shadow-lg">安心の最適解</div>
-                            <p className="text-center font-black text-blue-200 mb-6 pb-2 border-b border-blue-500/30 text-lg"><Icon name="check" className="text-blue-200 mr-2 size-6 align-middle" />東京ガスの品質</p>
-                            <div className="flex flex-col gap-4 relative">
-                                <div className="bg-blue-800/80 p-4 rounded-lg border border-blue-400 text-center relative z-10 shadow-lg">
-                                    <p className="font-bold text-white">プロによる綿密な図面調査</p>
-                                </div>
-                                <div className="w-1 h-6 bg-blue-400 mx-auto -my-4 relative z-0"></div>
-                                <div className="bg-blue-800/80 p-4 rounded-lg border border-blue-400 text-center relative z-10 mt-2 shadow-lg">
-                                    <p className="font-bold text-white">大手水準の厳格な施工管理</p>
-                                </div>
-                                <div className="w-1 h-6 bg-blue-400 mx-auto -my-4 relative z-0"></div>
-                                <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-5 rounded-lg border border-orange-400 text-center relative z-10 mt-2 shadow-xl">
-                                    <p className="text-lg font-black text-white">15年後も確実に存在する<br /><span className="text-sm font-bold">圧倒的なアフターサポート体制</span></p>
-                                </div>
-                            </div>
-                        </div>
+            {/* Block 5: 判断基準 (Criteria) */}
+            <section className="py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <span className="text-blue-600 font-bold tracking-widest text-sm mb-2 block uppercase">Judgment Criteria</span>
+                        <h2 className="text-3xl md:text-4xl font-black text-slate-800">導入を検討すべき「判定基準」</h2>
                     </div>
-
-                    <div className="text-center mt-12">
-                        <Link to="/installation" className="inline-flex items-center justify-center gap-2 text-blue-300 font-bold hover:text-white transition-colors bg-white/5 px-6 py-3 rounded-full hover:bg-white/10">
-                            工事・施工の不安について詳しく見る <Icon name="arrowRight" className="size-5" />
-                        </Link>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="space-y-4">
+                            {[
+                                "毎月の電気代が平均1.5万円を超えている",
+                                "日中の在宅時間が長く、電気自給率を高められる",
+                                "災害時の停電に強い不安を感じている",
+                                "築30年以内（1981年以降）の戸建てである"
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 font-bold text-slate-700">
+                                    <Icon name="check" className="text-blue-600 size-6 shrink-0" />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="bg-blue-600 p-8 rounded-3xl text-white flex flex-col justify-center">
+                            <p className="text-xl font-black mb-4 leading-tight">3つ以上当てはまるなら、<br />「東京ガス」が最適解です。</p>
+                            <p className="text-blue-100 text-sm leading-relaxed">
+                                上記の条件を満たす場合、東京ガスの0円設置モデルまたはセット割引により、月々の支払額を抑えつつ資産価値を高められる可能性が非常に高いです。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            {/* Decision Diagnosis Block (Constitution Requirement) */}
+            <DiagnosisBlock />
+
+            {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+            <section className="py-24 bg-slate-50">
+                <div className="max-w-5xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <span className="text-blue-600 font-bold tracking-widest text-sm mb-2 block uppercase">Simulation Results</span>
+                        <h2 className="text-3xl md:text-4xl font-black text-slate-800">導入後の「真実の数字」</h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Case 1 */}
+                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                                    <p className="font-bold text-slate-800">4人家族・築12年・電気代2万円（オール電化）</p>
+                                </div>
+                                <div className="bg-blue-50 p-4 rounded-xl">
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                    <p className="text-xl font-black text-blue-900">月々の光熱費 8,500円 削減</p>
+                                </div>
+                                <div>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                        昼間の消費電力量を太陽光で100%カバーし、夜間の安価な電力を蓄電池に貯めて朝晩に使用。高い燃料費調整額を完全に回避できました。
+                                    </p>
+                                </div>
+                                <div className="pt-4 border-t border-slate-100">
+                                    <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                    <Link to="/subsidy-payment" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                        「このケースで使える補助金はいくら？」<Icon name="arrowRight" className="size-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Case 2 */}
+                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                                    <p className="font-bold text-slate-800">共働き夫婦・築5年・電気代1.2万円</p>
+                                </div>
+                                <div className="bg-blue-50 p-4 rounded-xl">
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                    <p className="text-xl font-black text-blue-900">初期費用 0円 で太陽光を導入</p>
+                                </div>
+                                <div>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                        東京ガスの「エネカリ」制度を活用。屋根を貸す形式で初期投資をゼロにし、毎月の電気代充当分で実質コストを相殺しています。
+                                    </p>
+                                </div>
+                                <div className="pt-4 border-t border-slate-100">
+                                    <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                    <Link to="/cancellation" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                        「エネカリ契約中に引っ越すとどうなる？」<Icon name="arrowRight" className="size-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Block 7: 申込直前FAQ (Constitution Requirement) */}
+            <ConstitutionFAQ />
+
+
 
             <FinalCTA />
 

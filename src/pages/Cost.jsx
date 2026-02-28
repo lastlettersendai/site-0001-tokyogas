@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { CTALink } from '../components/CTALink.jsx';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 
 export const Cost = () => {
     // Simulator State
@@ -32,35 +33,43 @@ export const Cost = () => {
         >
 
             <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                {/* Intro Section with Image */}
-                <div className="flex flex-col md:flex-row items-center gap-10 mb-16 border-b border-gray-100 pb-12">
+                {/* Block 1: 冒頭3行 (Who/What) */}
+                <div className="mb-8">
+                    <span className="inline-block bg-orange-100 text-orange-800 font-bold px-4 py-1.5 rounded-full text-xs mb-4 border border-orange-300 tracking-wider">COST & TRANSPARENCY</span>
+                    <p className="text-gray-600 text-sm font-bold leading-relaxed">
+                        「結局、初期費用はいくら？」という問いに答えます。<br />
+                        安く見せるネットの広告に惑わされる時間は終わりです。<br />
+                        あなたの予算に合った「正しい選択肢」を提示します。
+                    </p>
+                </div>
+
+                {/* Block 2: 結論1行 */}
+                <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-8">
+                    「補助金」と「0円設置」を組み合わせるのが正解です
+                </h1>
+
+                {/* Block 3: 前提条件 (3行以内) */}
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12">
+                    <p className="text-xs font-black text-orange-600 mb-2 tracking-widest uppercase">Prerequisite for Pricing</p>
+                    <ul className="text-sm font-bold text-slate-700 space-y-1">
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-600" /> 手元の現金を残したまま導入したい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-600" /> 15年間のトータルコスト（維持費含む）で得をしたい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-600" /> 契約後の「追加費用」に怯えたくない</li>
+                    </ul>
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
                     <div className="w-full md:w-3/5 text-left">
-                        <span className="text-orange-500 font-bold tracking-widest text-sm mb-3 block uppercase">Cost & Estimate</span>
-                        <h1 className="text-4xl md:text-5xl font-black text-[#003366] leading-tight mb-6">
-                            東京ガスのシステム<br />
-                            費用はいくら？
-                        </h1>
                         <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                            「我が家だといくらかかるの？」という疑問に対し、金額が変動する3つのポイントを解説。
+                            太陽光の価格は「屋根の形」と「電気の使い方」で決まります。
                         </p>
-                        <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg inline-block shadow-sm">
-                            <p className="text-sm md:text-base font-bold text-gray-800">
-                                <span className="text-orange-600">結論：</span> 金額は家ごとに完全に異なります。<br />まずはプロによる「内訳つきの正確な見積もり」を取ることが唯一の正解です。
-                            </p>
+                        <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg inline-block shadow-sm text-sm font-bold text-gray-800">
+                            金額は家ごとに完全に異なります。まずはプロによる「内訳つきの正確な見積もり」を取ることが唯一の正解です。
                         </div>
                     </div>
                     <div className="w-full md:w-2/5 relative">
                         <div className="absolute -inset-2 bg-gradient-to-tr from-blue-100 to-orange-100 rounded-2xl blur-md opacity-70"></div>
-                        <img
-                            src="/images/cost_inspector.png"
-                            alt="屋根と図面を確認する信頼できる施工士"
-                            className="relative rounded-2xl shadow-lg border border-white w-full object-cover aspect-square"
-                            loading="lazy"
-                        />
-                        <div className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-xl border border-gray-100 flex items-center gap-2">
-                            <Icon name="hardhat" className="text-gray-800 size-6" />
-                            <span className="text-sm font-bold text-[#003366]">プロの無料診断</span>
-                        </div>
+                        <img src="/images/cost_inspector.webp" alt="信頼できる施工士" className="relative rounded-2xl shadow-lg border border-white w-full object-cover" />
                     </div>
                 </div>
 
@@ -156,76 +165,75 @@ export const Cost = () => {
                     </div>
                 </div>
 
-                {/* Estimate Checklist Diagram/Visual Block */}
-                <div className="mb-20">
-                    <div className="text-center mb-10">
-                        <span className="text-orange-500 font-bold tracking-widest text-sm mb-2 block uppercase">Warning</span>
-                        <h2 className="text-2xl md:text-3xl font-black text-[#003366] mb-4">ネットの「平均価格」で<br className="md:hidden" />安心していませんか？</h2>
-                        <p className="text-gray-600">見積もり提出時に「以下の費用」が明記されているか必ずチェックしてください。<br className="hidden md:block" />悪質な業者はこれを契約後に「追加請求」してきます。</p>
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「一括購入が一番安い」</h2>
                     </div>
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        初期費用の安さだけで選ぶと、<span className="underline decoration-red-500 decoration-2">15年後のメンテナンス費用で大損します。</span>
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        一括購入は金利負担がない一方、機器の故障や不具合の対応はすべて自己負担です。東京ガスの「エネカリ」なら月々定額で15年間のフル保証がつくため、突発的な高額修理（パワコン交換など）のリスクを完全にゼロにできます。
+                    </p>
+                </div>
 
-                    <div className="bg-[#001a33] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                        {/* Blueprint Background Pattern */}
-                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                {/* Block 5: 判断基準 (Criteria) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-orange-600 pl-4">あなたに最適な「支払い方法」</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">「補助金活用・一括購入」の基準</h3>
+                            <ul className="text-sm space-y-2 text-slate-600 italic">
+                                <li>・手元の現金を運用せず、支払いを一度で終わらせたい</li>
+                                <li>・補助金を最大額（数十万円）確保したい</li>
+                                <li>・売電収入をすべて自分の所得にしたい</li>
+                            </ul>
+                        </div>
+                        <div className="bg-orange-50 p-6 rounded-2xl border border-orange-200">
+                            <h3 className="font-bold mb-4 text-orange-900">「0円設置・エネカリ」の基準</h3>
+                            <ul className="text-sm space-y-2 text-orange-800 italic">
+                                <li>・手元の貯金を減らしたくない</li>
+                                <li>・15年間の「突発的な故障」に一切費用を払いたくない</li>
+                                <li>・家計の支出をフラットに保ちたい</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                        <h3 className="text-xl font-bold text-white mb-8 text-center relative z-10">見積書で見落としてはならない <span className="text-orange-400">4つの項目</span></h3>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
-                                <div className="mb-3"><Icon name="box" className="text-orange-400 size-8" /></div>
-                                <h4 className="text-lg font-bold text-white mb-2">1. 機器代 / 工事費の分離</h4>
-                                <p className="text-sm text-gray-300">「一式」とだけ書かれている場合は危険。どのパネルにいくらかかり、工事の人件費がいくらか、内訳明記を求めましょう。</p>
+                {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        支払いシミュレーション
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">4人家族・太陽光5kW＋蓄電池7kWh・補助金フル活用</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">月々の家計収支：約2,500円 のプラス</p>
                             </div>
-
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
-                                <div className="mb-3"><Icon name="hammer" className="text-orange-400 size-8" /></div>
-                                <h4 className="text-lg font-bold text-white mb-2">2. 「足場代」の完全な記載</h4>
-                                <p className="text-sm text-gray-300">屋根工事に必須の足場代（15万〜30万円前後）。これが「別途請求」の罠になりやすいため、合算されているか確認を。</p>
-                            </div>
-
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
-                                <div className="mb-3"><Icon name="file" className="text-orange-400 size-8" /></div>
-                                <h4 className="text-lg font-bold text-white mb-2">3. 補助金「適用前 / 後」の明記</h4>
-                                <p className="text-sm text-gray-300">補助金は審査落ちや予算切れのリスクがあります。「適用後」の極端に安い金額だけを誇張する説明には要注意です。</p>
-                            </div>
-
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-colors">
-                                <div className="mb-3"><Icon name="shield" className="text-orange-400 size-8" /></div>
-                                <h4 className="text-lg font-bold text-white mb-2">4. 保証範囲（機器・施工）</h4>
-                                <p className="text-sm text-gray-300">「15年保証」とあっても、それが「パネル出力」だけなのか「パワコン」も含むのか、「雨漏り等の施工保証」があるか確認必須。</p>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                電気代削減額（1.5万円）＋売電（0.5万円）− 導入コスト月換算分（1.7万円）。生活を変えずに家計を改善。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/subsidy-tokyo" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「実際に受け取れる補助金の額は？」<Icon name="arrowRight" className="size-4" />
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <section className="mb-16">
-                    <h2 className="text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100">よくある質問（費用・相見積もり）</h2>
-                    <div className="space-y-4">
-                        <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
-                                <span className="text-blue-600 mr-3">Q.</span> 他社と相見積もりをした方がいいですか？
-                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
-                            </summary>
-                            <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4 leading-relaxed">
-                                基本的に相見積もりは推奨されます。ただし、比較する際は<strong className="text-gray-800">「パネルのメーカー」「蓄電池の容量」「保証年数」「足場代の有無」などを同条件に揃えて</strong>比較しないと、安かろう悪かろうの業者を選んでしまうリスクがあります。価格だけでなく、アフターサポートの安心感（東京ガスという看板の強みなど）も含めて総合的に判断してください。
-                            </div>
-                        </details>
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
+                <FinalCTA />
 
-                        <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
-                                <span className="text-blue-600 mr-3">Q.</span> 初期費用0円のプランもあると聞きましたが？
-                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
-                            </summary>
-                            <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4 leading-relaxed">
-                                いわゆる「PPAモデル（第三者所有モデル）」やリース契約のことです。初期費用がかからない分、契約期間中は売電収入が得られなかったり、長期的には一括購入より総支払額が高くなるケースがあります。本サイトでは、補助金を活用した「購入」をご案内しています。
-                            </div>
-                        </details>
-                    </div>
-                </section>
             </div>
-
-            <FinalCTA />
-
         </PageTemplate>
     );
 };

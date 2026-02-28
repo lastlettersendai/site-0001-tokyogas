@@ -54,7 +54,7 @@ export const Layout = ({ children }) => {
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <div>
+                        <div className="px-4 md:px-0">
                             <h4 className="font-bold text-lg mb-4 text-blue-100 border-b border-blue-800 pb-2">導入前の確認</h4>
                             <ul className="space-y-2 text-sm text-blue-200">
                                 <li><Link to="/eligible" className="hover:text-white transition-colors">対象条件チェック</Link></li>
@@ -63,7 +63,7 @@ export const Layout = ({ children }) => {
                                 <li><Link to="/outage" className="hover:text-white transition-colors">停電時の仕様</Link></li>
                             </ul>
                         </div>
-                        <div>
+                        <div className="px-4 md:px-0">
                             <h4 className="font-bold text-lg mb-4 text-blue-100 border-b border-blue-800 pb-2">制度と運営</h4>
                             <ul className="space-y-2 text-sm text-blue-200">
                                 <li><Link to="/subsidy-tokyo" className="hover:text-white transition-colors">東京都の補助金</Link></li>

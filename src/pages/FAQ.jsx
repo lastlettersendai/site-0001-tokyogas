@@ -5,6 +5,7 @@ import { StructuredData } from '../components/StructuredData.jsx';
 import { CTALink } from '../components/CTALink.jsx';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 
 export const FAQ = () => {
     const faqData = {
@@ -77,24 +78,101 @@ export const FAQ = () => {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
 
                 {/* Hero Section with Support Agent Image */}
-                <div className="mb-16">
-                    <div className="bg-gradient-to-br from-blue-50 to-[#e6f0fa] rounded-3xl overflow-hidden shadow-lg border border-blue-100 flex flex-col md:flex-row items-center">
-                        <div className="p-8 md:p-12 md:w-3/5 text-center md:text-left z-10 relative">
-                            <span className="inline-block bg-white text-[#003366] font-bold px-4 py-1.5 rounded-full text-sm mb-4 border border-blue-200 tracking-wider shadow-sm">疑問や不安を解消</span>
-                            <h1 className="text-3xl md:text-4xl font-black text-[#003366] leading-tight mb-4">
-                                よくある質問<br className="hidden md:block" />（FAQ）
-                            </h1>
-                            <p className="text-gray-700 text-lg leading-relaxed">
-                                導入に向けた、最後の気になる疑問を解消します。契約前にクリアにしておきたいポイントをまとめました。
-                            </p>
+                <div className="mb-16 border-b border-gray-100 pb-12">
+                    <span className="inline-block bg-blue-100 text-[#003366] font-bold px-4 py-1.5 rounded-full text-sm mb-4 border border-blue-200 tracking-wider shadow-sm">FAQ & DECISION</span>
+                    <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-8">
+                        「知らなかった」で後悔しないための<br className="hidden md:inline" />最終確認リスト
+                    </h1>
+
+                    {/* Block 3: 前提条件 (3行以内) */}
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-8">
+                        <p className="text-xs font-black text-[#003366] mb-2 tracking-widest uppercase">Prerequisite for FAQ</p>
+                        <ul className="text-sm font-bold text-slate-700 space-y-1">
+                            <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 基本的な仕組みや費用の知識はある</li>
+                            <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 契約直前の「最後の不安」を消したい</li>
+                            <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> メリットだけでなくデメリットも知りたい</li>
+                        </ul>
+                    </div>
+
+                    <p className="text-gray-700 text-lg leading-relaxed max-w-2xl">
+                        導入に向けた、最後の気になる疑問を解消します。契約前にクリアにしておきたいポイントをまとめました。
+                    </p>
+
+                    <div className="mt-10 overflow-hidden rounded-3xl border border-blue-100 shadow-lg relative h-64 md:h-80">
+                        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent to-[#e6f0fa]/80 z-10 flex items-center p-8 md:p-12">
+                            <div className="max-w-md">
+                                <h2 className="text-2xl font-black text-[#003366] mb-2">サポート体制も万全</h2>
+                                <p className="text-[#003366] font-bold">担当者がマンツーマンで疑問にお答えします。</p>
+                            </div>
                         </div>
-                        <div className="w-full md:w-2/5 h-64 md:h-auto relative">
-                            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent to-[#e6f0fa] z-10"></div>
-                            <img
-                                src="/images/faq_support.png"
-                                alt="カスタマーサポート担当者"
-                                className="w-full h-full object-cover object-center"
-                            />
+                        <img
+                            src="/images/faq_support.webp"
+                            alt="カスタマーサポート担当者"
+                            className="w-full h-full object-cover object-center"
+                        />
+                    </div>
+                </div>
+
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20 mt-16">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「質問するとしつこく営業される」</h2>
+                    </div>
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        「見積もりや相談をしたら最後、契約するまで帰ってくれない」というのは、<span className="underline decoration-red-500 decoration-2">昔の訪問販売のイメージです。</span>
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        東京ガスでは、強引な押し売りやしつこい電話営業はコンプライアンス上固く禁じられています。あくまで「お客様の課題解決」が目的であり、費用対効果にメリットが出ないご家庭には、正直に「今回は見送った方が良いです」とご案内する場合も多々あります。
+                    </p>
+                </div>
+
+                {/* Block 5: 判断基準 (Criteria) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-blue-600 pl-4">無料シミュレーションに進むべき基準</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">こんな方は今すぐ相談へ</h3>
+                            <ul className="text-sm space-y-2 text-slate-600 italic">
+                                <li>・補助金がなくなる前に「枠」だけでも確保したい</li>
+                                <li>・光熱費の高騰に毎月ストレスを感じている</li>
+                                <li>・数年内に屋根のメンテナンス時期が来ない新築〜築浅</li>
+                            </ul>
+                        </div>
+                        <div className="bg-blue-50 p-6 rounded-2xl border border-blue-200">
+                            <h3 className="font-bold mb-4 text-blue-900">こんな方は見送り推奨</h3>
+                            <ul className="text-sm space-y-2 text-blue-800 italic">
+                                <li>・数年以内に家の売却や取り壊しが決まっている</li>
+                                <li>・日陰が多く、1日中全く日が当たらない</li>
+                                <li>・屋根の劣化が激しく、雨漏りなどの修繕が最優先</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Block 6: 実例 (Case Study) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        導入判断シミュレーション
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">「本当に安くなるの？」と半信半疑だったBさん</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">月額3,000円の実質負担減を確認し、即契約</p>
+                            </div>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                無料の発電シミュレーションを依頼したところ、ご自宅の屋根の形が太陽光に非常に適していることが判明。ローン支払いを含めても今の電気代よりトータルの出費が減る明確な数字が出たため、迷いなく決断できました。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/subsidy-tokyo" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「東京都の補助金はまだ間に合う？」<Icon name="arrowRight" className="size-4" />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,7 +277,7 @@ export const FAQ = () => {
                                     <span className="bg-[#003366] text-white rounded-full w-8 h-8 flex items-center justify-center font-black shrink-0">Q</span>
                                     <span>契約後、やむを得ない理由（転勤など）で解約することはできますか？</span>
                                 </span>
-                                <span className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-open:-rotate-180 transition-transform">▼</span>
+                                <span className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-open:-rotate-180 transition-transform"><Icon name="chevronDown" className="size-5" /></span>
                             </summary>
                             <div className="p-6 pt-0 bg-gray-50">
                                 <div className="border-t border-gray-200 pt-6 mt-2 flex items-start gap-4">
@@ -214,8 +292,30 @@ export const FAQ = () => {
                     </div>
                 </div>
 
-                <div className="mt-20">
-                    <FinalCTA />
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
+
+                <FinalCTA />
+
+                {/* Internal Links Navigation */}
+                <div className="border-t-2 border-gray-100 pt-10 mt-16 pb-12">
+                    <h3 className="font-bold text-lg text-gray-700 mb-6 text-center">次はこちらも確認してください</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <Link to="/subsidy-tokyo" className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
+                            <div className="text-left w-full">
+                                <div className="text-xs text-orange-500 font-bold mb-1 tracking-wider uppercase">Money</div>
+                                <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">東京都の補助金と罠</div>
+                            </div>
+                            <Icon name="arrowRight" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2" />
+                        </Link>
+                        <Link to="/" className="bg-[#003366] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex items-center justify-between group">
+                            <div className="text-left w-full">
+                                <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
+                                <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
+                            </div>
+                            <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:translate-x-2" />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </PageTemplate>

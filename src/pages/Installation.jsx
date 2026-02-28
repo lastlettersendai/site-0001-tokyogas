@@ -3,6 +3,7 @@ import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 
 export const Installation = () => {
     return (
@@ -12,43 +13,36 @@ export const Installation = () => {
             path="/installation"
         >
 
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                {/* Intro & Hero Area */}
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+                {/* Block 1: 冒頭3行 (Who/What) */}
+                <div className="mb-8">
+                    <span className="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1.5 rounded-full text-xs mb-4 border border-blue-300 tracking-wider uppercase">INSTALLATION QUALITY</span>
+                    <p className="text-gray-600 text-sm font-bold leading-relaxed">
+                        「どこが工事しても同じ」は大間違いです。<br />
+                        屋根に穴をあけるという重大な作業において、誰が責任を負うのか。<br />
+                        後悔しないための「施工の真実」をここに記します。
+                    </p>
+                </div>
+
+                {/* Block 2: 結論1行 */}
+                <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-8">
+                    「元請け」が逃げない大手を選ぶのが正解です
+                </h1>
+
+                {/* Block 3: 前提条件 (3行以内) */}
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12">
+                    <p className="text-xs font-black text-blue-600 mb-2 tracking-widest uppercase">Prerequisite for Safety</p>
+                    <ul className="text-sm font-bold text-slate-700 space-y-1">
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 屋根の寿命（20〜30年）を全うさせたい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 万が一の雨漏り時に、電話一本で駆けつけてほしい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 訪問販売などの「安さ重視」の施工に不安がある</li>
+                    </ul>
+                </div>
+
                 <div className="text-center mb-16 border-b border-gray-100 pb-12">
-                    <span className="inline-block bg-orange-100 text-orange-800 font-bold px-4 py-1.5 rounded-full text-sm mb-4 tracking-wider uppercase">Installation Quality</span>
-                    <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-6">
-                        工事は下請けに丸投げ？<br className="hidden md:inline" />雨漏りは大丈夫？
-                    </h1>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
                         太陽光パネルの設置について、「屋根に穴をあけるから雨漏りするのでは」と心配される方は非常に多いです。施工不良のリスクと、業者の選び方について解説します。
                     </p>
-
-                    {/* Timeline Flow */}
-                    <div className="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-200 text-left">
-                        <h3 className="font-bold text-gray-800 mb-6 text-center text-lg">一般的な導入までの流れ</h3>
-                        <div className="relative border-l-4 border-blue-200 ml-4 md:ml-6 space-y-6 pb-4">
-                            <div className="relative pl-6">
-                                <span className="absolute -left-[30px] top-1 w-11 h-11 bg-white border-4 border-[#003366] rounded-full flex items-center justify-center font-bold text-[#003366]">1</span>
-                                <h4 className="font-bold text-gray-800 text-lg">無料相談・現地調査</h4>
-                                <p className="text-sm text-gray-600 mt-1">プロが屋根の形状や設備の劣化状況を詳細に確認します。</p>
-                            </div>
-                            <div className="relative pl-6">
-                                <span className="absolute -left-[30px] top-1 w-11 h-11 bg-white border-4 border-[#003366] rounded-full flex items-center justify-center font-bold text-[#003366]">2</span>
-                                <h4 className="font-bold text-gray-800 text-lg">正式見積もり・ご契約</h4>
-                                <p className="text-sm text-gray-600 mt-1">調査結果に基づき正確な見積もりを提示。納得の上で契約となります。</p>
-                            </div>
-                            <div className="relative pl-6">
-                                <span className="absolute -left-[30px] top-1 w-11 h-11 bg-white border-4 border-orange-500 rounded-full flex items-center justify-center font-bold text-orange-500">3</span>
-                                <div className="bg-orange-50 p-4 rounded-lg border border-orange-100 mt-1">
-                                    <h4 className="font-bold text-orange-800 text-lg flex items-center gap-2">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
-                                        施工（約1〜3日）
-                                    </h4>
-                                    <p className="text-sm text-gray-700 mt-1">ここで業者の「品質」が問われます。近隣への挨拶や丁寧な施工が必須です。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 {/* Risk Cards */}
@@ -78,12 +72,49 @@ export const Installation = () => {
                     </div>
                 </div>
 
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「自社施工の会社が一番安心」</h2>
+                    </div>
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        「中間マージンがないから安い」という言葉の裏には、<span className="underline decoration-red-500 decoration-2">会社が倒産したら保証も終わる</span>という致命的なリスクが隠れています。
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        太陽光発電は15年以上の長期運用が前提です。自社施工を謳う小さな会社は、経営が悪化すれば保証義務を果たすことができません。インフラ大手の東京ガスが元請けであることは、「15年後も確実に会社が存在している」という、何物にも代えがたい保証です。
+                    </p>
+                </div>
+
+                {/* Block 5: 判断基準 (Criteria) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-blue-600 pl-4">良い施工業者を見分ける「3つの基準」</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">チェックすべきポイント</h3>
+                            <ul className="text-sm space-y-2 text-slate-600">
+                                <li>・屋根の「現地調査」に1時間以上かけているか</li>
+                                <li>・雨漏り保証が「メーカー保証」とは別に存在するか</li>
+                                <li>・近隣住民への配慮（挨拶・清掃）が徹底されているか</li>
+                            </ul>
+                        </div>
+                        <div className="bg-blue-50 p-6 rounded-2xl border border-blue-200">
+                            <h3 className="font-bold mb-4 text-blue-900">東京ガスならどうなる？</h3>
+                            <ul className="text-sm space-y-2 text-blue-800 italic">
+                                <li>・提携店への抜き打ち検査と厳格な施工マニュアルあり</li>
+                                <li>・万が一の不具合時も、東京ガスが責任を持って対応</li>
+                                <li>・地域密着のネットワークで迅速な駆けつけが可能</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Split Layout: Workers Image & Warranty Cards */}
                 <div className="bg-[#001a33] rounded-3xl overflow-hidden shadow-2xl mb-20">
                     <div className="flex flex-col lg:flex-row">
                         <div className="w-full lg:w-5/12 relative">
                             <img
-                                src="/images/installation_workers.png"
+                                src="/images/installation_workers.webp"
                                 alt="信頼できるプロの施工スタッフ"
                                 className="w-full h-full object-cover min-h-[400px]"
                                 loading="lazy"
@@ -176,9 +207,36 @@ export const Installation = () => {
                     </div>
                 </div>
 
-            </div>
+                {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        施工品質シミュレーション
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">築18年・瓦屋根・他社で「屋根の状態不良」と断られたケース</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">適切な補強工事とセットで安全に設置完了</p>
+                            </div>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                東京ガスの調査チームが構造から再計算。無理な設置を勧めるのではなく、現状に合わせた最適な工法を提案し、長期保証を付帯させました。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/faq" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「自分の家が設置できるか今すぐ聞きたい」<Icon name="arrowRight" className="size-4" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <FinalCTA />
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
+            </div>
         </PageTemplate>
     );
 };

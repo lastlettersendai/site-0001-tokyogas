@@ -3,6 +3,7 @@ import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
 import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 
 export const SubsidyTokyo = () => {
     return (
@@ -13,25 +14,35 @@ export const SubsidyTokyo = () => {
         >
 
             <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                {/* Hero Section */}
+                {/* Block 1: 冒頭3行 (Who/What) */}
+                <div className="mb-8">
+                    <span className="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1.5 rounded-full text-xs mb-4 border border-blue-300 tracking-wider">SUBSIDY STRATEGY</span>
+                    <p className="text-gray-600 text-sm font-bold leading-relaxed">
+                        「東京都の補助金はすごい」と誰もが言います。<br />
+                        しかし、その裏にある複雑な申請ルールを知る人はわずかです。<br />
+                        1円も無駄にしないための「確実な受給」への道筋を示します。
+                    </p>
+                </div>
+
+                {/* Block 2: 結論1行 */}
+                <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-8">
+                    「先着順」の枠をプロに確保させるのが正解です
+                </h1>
+
+                {/* Block 3: 前提条件 (3行以内) */}
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12">
+                    <p className="text-xs font-black text-blue-600 mb-2 tracking-widest uppercase">Prerequisite for Subsidy</p>
+                    <ul className="text-sm font-bold text-slate-700 space-y-1">
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 東京都内に住宅を所有している</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 予算が切れる前に「交付決定」を勝ち取りたい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 面倒な書類作成をすべて外部に丸投げしたい</li>
+                    </ul>
+                </div>
+
                 <div className="text-center mb-16 border-b border-gray-100 pb-12">
-                    <span className="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1.5 rounded-full text-sm mb-4 border border-blue-200 tracking-wider">費用を下げる最大のカギ</span>
-                    <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-6">
-                        東京都の強力な補助金と<br className="hidden md:inline" />申請の「罠」
-                    </h1>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed text-lg">
                         東京都は全国トップクラスの手厚い補助金を用意していますが、<strong className="text-red-600">最大の敵は「複雑な申請手続き」と「書類不備による審査落ち」です。</strong>
                     </p>
-
-                    <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl relative border border-gray-200">
-                        <div className="absolute top-0 right-0 bg-[#003366] text-white font-bold px-6 py-2 rounded-bl-2xl text-sm z-10 shadow-lg">※令和6年度（2024年度）時点</div>
-                        <img
-                            src="/images/subsidy_tokyo.png"
-                            alt="東京都の太陽光・蓄電池に対する圧倒的な補助金"
-                            className="w-full h-auto object-cover max-h-[500px]"
-                            loading="lazy"
-                        />
-                    </div>
                 </div>
 
                 {/* Max Subsidy Cards */}
@@ -94,71 +105,72 @@ export const SubsidyTokyo = () => {
                     </div>
                 </div>
 
-                {/* DIY vs Proxy Diagram */}
-                <div className="mb-20">
-                    <div className="text-center mb-10">
-                        <span className="text-[#003366] font-bold tracking-widest text-sm mb-2 block uppercase">Easy & Safe</span>
-                        <h2 className="text-2xl md:text-3xl font-black text-gray-800 mb-4">なぜ「東京ガスにお任せ」が最適なのか？</h2>
-                        <p className="text-gray-600">大量の書類作成や不慣れな役所とのやり取りはプロに任せ、<br className="hidden md:block" />お客様は最低限の公的書類を用意するだけの手軽な流れです。</p>
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「後からでも申請できる」</h2>
                     </div>
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        「設置が終わってからゆっくり申請しよう」は大間違いです。<span className="underline decoration-red-500 decoration-2">工事を始めた後では、1円も受け取れません。</span>
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        補助金の基本ルールは「着工前の事前申請」です。さらに、見積もり段階で補助金要件に合致した機器を選定しておく必要があります。後から「このパネルは補助金対象外だった」と判明しても手遅れです。東京ガスの担当者は、最初から「補助金ありき」で最適な提案を行います。
+                    </p>
+                </div>
 
-                    <div className="flex flex-col md:flex-row gap-6 lg:gap-10 items-stretch">
-                        {/* Self / Bad Flow */}
-                        <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-3xl p-6 md:p-8 flex-1 relative opacity-80">
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gray-500 text-white font-bold px-6 py-2 rounded-full text-sm w-[80%] text-center">激安業者・自力申請の場合</div>
+                {/* Block 5: 判断基準 (Criteria) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-blue-600 pl-4">補助金を逃さないための「3つの絶対基準」</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">必ず守るべきこと</h3>
+                            <ul className="text-sm space-y-2 text-slate-600 italic">
+                                <li>・契約前に「今の予算残高」を担当者に確認させる</li>
+                                <li>・国の補助金との「併用」が可能か精査する</li>
+                                <li>・完了報告の期限（工事後○日以内）を死守する</li>
+                            </ul>
+                        </div>
+                        <div className="bg-blue-50 p-6 rounded-2xl border border-blue-200">
+                            <h3 className="font-bold mb-4 text-blue-900">東京ガスの申請サポート</h3>
+                            <ul className="text-sm space-y-2 text-blue-800 italic">
+                                <li>・都庁との膨大なやり取り、図面提出を完全網羅</li>
+                                <li>・過去数千件のデータに基づく「落ちない」書類作成</li>
+                                <li>・予算状況のリアルタイム把握と迅速な枠確保</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                            <div className="mt-8 space-y-4">
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-gray-500">
-                                    <span className="text-red-500 font-bold mr-2">苦労1</span>各省庁・都庁の複雑な要綱を解読
-                                </div>
-                                <div className="text-center text-gray-300"><Icon name="arrowDown" className="size-6 inline-block" /></div>
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-gray-500">
-                                    <span className="text-red-500 font-bold mr-2">苦労2</span>専門的な図面（結線図等）を自作
-                                </div>
-                                <div className="text-center text-gray-300"><Icon name="arrowDown" className="size-6 inline-block" /></div>
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 border-l-4 border-l-red-500">
-                                    <p className="text-red-600 font-bold mb-1">少しでも不備があると…</p>
-                                    <p className="text-sm text-gray-600">差し戻しで期限切れになり補助金ゼロの悲劇に。</p>
-                                </div>
+                {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        補助金受給シミュレーション
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">世田谷区・太陽光4kW＋蓄電池・都と区の補助金を併用</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">補助金総額：約115万円 の受給に成功</p>
                             </div>
-                        </div>
-
-                        {/* VS Badge */}
-                        <div className="flex items-center justify-center shrink-0">
-                            <div className="w-12 h-12 md:w-16 md:h-16 bg-white border-4 border-gray-100 rounded-full flex items-center justify-center font-black text-gray-300 text-xl md:text-2xl z-10 relative">VS</div>
-                        </div>
-
-                        {/* Tokyo Gas Flow */}
-                        <div className="bg-gradient-to-b from-blue-50 to-white border-2 border-[#003366] rounded-3xl p-6 md:p-8 flex-1 relative shadow-xl transform md:-translate-y-4">
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#003366] text-white font-black px-8 py-2 rounded-full shadow-lg border border-blue-400 w-[90%] text-center">東京ガス（おまかせ）</div>
-
-                            <div className="mt-8">
-                                <h4 className="font-bold text-center text-[#003366] mb-4 border-b border-blue-200 pb-2">お客様の作業はこれだけ</h4>
-                                <div className="space-y-4">
-                                    <div className="bg-white p-4 rounded-xl shadow-sm border border-blue-100 flex items-center gap-3">
-                                        <Icon name="building" className="text-blue-900 size-6 shrink-0" />
-                                        <p className="font-bold text-gray-700 text-sm">「公的書類」の取得（住民票など）</p>
-                                    </div>
-                                    <div className="bg-white p-4 rounded-xl shadow-sm border border-blue-100 flex items-center gap-3">
-                                        <Icon name="file" className="text-blue-900 size-6 shrink-0" />
-                                        <p className="font-bold text-gray-700 text-sm">建物の「登記簿謄本」を用意</p>
-                                    </div>
-                                    <div className="bg-white p-4 rounded-xl shadow-sm border border-blue-100 flex items-center gap-3">
-                                        <Icon name="pen" className="text-blue-900 size-6 shrink-0" />
-                                        <p className="font-bold text-gray-700 text-sm">申請書類へ「署名・捺印」</p>
-                                    </div>
-                                </div>
-
-                                <div className="mt-6 bg-orange-100 p-4 rounded-xl border border-orange-200 text-center relative overflow-hidden">
-                                    <div className="absolute top-0 left-0 w-2 h-full bg-orange-500"></div>
-                                    <p className="text-orange-900 font-bold flex items-center justify-center gap-2 text-sm">
-                                        <Icon name="handshake" className="text-orange-900 size-5" /> 面倒な専門書類や図面はすべて代行！
-                                    </p>
-                                </div>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                都の補助金（約80万円）に加えて、区の独自助成（約35万円）を逃さず申請。東京ガスの担当店が両方の要件を熟知していたため可能になった事例です。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/subsidy-payment" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「振込までの具体的なスケジュールは？」<Icon name="arrowRight" className="size-4" />
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
 
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-[#003366] mb-8 pb-2 border-b-2 border-blue-100">
@@ -166,16 +178,16 @@ export const SubsidyTokyo = () => {
                     </h2>
 
                     <div className="bg-blue-50/50 rounded-2xl p-8 border border-blue-100 shadow-sm">
-                        <ul className="space-y-6">
+                        <ul className="space-y-6 [&>li>svg]:size-5 [&>li>svg]:shrink-0 [&>li>svg]:align-middle [&>li>svg]:mt-0.5">
                             <li className="flex items-start gap-4">
-                                <Icon name="message" className="text-blue-600 size-8 shrink-0" />
+                                <Icon name="message" className="text-blue-600" />
                                 <div>
                                     <strong className="text-gray-800 block text-lg mb-2">今の時期、東京都の予算はまだ余っていますか？</strong>
                                     <p className="text-sm text-gray-600 leading-relaxed">これを聞かずに契約するのは危険です。今から動いて間に合うのか、担当者に率直なスケジュールの見立てを確認してください。</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
-                                <Icon name="message" className="text-blue-600 size-8 shrink-0" />
+                                <Icon name="message" className="text-blue-600" />
                                 <div>
                                     <strong className="text-gray-800 block text-lg mb-2">国や市区町村の補助金と「併用」した総額を出して下さい</strong>
                                     <p className="text-sm text-gray-600 leading-relaxed">東京都の補助金は、国の補助金や、お住まいの市区町村（区市）の補助金と併用できる「二重取り、三重取り」が可能なケースがあります。「実質負担額」での見積もりを必ず依頼してください。</p>
@@ -187,26 +199,6 @@ export const SubsidyTokyo = () => {
 
                 <FinalCTA />
 
-                {/* Internal Links Navigation */}
-                <div className="border-t-2 border-gray-100 pt-10 mt-16">
-                    <h3 className="font-bold text-lg text-gray-700 mb-6 text-center">お金に関する次の疑問はこちら</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Link to="/subsidy-payment" className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center flex items-center justify-between group">
-                            <div className="text-left w-full">
-                                <div className="text-xs text-orange-500 font-bold mb-1 tracking-wider uppercase">Timing</div>
-                                <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-lg">補助金はいつ振り込まれる？</div>
-                            </div>
-                            <Icon name="arrowRight" className="size-6 text-gray-300 group-hover:text-blue-600 transition-transform group-hover:translate-x-2" />
-                        </Link>
-                        <Link to="/" className="bg-[#003366] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center flex items-center justify-between group">
-                            <div className="text-left w-full">
-                                <div className="text-xs text-blue-200 font-bold mb-1 tracking-wider uppercase">Home</div>
-                                <div className="font-bold text-white transition-colors text-lg">トップページへ戻る</div>
-                            </div>
-                            <Icon name="arrowRight" className="size-6 text-blue-300 transition-transform group-hover:-translate-x-1" />
-                        </Link>
-                    </div>
-                </div>
 
             </div>
         </PageTemplate>

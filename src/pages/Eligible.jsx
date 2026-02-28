@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { PageTemplate } from '../components/PageTemplate.jsx';
 import { Link } from 'react-router-dom';
 import { Icon } from '../components/Icon.jsx';
+import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
+import { FinalCTA } from '../components/FinalCTA.jsx';
 
 export const Eligible = () => {
     // Interactive checklist states
@@ -24,24 +26,42 @@ export const Eligible = () => {
         >
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                <div className="text-center mb-12">
-                    <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-6">
-                        <span className="block text-lg md:text-2xl text-blue-600 mb-2 font-bold tracking-widest">お申し込み前の必須確認</span>
-                        我が家は導入の<span className="text-orange-500">対象外</span>？<br />
-                        1分セルフ・チェック
-                    </h1>
-                    <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
-                        実は、すべての家で太陽光や蓄電池が設置できるわけではありません。申し込んだ後に「対象外でした」と断られる手間を省くため、まずは公式の条件に基づいた簡易チェックをお試しください。
+                {/* Block 1: 冒頭3行 (Who/What) */}
+                <div className="mb-8 text-left">
+                    <span className="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1.5 rounded-full text-xs mb-4 border border-blue-300 tracking-wider">ELIGIBILITY CHECK</span>
+                    <p className="text-gray-600 text-sm font-bold leading-relaxed">
+                        「我が家には太陽光を置けないのではないか」という不安。<br />
+                        実は、設置基準は驚くほどシンプルに決まっています。<br />
+                        無駄な見積もりで時間を浪費する前に、ここで結論を出しましょう。
                     </p>
+                </div>
 
-                    {/* Roof Image Block */}
+                {/* Block 2: 結論1行 */}
+                <h1 className="text-3xl md:text-5xl font-black text-[#003366] leading-tight mb-8">
+                    設置可否は「地域」「築年数」「戸建て」の3点で決まります。
+                </h1>
+
+                {/* Block 3: 前提条件 (3行以内) */}
+                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12">
+                    <p className="text-xs font-black text-blue-600 mb-2 tracking-widest uppercase">Prerequisite for Check</p>
+                    <ul className="text-sm font-bold text-slate-700 space-y-1">
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 手回しですぐに確認したい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 営業マンと話す前に「目星」をつけておきたい</li>
+                        <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> 公式な導入基準を明確に知りたい</li>
+                    </ul>
+                </div>
+
+                <div className="text-center mb-12 border-b border-gray-100 pb-12">
+                    <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10">
+                        すべての家に太陽光や蓄電池が設置できるわけではありません。申し込んだ後に「対象外でした」と断られる手間を完全に省くため、公式条件に基づいた1分チェックをご用意しました。
+                    </p>
                     <div className="max-w-3xl mx-auto relative rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                         <div className="absolute top-0 left-0 w-full p-3 bg-gradient-to-b from-black/60 to-transparent z-10 flex justify-between text-white font-bold text-sm">
                             <span><Icon name="check" className="text-blue-400 size-4 mr-1 align-middle" /> 設置向いている家</span>
                             <span><Icon name="x" className="text-red-400 size-4 mr-1 align-middle" /> 設置が難しい家</span>
                         </div>
                         <img
-                            src="/images/eligible_roof.png"
+                            src="/images/eligible_roof.webp"
                             alt="太陽光パネル設置に向いている屋根と向いていない屋根の比較画像"
                             className="w-full h-auto object-cover"
                             loading="lazy"
@@ -158,76 +178,104 @@ export const Eligible = () => {
                     </div>
                 </div>
 
-                {/* Target Conditions Q&A */}
-                <section className="mb-16">
-                    <h2 className="text-2xl md:text-3xl font-black text-[#003366] text-center mb-10">対象条件に関するよくある質問</h2>
-                    <div className="space-y-4">
-                        <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
-                                <span className="text-blue-600 mr-3">Q.</span> 建築確認日（1981年以降）って何を見ればわかりますか？
-                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
-                            </summary>
-                            <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
-                                ご自宅を建てた際の「建築確認済証」または「検査済証」の日付をご確認ください。（※建物の完成日や引き渡し日ではありません）。手元に資料がない場合でも、無料相談の際に担当者に「資料がない」旨を伝えて確認してもらうことが可能です。
-                            </div>
-                        </details>
-
-                        <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
-                                <span className="text-blue-600 mr-3">Q.</span> 現在建築中の家でも申し込みできますか？
-                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
-                            </summary>
-                            <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
-                                基本的に既築（すでに建っている）住宅への「後付け」を想定したパッケージとなっています。新築建築中の場合は、まずはハウスメーカーや工務店へ「東京ガスのシステムを導入できるか」ご自身で相談・調整していただく必要があります。
-                            </div>
-                        </details>
-
-                        <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
-                                <span className="text-blue-600 mr-3">Q.</span> 東京ガスとガスや電気の契約をしていなくても申し込めますか？
-                                <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
-                            </summary>
-                            <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
-                                はい、可能です。現在のガスや電気の契約会社が他社であっても、対象エリア等その他の条件を満たしていれば申し込み・契約ができます。
-                            </div>
-                        </details>
+                {/* Block 4: 誤解の解体 (Misconception) */}
+                <div className="bg-red-50 p-8 rounded-3xl border border-red-100 mb-20 mt-16">
+                    <div className="flex items-center gap-3 mb-4 text-red-600">
+                        <Icon name="x" className="size-8" />
+                        <h2 className="text-xl font-black">よくある誤解：「屋根が狭いから無理」</h2>
                     </div>
-                    <div className="text-right mt-4">
-                        <Link to="/faq" className="text-sm text-blue-600 hover:underline">もっと質問を見る <Icon name="arrowRight" className="size-4 ml-1" /></Link>
-                    </div>
-                </section>
-
-                <div className="bg-blue-50 p-6 md:p-8 rounded-xl border border-blue-100 mb-12">
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                        ※上記は基本的な条件です。この他に「屋根の面積・形状（急勾配など）」「劣化状況」「設置スペース（蓄電池を置く場所）」などにより、現地調査後に設置不可となるケースもございます。
+                    <p className="font-bold text-red-800 mb-4 leading-relaxed">
+                        「うちの屋根じゃパネルが少ししか載らない」という理由で諦めるのは、<span className="underline decoration-red-500 decoration-2">補助金額の巨大さを見落としています。</span>
                     </p>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                        ※最新の対象条件については、<a href="https://support.tokyo-gas.co.jp/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">東京ガス公式FAQサイト</a>等もあわせてご確認ください。
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                        最新のパネルは小型化・高効率化が進んでおり、狭小住宅でも十分な発電量が期待できるケースが増えています。特に東京都などでは、ごく少量の設置でも補助金によって「十分にモトが取れる」状態になっています。自己判断で諦めるのが一番の損失です。
                     </p>
                 </div>
 
-                {/* Internal Links Navigation */}
-                <div className="border-t-2 border-blue-100 pt-10 mt-10">
-                    <h3 className="font-bold text-lg text-[#003366] mb-6 text-center">次に読むべき重要なポイント</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <Link to="/cost" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center group">
-                            <div className="mb-2 flex justify-center"><Icon name="money" className="text-gray-800 size-6 group-hover:text-blue-600 transition-colors" /></div>
-                            <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors">費用の決まり方</div>
-                            <div className="text-xs text-gray-500 mt-2">見積もりの見方と変動要因</div>
-                        </Link>
-                        <Link to="/cancellation" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center group">
-                            <div className="mb-2 flex justify-center"><Icon name="alert" className="text-gray-800 size-6 group-hover:text-blue-600 transition-colors" /></div>
-                            <div className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors">解約・引越しの注意</div>
-                            <div className="text-xs text-gray-500 mt-2">契約前に知るべき解約金リスク</div>
-                        </Link>
-                        <Link to="/" className="bg-[#003366] p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#003366] text-center group">
-                            <div className="mb-2 flex justify-center"><Icon name="home" className="text-white size-6" /></div>
-                            <div className="font-bold text-white transition-colors">トップページへ</div>
-                            <div className="text-xs text-blue-200 mt-2">すべての不安を解消する</div>
-                        </Link>
+                {/* Block 5: 判断基準 (Criteria) */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-[#003366] mb-8 border-l-4 border-blue-600 pl-4">プロが見ている「最終判断の境界線」</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h3 className="font-bold mb-4">クリア必須な絶対条件</h3>
+                            <ul className="text-sm space-y-2 text-slate-600 italic">
+                                <li>・対象の関東1都6県に該当していること</li>
+                                <li>・「戸建て」の自己所有物件であること</li>
+                                <li>・1981年（昭和56年）6月以降の「新耐震基準」</li>
+                            </ul>
+                        </div>
+                        <div className="bg-blue-50 p-6 rounded-2xl border border-blue-200">
+                            <h3 className="font-bold mb-4 text-blue-900">見積もり時に発覚するNG例</h3>
+                            <ul className="text-sm space-y-2 text-blue-800 italic">
+                                <li>・屋根の劣化が激しく「改修工事」が先になる</li>
+                                <li>・北向きの急勾配で、発電効率が著しく悪い</li>
+                                <li>・蓄電池を置くための「基礎スペース」が全くない</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
+                {/* Block 6: 実例 (Case Study) - Format Fixed: Premise -> Conclusion -> Reason -> Next Q */}
+                <div className="mb-20">
+                    <h2 className="text-2xl font-black text-center text-[#003366] mb-12">
+                        診断後の行動シミュレーション
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                            <p className="font-bold text-slate-800 mb-4">築年数が微妙（1980年頃）で「わからない」となったAさん</p>
+                            <div className="bg-blue-50 p-4 rounded-xl mb-4">
+                                <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                <p className="text-lg font-black text-blue-900">図面提出により「設置可」の正式判定を獲得</p>
+                            </div>
+                            <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
+                            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                                ご自身では判断できなくても、東京ガスの無料見積もりに「設計図（または検査済証）」の写真をアップロードするだけで、専門スタッフが「新耐震基準」に該当するかを代行判定してくれました。
+                            </p>
+                            <div className="pt-4 border-t border-slate-100">
+                                <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
+                                <Link to="/installation" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
+                                    「実際の工事日数はどれくらいかかる？」<Icon name="arrowRight" className="size-4" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Block 7: 申込直前FAQ */}
+                <ConstitutionFAQ />
+                <div className="space-y-4">
+                    <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                        <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
+                            <span className="text-blue-600 mr-3">Q.</span> 建築確認日（1981年以降）って何を見ればわかりますか？
+                            <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
+                        </summary>
+                        <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
+                            ご自宅を建てた際の「建築確認済証」または「検査済証」の日付をご確認ください。（※建物の完成日や引き渡し日ではありません）。手元に資料がない場合でも、無料相談の際に担当者に「資料がない」旨を伝えて確認してもらうことが可能です。
+                        </div>
+                    </details>
+
+                    <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                        <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
+                            <span className="text-blue-600 mr-3">Q.</span> 現在建築中の家でも申し込みできますか？
+                            <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
+                        </summary>
+                        <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
+                            基本的に既築（すでに建っている）住宅への「後付け」を想定したパッケージとなっています。新築建築中の場合は、まずはハウスメーカーや工務店へ「東京ガスのシステムを導入できるか」ご自身で相談・調整していただく必要があります。
+                        </div>
+                    </details>
+
+                    <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
+                        <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-10 relative">
+                            <span className="text-blue-600 mr-3">Q.</span> 東京ガスとガスや電気の契約をしていなくても申し込めますか？
+                            <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
+                        </summary>
+                        <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
+                            はい、可能です。現在のガスや電気の契約会社が他社であっても、対象エリア等その他の条件を満たしていれば申し込み・契約ができます。
+                        </div>
+                    </details>
+                </div>
+                <FinalCTA />
             </div>
         </PageTemplate>
     );
