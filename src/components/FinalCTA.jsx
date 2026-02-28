@@ -35,12 +35,12 @@ export const FinalCTA = () => {
 
                 {/* Sub Links (最大2つまで) */}
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <Link to="/eligible" className="text-blue-200 hover:text-white font-bold border-b border-blue-400/50 hover:border-white transition-all text-sm flex items-center gap-1">
+                    <a href="/eligible" className="text-blue-200 hover:text-white font-bold border-b border-blue-400/50 hover:border-white transition-all text-sm flex items-center gap-1">
                         <span>我が家が対象か再確認する</span>
-                    </Link>
-                    <Link to="/operator" className="text-blue-200 hover:text-white font-bold border-b border-blue-400/50 hover:border-white transition-all text-sm flex items-center gap-1">
+                    </a>
+                    <a href="/operator" className="text-blue-200 hover:text-white font-bold border-b border-blue-400/50 hover:border-white transition-all text-sm flex items-center gap-1">
                         <span>運営会社・サポート体制について</span>
-                    </Link>
+                    </a>
                 </div>
 
                 <p className="mt-8 text-xs text-blue-300 font-medium opacity-70 italic font-serif">
