@@ -7,7 +7,6 @@ import { FinalCTA } from '../components/FinalCTA.jsx';
 import { Icon } from '../components/Icon.jsx';
 import { ConstitutionFAQ } from '../components/ConstitutionFAQ.jsx';
 import { DiagnosisBlock } from '../components/DiagnosisBlock.jsx';
-import content from '../content/site-0001/content.json';
 
 const Home = () => {
     const articleData = {
@@ -47,8 +46,8 @@ const Home = () => {
 
     return (
         <PageTemplate
-            title={content.home.attr_title_38}
-            description={content.home.attr_description_39}
+            title="東京ガスの太陽光・蓄電池｜後悔しないための確認ポイントと無料見積もり"
+            description="あなたのご自宅に太陽光・蓄電池は本当に必要？東京ガスのシステム導入前に確認すべき「途中解約リスク」「費用の決まり方」「補助金の事実」をまとめました。まずは1分チェックから。"
             path="/"
         >
             <StructuredData data={articleData} />
@@ -64,31 +63,31 @@ const Home = () => {
                         <div className="mb-6">
                             <span className="inline-block bg-blue-800 text-blue-100 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm border border-blue-700 tracking-wider shadow-inner mb-4">TOKYO GAS SOLAR SOLUTIONS</span>
                             <p className="text-blue-100/80 text-sm font-bold leading-relaxed">
-                                {content.home.text_1}<br />
-                                {content.home.text_2}<br />
-                                {content.home.text_3}
+                                太陽光か蓄電池か、それとも両方か。<br />
+                                溢れる情報に迷う時間を、この1ページで終わらせます。<br />
+                                あなたの家にとっての「真実の数字」を今、提示します。
                             </p>
                         </div>
 
                         {/* Block 2: 結論1行 */}
                         <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black leading-tight mb-8 tracking-tight">
-                            {content.home.text_4}<span className="text-orange-400"><span className="mx-1">0</span>{content.home.text_5}</span>{content.home.text_6}<br />
-                            <span className="underline decoration-orange-500 decoration-4 underline-offset-8"><span className="mx-1">15</span>{content.home.text_7}</span>{content.home.text_8}
+                            東京ガスの<span className="text-orange-400"><span className="mx-1">0</span>円設置</span>と<br />
+                            <span className="underline decoration-orange-500 decoration-4 underline-offset-8"><span className="mx-1">15</span>年保証</span>を選ぶのが正解です
                         </h1>
 
                         {/* Block 3: 前提条件 (3行以内) */}
                         <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 inline-block w-full max-w-md text-left mb-10">
                             <p className="text-xs font-black text-orange-400 mb-2 tracking-widest uppercase">Target & Premise</p>
                             <ul className="text-sm font-bold text-white space-y-1">
-                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> {content.home.text_9}</li>
-                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> {content.home.text_10}</li>
-                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> {content.home.text_11}</li>
+                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> 関東1都6県の戸建てにお住まいの方</li>
+                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> 1981年以降に建てられた家屋であること</li>
+                                <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-orange-400" /> 数年内の解体・引越しの予定がないこと</li>
                             </ul>
                         </div>
 
                         <div>
                             <Link to="/eligible" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white font-black text-xl py-4 px-8 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto text-center">
-                                {content.home.text_12} <Icon name="arrowRight" className="size-6" />
+                                我が家は対象？ 1分判定へ <Icon name="arrowRight" className="size-6" />
                             </Link>
                         </div>
                     </div>
@@ -100,7 +99,7 @@ const Home = () => {
                         <source srcSet="/images/home_hero.png" type="image/png" />
                         <img
                             src="/images/home_hero.png"
-                            alt={content.home.attr_alt_40}
+                            alt="東京ガスの太陽光・蓄電池が設置されたエコな住宅"
                             className="w-full object-cover aspect-video block"
                             decoding="async"
                             fetchPriority="high"
@@ -118,14 +117,14 @@ const Home = () => {
                             <div className="bg-red-500 text-white p-2 rounded-lg">
                                 <Icon name="x" className="size-6" />
                             </div>
-                            <h2 className="text-xl md:text-2xl font-black">{content.home.text_13}</h2>
+                            <h2 className="text-xl md:text-2xl font-black">よくある「最大の間違い」</h2>
                         </div>
                         <p className="text-lg md:text-xl font-bold leading-relaxed mb-6">
-                            {content.home.text_14}<br className="hidden md:block" />
-                            <span className="text-red-400">{content.home.text_15}</span>
+                            「安い海外メーカーの太陽光パネルを選べば、早く元が取れる」<br className="hidden md:block" />
+                            <span className="text-red-400">――それは大きな間違いです。</span>
                         </p>
                         <p className="text-gray-300 leading-relaxed">
-                            {content.home.text_16}
+                            太陽光と蓄電池は15年、20年と使い続けるインフラです。安価な海外製品は初期コストを抑えられますが、変換効率の劣化や、メーカー撤退時の保証消失リスクを考慮すると、長期的には赤字になるケースが多発しています。東京ガスの15年長期保証は、「最後まで利益を出し切る」ための保険です。
                         </p>
                     </div>
                 </div>
@@ -136,15 +135,15 @@ const Home = () => {
                 <div className="max-w-4xl mx-auto px-6">
                     <div className="text-center mb-16">
                         <span className="text-blue-600 font-bold tracking-widest text-sm mb-2 block uppercase">Judgment Criteria</span>
-                        <h2 className="text-3xl md:text-4xl font-black text-slate-800">{content.home.text_17}</h2>
+                        <h2 className="text-3xl md:text-4xl font-black text-slate-800">導入を検討すべき「判定基準」</h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-4">
                             {[
-                                content.home.str_41,
-                                content.home.str_42,
-                                content.home.str_43,
-                                content.home.str_44
+                                "毎月の電気代が平均1.5万円を超えている",
+                                "日中の在宅時間が長く、電気自給率を高められる",
+                                "災害時の停電に強い不安を感じている",
+                                "築30年以内（1981年以降）の戸建てである"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 font-bold text-slate-700">
                                     <Icon name="check" className="text-blue-600 size-6 shrink-0" />
@@ -153,9 +152,9 @@ const Home = () => {
                             ))}
                         </div>
                         <div className="bg-blue-600 p-8 rounded-3xl text-white flex flex-col justify-center">
-                            <p className="text-xl font-black mb-4 leading-tight">{content.home.text_18}<br />{content.home.text_19}</p>
+                            <p className="text-xl font-black mb-4 leading-tight">3つ以上当てはまるなら、<br />「東京ガス」が最適解です。</p>
                             <p className="text-blue-100 text-sm leading-relaxed">
-                                {content.home.text_20}
+                                上記の条件を満たす場合、東京ガスの0円設置モデルまたはセット割引により、月々の支払額を抑えつつ資産価値を高められる可能性が非常に高いです。
                             </p>
                         </div>
                     </div>
@@ -170,7 +169,7 @@ const Home = () => {
                 <div className="max-w-5xl mx-auto px-6">
                     <div className="text-center mb-16">
                         <span className="text-blue-600 font-bold tracking-widest text-sm mb-2 block uppercase">Simulation Results</span>
-                        <h2 className="text-3xl md:text-4xl font-black text-slate-800">{content.home.text_21}</h2>
+                        <h2 className="text-3xl md:text-4xl font-black text-slate-800">導入後の「真実の数字」</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
@@ -178,23 +177,23 @@ const Home = () => {
                         <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                             <div className="space-y-6">
                                 <div>
-                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">{content.home.text_22}</p>
-                                    <p className="font-bold text-slate-800">{content.home.text_23}</p>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                                    <p className="font-bold text-slate-800">4人家族・築12年・電気代2万円（オール電化）</p>
                                 </div>
                                 <div className="bg-blue-50 p-4 rounded-xl">
-                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">{content.home.text_24}</p>
-                                    <p className="text-xl font-black text-blue-900">{content.home.text_25}</p>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                    <p className="text-xl font-black text-blue-900">月々の光熱費 8,500円 削減</p>
                                 </div>
                                 <div>
-                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">{content.home.text_26}</p>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
                                     <p className="text-sm text-slate-600 leading-relaxed">
-                                        {content.home.text_27}
+                                        昼間の消費電力量を太陽光で100%カバーし、夜間の安価な電力を蓄電池に貯めて朝晩に使用。高い燃料費調整額を完全に回避できました。
                                     </p>
                                 </div>
                                 <div className="pt-4 border-t border-slate-100">
-                                    <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">{content.home.text_28}</p>
+                                    <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
                                     <Link to="/subsidy-payment" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
-                                        {content.home.text_29}<Icon name="arrowRight" className="size-4" />
+                                        「このケースで使える補助金はいくら？」<Icon name="arrowRight" className="size-4" />
                                     </Link>
                                 </div>
                             </div>
@@ -204,23 +203,23 @@ const Home = () => {
                         <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                             <div className="space-y-6">
                                 <div>
-                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">{content.home.text_30}</p>
-                                    <p className="font-bold text-slate-800">{content.home.text_31}</p>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">1. 前提</p>
+                                    <p className="font-bold text-slate-800">共働き夫婦・築5年・電気代1.2万円</p>
                                 </div>
                                 <div className="bg-blue-50 p-4 rounded-xl">
-                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">{content.home.text_32}</p>
-                                    <p className="text-xl font-black text-blue-900">{content.home.text_33}</p>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">2. 結論</p>
+                                    <p className="text-xl font-black text-blue-900">初期費用 0円 で太陽光を導入</p>
                                 </div>
                                 <div>
-                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">{content.home.text_34}</p>
+                                    <p className="text-xs font-black text-blue-600 mb-1 uppercase tracking-tighter">3. 理由</p>
                                     <p className="text-sm text-slate-600 leading-relaxed">
-                                        {content.home.text_35}
+                                        東京ガスの「エネカリ」制度を活用。屋根を貸す形式で初期投資をゼロにし、毎月の電気代充当分で実質コストを相殺しています。
                                     </p>
                                 </div>
                                 <div className="pt-4 border-t border-slate-100">
-                                    <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">{content.home.text_36}</p>
+                                    <p className="text-xs font-black text-orange-600 mb-1 uppercase tracking-tighter">4. 次の質問</p>
                                     <Link to="/cancellation" className="text-sm font-bold text-slate-800 hover:text-blue-600 flex items-center gap-2">
-                                        {content.home.text_37}<Icon name="arrowRight" className="size-4" />
+                                        「エネカリ契約中に引っ越すとどうなる？」<Icon name="arrowRight" className="size-4" />
                                     </Link>
                                 </div>
                             </div>

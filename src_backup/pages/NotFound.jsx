@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import content from '../content/site-0001/content.json';
 
 function NotFound() {
     return (
@@ -9,10 +8,10 @@ function NotFound() {
                 <span className="mx-1">404</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-                {content.notfound.text_1}
+                ページが見つかりません
             </h2>
             <p className="text-gray-500 mb-10 max-w-md mx-auto leading-relaxed">
-                {content.notfound.text_2}
+                お探しのページは、移動または削除されたか、URLが間違っている可能性があります。
             </p>
             <Link
                 to="/"
@@ -21,7 +20,7 @@ function NotFound() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                 </svg>
-                {content.notfound.text_3}
+                トップページへ戻る
             </Link>
         </div>
     );

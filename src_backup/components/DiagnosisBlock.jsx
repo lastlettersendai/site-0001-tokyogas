@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Icon } from './Icon';
 import { Link } from 'react-router-dom';
-import content from '../content/site-0001/content.json';
 
 const QUESTIONS = [
     {
@@ -70,8 +69,8 @@ export const DiagnosisBlock = () => {
                 <div className="text-center mb-12">
                     <span className="text-orange-600 font-bold tracking-widest text-sm mb-2 block uppercase">Decision Support</span>
                     <h2 className="text-3xl md:text-4xl font-black text-slate-800">
-                        {content.diagnosisblock.text_1}<br />
-                        <span className="text-blue-600">{content.diagnosisblock.text_2}</span>
+                        10秒で完結:あなたに最適な<br />
+                        <span className="text-blue-600">「導入タイプ」診断</span>
                     </h2>
                 </div>
 
@@ -100,15 +99,15 @@ export const DiagnosisBlock = () => {
                                     onClick={() => handleAnswer(true)}
                                     className="flex flex-col items-center justify-center py-6 px-4 bg-blue-50 hover:bg-blue-600 group rounded-2xl border-2 border-blue-100 hover:border-blue-600 transition-all"
                                 >
-                                    <span className="text-blue-600 group-hover:text-white font-black text-2xl mb-1">{content.diagnosisblock.text_3}</span>
-                                    <span className="text-blue-400 group-hover:text-blue-100 text-xs">{content.diagnosisblock.text_4}</span>
+                                    <span className="text-blue-600 group-hover:text-white font-black text-2xl mb-1">はい</span>
+                                    <span className="text-blue-400 group-hover:text-blue-100 text-xs">当てはまる</span>
                                 </button>
                                 <button
                                     onClick={() => handleAnswer(false)}
                                     className="flex flex-col items-center justify-center py-6 px-4 bg-slate-50 hover:bg-slate-600 group rounded-2xl border-2 border-slate-100 hover:border-slate-600 transition-all"
                                 >
-                                    <span className="text-slate-600 group-hover:text-white font-black text-2xl mb-1">{content.diagnosisblock.text_5}</span>
-                                    <span className="text-slate-400 group-hover:text-slate-100 text-xs">{content.diagnosisblock.text_6}</span>
+                                    <span className="text-slate-600 group-hover:text-white font-black text-2xl mb-1">いいえ</span>
+                                    <span className="text-slate-400 group-hover:text-slate-100 text-xs">当てはまらない</span>
                                 </button>
                             </div>
                         </div>
@@ -117,13 +116,13 @@ export const DiagnosisBlock = () => {
                             <div className="bg-green-100 text-green-600 size-16 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <Icon name="check" className="size-10" />
                             </div>
-                            <p className="text-sm font-bold text-slate-500 mb-2">{content.diagnosisblock.text_7}</p>
+                            <p className="text-sm font-bold text-slate-500 mb-2">診断結果</p>
                             <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-6">
-                                {content.diagnosisblock.text_8} <span className="text-blue-600">{result.type}</span> {content.diagnosisblock.text_9}
+                                あなたは <span className="text-blue-600">{result.type}</span> です
                             </h3>
                             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 mb-8 text-left">
                                 <p className="text-slate-700 leading-relaxed font-medium">
-                                    <span className="text-blue-600 font-black mr-2">{content.diagnosisblock.text_10}</span>
+                                    <span className="text-blue-600 font-black mr-2">理由:</span>
                                     {result.reason}
                                 </p>
                             </div>

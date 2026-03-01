@@ -1,6 +1,5 @@
 import React from 'react';
 import { Icon } from './Icon';
-import content from '../content/site-0001/content.json';
 
 const FAQ_ITEMS = [
     {
@@ -36,7 +35,7 @@ export const ConstitutionFAQ = () => {
             <div className="max-w-3xl mx-auto px-6">
                 <div className="text-center mb-12">
                     <span className="text-blue-600 font-bold tracking-widest text-sm mb-2 block uppercase">Last Confirmation</span>
-                    <h2 className="text-3xl font-black text-slate-800">{content.constitutionfaq.text_1}</h2>
+                    <h2 className="text-3xl font-black text-slate-800">申込直前に解消すべき「5つの疑問」</h2>
                 </div>
 
                 <div className="space-y-6">
@@ -55,7 +54,7 @@ export const ConstitutionFAQ = () => {
 
                 <div className="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-100 text-center">
                     <p className="text-sm font-bold text-blue-800 flex items-center justify-center gap-2">
-                        {content.constitutionfaq.text_2}
+                        上記以外に不明点がある場合は、お見積もり時の「担当者ヒアリング」にてすべて解消可能です。
                     </p>
                 </div>
             </div>
