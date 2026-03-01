@@ -43,7 +43,7 @@ export const Eligible = () => {
 
                 {/* Block 3: 前提条件 (3行以内) */}
                 <div className="px-4 sm:px-6 md:px-0">
-                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12 lg:mx-auto">
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 w-full max-w-2xl mx-auto text-left mb-12">
                         <p className="text-xs font-black text-blue-600 mb-2 tracking-widest uppercase">Prerequisite for Check</p>
                         <ul className="text-sm font-bold text-slate-700 space-y-1">
                             <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> {content.eligible.text_6}</li>
@@ -267,8 +267,8 @@ export const Eligible = () => {
                         </details>
 
                         <details className="bg-white rounded-lg shadow-sm border border-gray-200 group">
-                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex justify-between items-center pr-14 relative">
-                                <span className="text-blue-600 mr-3">Q.</span> {content.eligible.text_61}
+                            <summary className="font-bold p-5 cursor-pointer text-gray-800 list-none flex items-center pr-14 relative">
+                                <span className="flex items-center gap-2"><span className="text-blue-600 font-bold">Q.</span> <span>{content.eligible.text_61}</span></span>
                                 <Icon name="chevronDown" className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 group-open:rotate-180 transition-transform size-5" />
                             </summary>
                             <div className="p-5 pt-0 text-gray-600 text-sm md:text-base border-t border-gray-100 mt-2 pt-4">
