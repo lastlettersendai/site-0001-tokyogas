@@ -179,7 +179,7 @@ export const FAQ = () => {
                 <div className="mb-16 max-w-4xl mx-auto px-4 sm:px-6">
                     <h2 className="text-2xl font-black text-[#003366] mb-8 flex items-center gap-2 border-b-2 border-blue-100 pb-3">
                         <Icon name="star" className="text-orange-500 size-8 fill-orange-500" />
-                        {content.faq.text_29}<span className="mx-1">3</span>{content.faq.text_30}
+                        {content.faq.text_29}<span className="">3</span>{content.faq.text_30}
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

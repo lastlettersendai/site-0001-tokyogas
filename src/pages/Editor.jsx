@@ -92,27 +92,16 @@ const Editor = () => {
                         ))}
                     </div>
                 )
-            } else {
-                const val = obj[key] || '';
-                // Flag full-width characters that might break things or were specifically requested not to be used
-                // Requirements: 全角セミコロン「；」や全角引用符など、JSX/JSを壊す可能性がある文字を検出して警告
-                const hasWarning = val.includes('；') || val.includes('：') || val.includes('／') || val.includes('”') || val.includes('“') || val.includes('/') || val.includes(':');
-
                 return (
                     <div key={key} className="mb-5 last:mb-0">
                         <label className="block text-xs font-bold text-slate-500 mb-1 uppercase tracking-wider">{key.replace(/_/g, ' ')}</label>
                         <textarea
-                            className={`w-full border rounded p-3 text-sm font-medium leading-relaxed transition-colors outline-none focus:ring-2 ${hasWarning ? 'border-orange-400 bg-orange-50 focus:ring-orange-200' : 'border-gray-200 bg-gray-50 text-gray-800 focus:ring-blue-200'}`}
+                            className={`w-full border rounded p-3 text-sm font-medium leading-relaxed transition-colors outline-none focus:ring-2 border-gray-200 bg-gray-50 text-gray-800 focus:ring-blue-200`}
                             rows={val.length > 80 ? 4 : 2}
                             value={val}
                             onChange={(e) => handleChange(currentPath, e.target.value)}
                             placeholder="テキストを入力..."
                         />
-                        {hasWarning && (
-                            <div className="text-orange-600 font-bold text-xs mt-1.5 flex items-center gap-1 bg-orange-100 inline-block px-2 py-1 rounded">
-                                ⚠️ 警告: 使用禁止文字が含まれています（全角/半角の「/」「:」「;」「"」など）。ビルドエラーや表記ゆれを防ぐため修正してください。
-                            </div>
-                        )}
                     </div>
                 );
             }
