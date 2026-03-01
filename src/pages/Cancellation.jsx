@@ -32,7 +32,7 @@ export const Cancellation = () => {
 
                 {/* Block 3: 前提条件 (3行以内) */}
                 <div className="px-4 sm:px-6 md:px-0">
-                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
                         <p className="text-xs font-black text-red-600 mb-2 tracking-widest uppercase">Prerequisite for Cancellation</p>
                         <ul className="text-sm font-bold text-slate-700 space-y-1">
                             <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> {content.cancellation.text_5}</li>
@@ -71,7 +71,7 @@ export const Cancellation = () => {
                         <div className="bg-red-600 text-white p-5 rounded-xl shadow-md">
                             <p className="flex items-start">
                                 <Icon name="idea" className="text-blue-500 mr-2 size-6 shrink-0 mt-0.5" />
-                                <span>{content.cancellation.text_13}<span className="text-yellow-300 underline decoration-yellow-500 decoration-2 ml-1">{content.cancellation.text_14}</span>{content.cancellation.text_15}</span>
+                                <span>{content.cancellation.text_13}<span className="text-yellow-300 pink-marker ml-1">{content.cancellation.text_14}</span>{content.cancellation.text_15}</span>
                             </p>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export const Cancellation = () => {
                         <h2 className="text-xl font-black">{content.cancellation.text_16}</h2>
                     </div>
                     <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                        {content.cancellation.text_17}<span className="underline decoration-red-500 decoration-2">{content.cancellation.text_18}</span>
+                        {content.cancellation.text_17}<span className="pink-marker">{content.cancellation.text_18}</span>
                     </p>
                     <p className="text-sm text-gray-700 leading-relaxed">
                         {content.cancellation.text_19}

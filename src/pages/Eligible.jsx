@@ -185,7 +185,7 @@ export const Eligible = () => {
                         <h2 className="text-xl font-black">{content.eligible.text_35}</h2>
                     </div>
                     <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                        {content.eligible.text_36}<span className="underline decoration-red-500 decoration-2">{content.eligible.text_37}</span>
+                        {content.eligible.text_36}<span className="pink-marker">{content.eligible.text_37}</span>
                     </p>
                     <p className="text-sm text-gray-700 leading-relaxed">
                         {content.eligible.text_38}

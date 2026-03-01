@@ -1,0 +1,8 @@
+
+@layer utilities {
+  .pink-marker {
+    background: linear-gradient(transparent 50%, #FF66CC 50%);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

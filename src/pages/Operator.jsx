@@ -68,7 +68,7 @@ export const Operator = () => {
 
                 {/* Block 3: 前提条件 (3行以内) */}
                 <div className="px-4 sm:px-6 md:px-0">
-                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
                         <p className="text-xs font-black text-gray-600 mb-2 tracking-widest uppercase">Prerequisite for Information</p>
                         <ul className="text-sm font-bold text-slate-700 space-y-1">
                             <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-gray-600" /> {content.operator.text_5}</li>
@@ -106,7 +106,7 @@ export const Operator = () => {
                                 <h2 className="text-xl font-black">{content.operator.text_10}</h2>
                             </div>
                             <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                                {content.operator.text_11}<span className="underline decoration-red-500 decoration-2">{content.operator.text_12}</span>
+                                {content.operator.text_11}<span className="pink-marker">{content.operator.text_12}</span>
                             </p>
                             <p className="text-sm text-gray-700 leading-relaxed">
                                 {content.operator.text_13}

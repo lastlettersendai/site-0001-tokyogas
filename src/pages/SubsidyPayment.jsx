@@ -32,7 +32,7 @@ export const SubsidyPayment = () => {
 
                 {/* Block 3: 前提条件 (3行以内) */}
                 <div className="px-4 sm:px-6 md:px-0">
-                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
                         <p className="text-xs font-black text-red-600 mb-2 tracking-widest uppercase">Prerequisite for Cash Flow</p>
                         <ul className="text-sm font-bold text-slate-700 space-y-1">
                             <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-red-600" /> {content.subsidypayment.text_5}</li>
@@ -84,7 +84,7 @@ export const SubsidyPayment = () => {
                     <div className="bg-red-600 text-white p-4 rounded-xl shadow-md text-center">
                         <p className="font-bold text-lg">
                             {content.subsidypayment.text_16}<br className="hidden md:block" />
-                            <span className="text-yellow-300 text-xl mx-1 underline decoration-yellow-500 decoration-2">{content.subsidypayment.text_17}</span>{content.subsidypayment.text_18}
+                            <span className="text-yellow-300 text-xl mx-1 pink-marker">{content.subsidypayment.text_17}</span>{content.subsidypayment.text_18}
                         </p>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ export const SubsidyPayment = () => {
                         <h2 className="text-xl font-black">{content.subsidypayment.text_38}</h2>
                     </div>
                     <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                        {content.subsidypayment.text_39}<span className="underline decoration-red-500 decoration-2">{content.subsidypayment.text_40}</span>
+                        {content.subsidypayment.text_39}<span className="pink-marker">{content.subsidypayment.text_40}</span>
                     </p>
                     <p className="text-sm text-gray-700 leading-relaxed">
                         {content.subsidypayment.text_41}

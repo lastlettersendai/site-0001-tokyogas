@@ -32,7 +32,7 @@ export const Installation = () => {
 
                 {/* Block 3: 前提条件 (3行以内) */}
                 <div className="px-4 sm:px-6 md:px-0">
-                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
                         <p className="text-xs font-black text-blue-600 mb-2 tracking-widest uppercase">Prerequisite for Safety</p>
                         <ul className="text-sm font-bold text-slate-700 space-y-1">
                             <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> {content.installation.text_5}</li>
@@ -90,7 +90,7 @@ export const Installation = () => {
                         <h2 className="text-xl font-black">{content.installation.text_18}</h2>
                     </div>
                     <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                        {content.installation.text_19}<span className="underline decoration-red-500 decoration-2">{content.installation.text_20}</span>{content.installation.text_21}
+                        {content.installation.text_19}<span className="pink-marker">{content.installation.text_20}</span>{content.installation.text_21}
                     </p>
                     <p className="text-sm text-gray-700 leading-relaxed">
                         {content.installation.text_22}

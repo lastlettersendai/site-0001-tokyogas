@@ -87,7 +87,7 @@ export const FAQ = () => {
                         </h1>
 
                         {/* Block 3: 前提条件 (3行以内) */}
-                        <div className="bg-slate-50 p-6 rounded-none sm:rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-8 md:mx-auto lg:ml-[calc(50vw-24rem)]">
+                        <div className="bg-slate-50 p-6 rounded-none sm:rounded-2xl border border-slate-200 w-full max-w-2xl text-left mb-8 md:mx-auto lg:ml-[calc(50vw-24rem)]">
                             <p className="text-xs font-black text-[#003366] mb-2 tracking-widest uppercase">Prerequisite for FAQ</p>
                             <ul className="text-sm font-bold text-slate-700 space-y-1">
                                 <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> {content.faq.text_3}</li>
@@ -118,7 +118,7 @@ export const FAQ = () => {
                         <h2 className="text-xl font-black">{content.faq.text_7}</h2>
                     </div>
                     <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                        {content.faq.text_8}<span className="underline decoration-red-500 decoration-2">{content.faq.text_9}</span>
+                        {content.faq.text_8}<span className="pink-marker">{content.faq.text_9}</span>
                     </p>
                     <p className="text-sm text-gray-700 leading-relaxed">
                         {content.faq.text_10}

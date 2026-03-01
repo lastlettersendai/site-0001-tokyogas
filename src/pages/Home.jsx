@@ -73,7 +73,7 @@ const Home = () => {
                         {/* Block 2: 結論1行 */}
                         <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black leading-tight mb-8 tracking-tight">
                             {content.home.text_4}<span className="text-orange-400"><span className="mx-1">0</span>{content.home.text_5}</span>{content.home.text_6}<br />
-                            <span className="underline decoration-orange-500 decoration-4 underline-offset-8"><span className="mx-1">15</span>{content.home.text_7}</span>{content.home.text_8}
+                            <span className="pink-marker"><span className="mx-1">15</span>{content.home.text_7}</span>{content.home.text_8}
                         </h1>
 
                         {/* Block 3: 前提条件 (3行以内) */}

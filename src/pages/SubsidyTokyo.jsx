@@ -32,7 +32,7 @@ export const SubsidyTokyo = () => {
 
                 {/* Block 3: 前提条件 (3行以内) */}
                 <div className="px-4 sm:px-6 md:px-0">
-                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 inline-block w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
+                    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 w-full max-w-2xl text-left mb-12 lg:ml-[calc(50vw-24rem)]">
                         <p className="text-xs font-black text-blue-600 mb-2 tracking-widest uppercase">Prerequisite for Subsidy</p>
                         <ul className="text-sm font-bold text-slate-700 space-y-1">
                             <li className="flex items-center gap-2"><Icon name="check" className="size-4 text-blue-600" /> {content.subsidytokyo.text_5}</li>
@@ -124,7 +124,7 @@ export const SubsidyTokyo = () => {
                         <h2 className="text-xl font-black">{content.subsidytokyo.text_28}</h2>
                     </div>
                     <p className="font-bold text-red-800 mb-4 leading-relaxed">
-                        {content.subsidytokyo.text_29}<span className="underline decoration-red-500 decoration-2">{content.subsidytokyo.text_30}</span>
+                        {content.subsidytokyo.text_29}<span className="pink-marker">{content.subsidytokyo.text_30}</span>
                     </p>
                     <p className="text-sm text-gray-700 leading-relaxed">
                         {content.subsidytokyo.text_31}
